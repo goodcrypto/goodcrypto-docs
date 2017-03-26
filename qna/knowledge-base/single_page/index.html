@@ -1,0 +1,4073 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Knowledge Base | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+            <h3>Topics</h3>
+
+
+
+                <a href="#Overview">
+                    <h4>Overview</h4>
+                </a>
+
+                <a href="#Configuration">
+                    <h4>Configuration</h4>
+                </a>
+
+                <a href="#Server">
+                    <h4>Server</h4>
+                </a>
+
+                <a href="#Mail">
+                    <h4>Mail</h4>
+                </a>
+
+                <a href="#Mail issues">
+                    <h4>Mail issues</h4>
+                </a>
+
+                <a href="#Web issues">
+                    <h4>Web issues</h4>
+                </a>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Overview"></a>
+            <p>&nbsp;</p>
+            <p><h3>Overview</h3></p>
+        </div>
+
+
+
+
+                <div>
+                    <a name="45"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I access my GoodCrypto private server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Your GoodCrypto private server has its own web site. This is not on GoodCrypto, but on the computer where you installed GoodCrypto.
+
+<p>
+Ask your administrator for the correct URL for your GoodCrypto server website.
+</p>
+
+<p>
+Use your browser to connect to your server's website. We recommend that you use a secure connection (i.e., https). The https key for your site is dynamically generated to be unique just for you. The first time you access your new site, you'll need to approve its self signed key. When your browser says it can't verify the site, <strong>that is normal</strong>. It's a private site so no public certificate authority knows about it.
+
+<p>
+<strong>Secure access:</strong> Prefix the IP address for your GoodCrypto server with <strong>https:</strong> and add <strong>:8443</strong> after the IP address.
+Don't forget the colon (:) between the IP address and the port number.
+</p>
+
+<p>
+<strong>Insecure access:</strong> Prefix the IP address for your GoodCrypto server with <strong>http:</strong> and add <strong>:8080</strong> after the IP address. Don't forget the colon (:) between the IP address and the port number.
+</p>
+
+<p>
+For example, if your private server's IP address is: 192.168.10.200, then the url for your server would be:
+</p>
+
+<ul>
+https://192.168.10.200:8443 (example only)<br/>
+http://192.168.10.200:8080 (example only)
+</ul>
+
+You must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> for some actions (e.g., verify a message arrived privately).
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Configuration"></a>
+            <p>&nbsp;</p>
+            <p><h3>Configuration</h3></p>
+        </div>
+
+
+
+
+
+
+
+                <div>
+                    <a name="91"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Is my GoodCrypto private server preconfigured?
+                    </h4>
+
+                        <h4 class="dropcap">
+                             Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        GoodCrypto is distributed as a preconfigured, bootable ISO. It contains all the software that you need to protect your group's mail and browsing, including full source. You simply need to integrate it with your mail server and browsers.
+
+<p>
+As years of experience with TLS, SSH, and GPG have shown, configuring crypto is hard. GoodCrypto is preconfigured to remove the hassles and improve security.
+
+<p>The smaller your group is, the less you can afford to install and configure your own crypto. The larger your organization is, the less you can afford users to install and configure their own crypto.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="72"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I run my GoodCrypto ISO on a new computer?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            To reduce the possibility of hidden malware, GoodCrypto will reformat the system data drive.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+        <li> <strong>Save the iso to a bootable device.</strong> We recommend you burn to readonly media such as a DVD.
+                If you choose to use a usb drive, you can just copy the iso straight to the drive.
+       </li>
+        <li> <strong>System requirements</strong>:
+              <div class="well">
+                  <ul>
+                      <li> Intel 64 bit processor with virtual machine support</li>
+                      <li> 4+ GB RAM + mail needs (8 GB or more suggested)</li>
+                      <li> 10 GB drive + mail space (500 GB or more suggested) <br/>
+                               The drive must be empty. </li>
+                      <li> Bootable from ISO (DVD recommended, USB, etc.) </li>
+                      <li> DHCP access </li>
+                      <li> Internet access </li>
+                  </ul>
+              </div>
+        </li>
+        <li> <strong>Back up any data from the hard drive.</strong> GoodCrypto will reformat the drive to reduce the possibility of hidden malware.</li>
+        <li> <strong>Boot the new computer from the iso.</strong> GoodCrypto needs a dedicated data drive. If it can't find an empty one to format, it will say so and not boot. You might see an error message about the wrong file type which you can ignore. GoodCrypto will automatically format the drive with the correct type. On the first boot, you may notice a delay. GoodCrypto is reformatting the empty drive and creating unique keys.
+        </li>
+        <li> <strong>Configure and maintain your GoodCrypto server on your private website.</strong> Browse to the new computer's IP address using port 8443 if you're using https, or 8080 if you're using http. Examples: http://199.18.0.50:8080 or https://199.18.0.50:8443. We recommend you use https, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert. <em> If your browser says it can't contact the site, wait a few minutes and try again.</em> </li>
+        <li> <strong>Enter the administrator's address for the domain you want to protect on your GoodCrypto private server.</strong>
+                This address will be used to find your mail server, and to receive admin messages from your GoodCrypto private server.
+                You may also opt to receive security alerts from GoodCrypto at this address.</li>
+       <li>Follow the rest of the instructions provided on your GoodCrypto private server.</li>
+    </ol>
+
+    <p class="important dropcap">
+        <strong>We strongly recommend</strong> that you:
+        <ol>
+            <li> Maintain your GoodCrypto Server in a secure location. </li>
+            <li> Limit access to authorized users. </li>
+            <li> Maintain a <a href="/qna/knowledge-base/configure-firewall.html">correctly configured firewall</a>. </li>
+        </ol>
+    </p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="52"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I run my GoodCrypto private server in a virtual machine?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Here's the configuration for VirtualBox
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+
+
+
+<p class="well">
+    Start VirtualBox. Click <strong>New</strong>. Use these settings in the wizard.
+</p>
+
+<p>
+    This is for Virtualbox 4.3.14. Other versions should be similar.
+</p>
+
+<p>
+    <strong>Name and operating system</strong>
+
+    <ul>
+        <li><strong>Name</strong>: GoodCrypto Private Server</li>
+
+        <li><strong>Type</strong>: Linux</li>
+
+        <li><strong>Version</strong>: Debian (64 bit)</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Memory size</strong>
+
+    <ul>
+        <li>2048
+            <br>
+            <font size="-2">This is the minumum, but more is better if you have it.</font>
+        </li>
+    </ul>
+</p>
+
+<p>
+    <strong>Hard drive</strong>
+
+    <ul>
+        <li>Create a virtual hard drive now</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Hard drive file type</strong>
+
+    <ul>
+        <li>VDI (VirtualBox Disk Image)</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Storage on physical hard drive</strong>
+
+    <ul>
+        <li>Dynamically allocated</li>
+    </ul>
+</p>
+
+<p>
+    <strong>File location and size</strong>
+
+    <ul>
+
+        <li>goodcrypto_private_server.vdi
+            <br>
+            <font size="-2">You can also select the path on your system where you want the vdi file.</font>
+        </li>
+
+        <li>10 GB
+            <br>
+            <font size="-2">This is the minumum, but more is better if you have it.</font>
+        </li>
+    </ul>
+
+<p>
+    That's all for the <strong>New</strong> wizard.
+</p>
+
+<p class="well">
+    There are a few adjustments to the regular settings.
+    Select <strong>GoodCrypto Private Server</strong>.
+</p>
+
+<p>
+    <strong>Storage</strong>
+
+    <ul>
+        <li>Remove the check mark from <strong>Enable IO APIC</strong></li>
+    </ul>
+</p>
+
+<p>
+    <strong>Storage</strong>
+
+    <ul>
+        <li>Highlight <strong>Controller: IDE</strong></li>
+
+        <li>Under <strong>Controller: IDE</strong>, highlight the <strong>Empty</strong> item and click
+            the icon with the blue disk and a red minus sign.</li>
+
+        <li>Click the small icon with a round circle and a plus sign. When you pass your cursor over the
+            icon it shows "Add CD/DVD Device"</li>
+
+        <li>In the pop up window, click the <strong>Choose disk</strong> button.</li>
+
+        <li>Move to the directory where you saved goodcrypto_private_server.iso,
+            highlight the filename, and click the <strong>Open</strong> button.</li>
+
+        <li>Under <strong>Controller: IDE</strong>, goodcrypto_private_server.iso should appear. Click on the name.</li>
+
+        <li>In the <strong>Attributes</strong>, add a check mark to <strong>Live CD/DVD</strong></li>
+    </ul>
+</p>
+
+<p>
+    <strong>Network</strong>
+
+    <ul>
+        <li>
+        Configure the VM to forward the following ports by clicking <strong>Advanced</strong> and then
+        <strong>Port forwarding</strong>.
+
+        <table border=1 width="60%">
+            <tr>
+                <th><center>Name</center></th>
+                <th><center>Protocol</center></th>
+                <th><center>Host IP</center></th>
+                <th><center>Host Port</center></th>
+                <th><center>Guest IP</center></th>
+                <th><center>Guest Port</center></th>
+            </tr>
+
+            <tr>
+<td>Rule 1</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>9350</td>
+<td>&nbsp;</td>
+<td>9350</td>
+</tr>
+<tr>
+<td>Rule 2</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8398</td>
+<td>&nbsp;</td>
+<td>8398</td>
+</tr>
+<tr>
+<td>Rule 3</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8080</td>
+<td>&nbsp;</td>
+<td>8080</td>
+</tr>
+<tr>
+<td>Rule 4</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8443</td>
+<td>&nbsp;</td>
+<td>8443</td>
+</tr>
+<tr>
+<td>Rule 5</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>11371</td>
+<td>&nbsp;</td>
+<td>11371</td>
+</tr>
+<tr>
+<td>Rule 6</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>10027</td>
+<td>&nbsp;</td>
+<td>10027</td>
+</tr>
+
+        </table>
+        </li>
+    </ul>
+</p>
+
+
+
+<p class="well"><strong>Final Steps</strong></p>
+
+<p>
+    <ol>
+        <li><strong><a href="/qna/knowledge-base/configure-firewall.html">Change your firewall</a></strong> to permit access to the forwarded ports.</li>
+        <li> <strong>Start the GoodCrypto private server.</strong>.</li>
+        <li> <strong>Configure and maintain your GoodCrypto server on your private website.</strong> Browse to the new computer's IP address using port 8443 if you're using https, or 8080 if you're using http. Examples: http://199.18.0.50:8080 or https://199.18.0.50:8443. We recommend you use https, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert. If your browser says it can't contact the site, wait a few minutes and try again.</li>
+        <li><strong>Enter the administrator's address for the domain you want to protect on your GoodCrypto private server.</strong> This address will be used to find your mail server, and to receive admin messages from your GoodCrypto private server. You may also opt to receive security alerts from GoodCrypto at this address.</li>
+      <li>Follow the rest of the instructions provided on your GoodCrypto private server.</li>
+    </ol>
+
+    <p class="important dropcap">
+        <strong>We strongly recommend</strong> that you:
+        <ol>
+            <li> Maintain your GoodCrypto Server in a secure location. </li>
+            <li> Limit access to authorized users. </li>
+            <li> Do not run other programs on the same computer as the VM. Encryption can use a lot of resources plus you would be opening yourself up to additional security risks.</li>
+        </ol>
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="98"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I integrate my mail system with GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+
+<ul>
+<li><a href="/qna/knowledge-base/config-postfix.html">Postfix</a>
+</li>
+
+<li>
+<a href="/qna/knowledge-base/config-exim/index.html">Exim4</a>
+</li>
+</ul>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="126"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure my postfix server to work with GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the administrator</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>MTA configuration</strong> button</li>
+  <li> Click the <strong>For your Postfix server</strong> tab</li>
+  <li><a href="/qna/knowledge-base/config-postfix-securely.html">Copy and paste</a> your postfix configuration to your GoodCrypto private server.
+  <li>Then copy the changes back to your mail server.</li>
+  <li>Restart postfix and you're done.</li>
+</ol>
+
+<p>
+If you have multiple servers, you may prefer to
+<a href="/qna/knowledge-base/postfix-config-script/index.html"> run a script </a>
+on each mail server. You can automate this alternative.
+</p>
+
+<p>
+To make sure you don't lose any mail while you test the new configuration, GoodCrypto configures postfix to "soft bounce" messages. This means that if there are issues after you change your configuration, your mail server will tell the sender's mail server to try again after a few hours. Once you're happy that the configuration is working as expected, you can remove the soft bounce configuration line.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="121"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What is the most secure way to configure postfix to work with GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a> with the Administrator credentials.</li>
+  <li>Click on <strong>Mail</strong>.
+  <li>Click on <strong>Postfix changes</strong>. This button only appears if you're logged in as the administrator. (If you don't see this button, then we recommend you <a href="/server/download.html">download the latest ISO</a> or <a href="/qna/knowledge-base/postfix-config-script.html">run the script</a> to update postfix.)</li>
+  <li>Enter the IP address for your GoodCrypto private server.</li>
+  <li>Copy the full contents from your postfix server's configuration files into the matching fields.</li>
+  <li>Click <strong>Generate config changes</strong>.</li>
+  <li>Review the changes and then copy the full contents from each field into the appropriate file on your mail server.</li>
+  <li>On your mail server, issue the command <strong>newaliases</strong>
+  <li>Restart postfix.</li>
+  <li>Send a message to someone outside of your domain to verify that postfix is working.</li>
+   <li>Once you are comfortable, you can remove the "soft_bounce = yes" line from /etc/postfix/main.cf</li>
+</ol>
+
+<p>
+We strongly recommend that you configure your SMTP/IMAP/POP servers and clients to default to TLS.
+</p>
+                </div>
+
+
+
+
+                <div>
+                    <a name="120"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Is there a script to configure postfix to work with GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Verify your mail server has the <a href="#prereqs">requirements</a>. If not, then <a href="/qna/knowledge-base/config-postfix-securely.html">use the cut and paste method</a> to configure your server.</li>
+<li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/goodcrypto-postfix.tgz/download" class="btn btn-primary btn-sm" title="Configuration program for postfix" <strong>postfix configuration script</strong></a>.  The program automatically makes a backup copy of your existing postfix configuration before making any changes to the configuration files. It also configures postfix to "soft bounce" any messages in case of unexpected issues.</li>
+  <li>Verify the downloaded file:
+          <ul>
+          <li> Filesize: 26,445 bytes</li>
+          <li> SHA512(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 4f86f2fdf8ac00da8a4126e2e269c5d56b96d9f410d91af45b47f794c81242f831f81ab42a9dd7dd0251f0e43c5a807704fee76e915c716bba9eac020fb8cd28
+</li>
+          <li> SHA256(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 8d85dc214f50a32d98ce864dd58b310f7e64eab42b720887c5e78c7cb571ae47
+</li>
+          <li> MD5(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 3102f0409cd2e284798157272644b405</li>
+          <li> PGP signature: <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/goodcrypto-postfix.tgz.sig/download">tgz sig</a> </li>
+         </ul>
+  <li>Move the downloaded file to the computer that runs postfix for your mail server</li>
+  <li>Expand the file using the command: <strong>tar xvzf goodcrypto-postfix.tgz</strong><br/>
+          You will see a new subdirectory named config-postfix.</li>
+  <li> Change to the config-postfix subdirectory.</li>
+  <li> The postfix-gc script makes a backup before changing anything.
+         With root or admin privileges, run
+          <pre>postfix-gc IP_ADDRESS_FOR_YOUR_PRIVATE_GOODCRYPTO_SERVER</pre>
+           Replace IP_ADDRESS_FOR_YOUR_PRIVATE_GOODCRYPTO_SERVER
+           with the IP address of your GoodCrypto private server. </li>
+  <li>Review the postfix configuration files. If everything looks ok, then restart postfix. If you have any problems, you can restore your original configuration by copying the original files from the Backup directory in /etc/postfix.</li>
+  <li> Send a message to someone outside of your domain to verify that postfix is working.</li>
+  <li> Once you are comfortable, you can remove the "soft_bounce = yes" line from /etc/postfix/main.cf</li>
+</ol>
+
+<p>
+We strongly recommend that you configure your SMTP/IMAP/POP servers and clients to default to TLS.
+ </p>
+
+<a name="prereqs"></a>
+<h3>Requirements</h3>
+<ul>
+<li> a working postfix configuration with TLS support. If you don't have postfix configured for TLS. Learn more at <a href="http://www.postfix.org/TLS_README.html#server_tls">postfix.org</a></li>
+<li> postfix's configuration files are in /etc/postfix. If your files are in a different location, let us know.</li>
+  <li> python 2.7 or later installed. If you're running on Windows and you do not
+have it installed already, then you can https://www.python.org/downloads/windows/ Unix and Mac users should already have python installed.</li>
+<li> you can run the program with root or admin privileges </li>
+</ul>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="127"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure exim to work with GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Exim4 support is experimental.
+
+<ol>
+  <li>Edit <strong>/etc/exim4/update-exim4.conf.conf</strong> so the <strong>dc_local_interfaces</strong> line includes <strong>; GC_PRIVATE_SERVER_IP.10028</strong> before the closing quote mark. Change GC_PRIVATE_SERVER_IP to the IP address of your GoodCrypto private server.<p>&nbsp;</p></li>
+  <li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/050_exim4-config_goodcrypto/download" class="btn btn-primary btn-sm" title="Exim router" <strong>GoodCrypto router</strong></a> and save it in <strong>/etc/exim4/conf.d/router</strong> directory<p>&nbsp;</p></li>
+  <li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/20-exim4-config_goodcrypto/download" class="btn btn-primary btn-sm" title="Exim router" <strong>GoodCrypto transport</strong></a> and save it in <strong>/etc/exim4/conf.d/transport</strong> directory<br/><p>&nbsp;</p></li>
+<li>Restart exim and you're done</li>
+</ol>
+
+<!--ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the administrator</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>MTA configuration</strong> button</li>
+  <li>Click the <strong>For your Exim server</strong> tab</li>
+  <li><a href="/qna/knowledge-base/config-exim-securely.html">Copy and paste</a> your exim configuration to your GoodCrypto private server.
+  <li>Then copy the changes back to your mail server.</li>
+  <li>Restart exim4 and you're done.</li>
+</ol-->
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="56"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure the mail server to work with GoodCrypto and other filters?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        GoodCrypto's filter should be the first filter for inbound mail and the last filter for outbound mail.
+<p>
+If you want other content filters to run (e.g., an antivirus filter), then we recommend you either follow Wietse Venema's (the author of postfix) advise <a href="http://postfix.1071664.n5.nabble.com/Postfix-Multi-Instance-on-multiple-hosts-td50073.html">configure a separate instance of postfix for each filter</a> or use a third party product like Amavisd-new.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="32"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure my firewall for GoodCrypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            GoodCrypto comes with a preconfigured firewall. Your own firewall needs to allow access to the server.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You'll need to open the following ports for the GoodCrypto machine:
+
+<table>
+<tr>
+<th width="20%">Port</th>
+<th width="20%">Interface</th>
+<th width="20%">Direction</th>
+<th width="20%">Purpose</th>
+</tr>
+<tr>
+<td>9151</td>
+<td>tcp</td>
+<td>in</td>
+<td>tor</td>
+</tr>
+<tr>
+<td>8398</td>
+<td>tcp</td>
+<td>in</td>
+<td>web proxy</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>tcp</td>
+<td>in</td>
+<td>server website</td>
+</tr>
+<tr>
+<td>8443</td>
+<td>tcp</td>
+<td>in</td>
+<td>https for website</td>
+</tr>
+<tr>
+<td>10025</td>
+<td>tcp</td>
+<td>in</td>
+<td>milter port</td>
+</tr>
+<tr>
+<td>10026</td>
+<td>tcp</td>
+<td>out</td>
+<td>milter port</td>
+</tr>
+</tr>
+<tr>
+<td>11371</td>
+<td>tcp</td>
+<td>in</td>
+<td>hkp port (used by keyservers)</td>
+</tr>
+</table>
+
+<p>
+The directions in and out are from the viewpoint of your GoodCrypto Server.
+</p>
+
+<p>Also, if you run GoodCrypto in a VM, we recommend a firewall on the computer that runs the VM with the same ports open. These ports assume the hypervisor is <strong>not</strong> running as root.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="41"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure my browser to reduce tracking?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        We strongly recommend that you ask your administrator to help configure your browser using <a href="#ProxySettings">the proxy settings</a>:
+
+<ul>
+        <li><a href="/qna/knowledge-base/configure-browsers.html#chrome">Chrome</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#ie">Internet Explorer</a></li-->
+       <li><a href="/qna/knowledge-base/configure-browsers.html#firefox">Firefox</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#safari">Safari</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#android">Android</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#opera">Opera</a></li-->
+ </ul>
+
+<a name="ProxySettings"></a>
+<p>&nbsp;</p>
+<h3>Proxy Settings</h3>
+<div class="table-responsive">
+<table class="table">
+        <tr>
+            <td> HTTP Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> SSL Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> FTP Proxy: </td>
+            <td> <em>leave blank</em> </td>
+            <td> 0 </td>
+        </tr>
+        <tr>
+            <td> SOCKS Host: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 9350 </td>
+        </tr>
+    </table>
+</div>
+
+<a name="chrome"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Chrome</h3>
+<ol>
+  <li>Click on the menu and select <strong>Settings</strong></li>
+  <li>Click on the <strong>Show advanced settings</strong> link</li>
+  <li>Under the <strong>Network</strong> section, click <strong>Change proxy settings</strong></li>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="firefox"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Firefox</h3>
+<p>
+Edit / Preferences / Advanced / Network / Settings
+<ol>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="35"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I import my GoodCrypto private server's web certificate?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        We strongly recommend that you ask your administrator to help configure your browser.
+
+<p>
+After saving the certificate from your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> and verify the fingerprint, then follow the detailed instructions for your browser:
+</p>
+
+<p>
+    <ul>
+        <li><a href="/qna/knowledge-base/import-web-certificate.html#chrome">Chrome</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#ie">Internet Explorer</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#firefox">Firefox</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#safari">Safari</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#android">Android</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#opera">Opera</a></li>
+   </ul>
+</p>
+
+<p>If you're using a browser not listed above, then search online for instructions about importing a <strong>root certificate</strong>.</p>
+
+<a name="chrome"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Chrome</h3>
+<ol>
+    <li>Click on the <strong>wrench icon</strong>, select <strong>Options</strong>, and select <strong>Under the Hood</strong></li>
+    <li>Scroll down to <strong>Security</strong> section and click on the <strong>Manage certificates</strong> button.</li>
+    <li>Click on the <strong>Import</strong> button and use the Certificate import wizard to import a certificate.</li>
+    <li>Click <strong>Next</strong>, use the <strong>Browse</strong> button to locate the file that you saved in Step 1 of these instructions, and <strong>highlight</strong> the filename.</li>
+    <li>Click <strong>Next</strong> to continue with Certificate Import Wizard.</li>
+    <li>Select the <strong>Trusted Root Certification Authorities</strong> store.</li>
+    <li>Click the <strong>Finish</strong> button to complete the process.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="ie"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Internet Explorer</h3>
+<ol>
+    <li>Navigate to any site that uses TLS/SSL (i.e., https).</li>
+    <li>IE will display a warning that, "There is a problem with this web site's security certificate."</li>
+    <li>Click the, <strong>Continue to this website (not recommended)</strong> link.</li>
+    <li>Once the page has loaded, look to the right of the address bar. A red/pink button, labeled <strong>Certificate Error,</strong> should be visible. Click that button.</li>
+    <li>A pop-up, titled <strong>Untrusted Certificate</strong>, will appear. Click the <strong>View certificates</strong> link at the bottom of the pop-up.
+    <li>Another pop-up, titled <strong>Certificate</strong>, will appear.</li>
+    <li>Click the <strong>Install Certificate…</strong> button.</li>
+    <li>The <strong>Certificate Import Wizard</strong> will be started. Click the <strong>Next</strong> button.</li>
+    <li>For XP: Leave <strong>Automatically select the certificate…</strong> option selected, and click the <strong>Next</strong> button.</li>
+    <li>For Vista/Windows7/Windows8:
+        <ul>
+            <li>Choose <strong>Place all certificates in the following store</strong> option, and click the <strong>Browse</strong> button.
+            <li>Choose the <strong>Trusted Root Certification Authorities</strong> store and click <strong>OK</strong>.</li>
+            <li>Click the <strong>Next</strong> button.
+        </ul>
+    </li>
+    <li>This should display the <strong>Completing the Certificate Import Wizard</strong> dialog. Click the <strong>Finish</strong> button.
+</ol>
+<p>&nbsp;</p>
+
+<a name="firefox"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Firefox</h3>
+<ol>
+    <li>From the menu, select <strong>Preferences / Advanced / Certificates</strong>.</li>
+    <li>Click the <strong>Import</strong> button.</li>
+    <li>Locate the certificate file that you saved earlier. Click the filename and <strong>Open</strong> it.
+    <li>If Firefox pops up the warning, "This certificate is already installed as a certificate authority", then
+        <a data-toggle="modal" data-target="#FirefoxWarning" href="#GoodCryptoDefined">click here</a>
+    <li>Another dialog will pop up that asks, "Do you want to trust "CA Cert Signing Authority" for the following purposes?".</li>
+    <li>Add a check mark in the <strong>Trust this CA to identify web sites</strong> box and click the <strong>OK</strong> button.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+
+On older Firefox versions:
+<ol>
+    <li>Select <strong>Preferences</strong> from the <strong>Edit</strong> menu.<br/>
+        If you're running Firefox on Mac, then select <strong>Preferences...</strong> from the <strong>Firefox</strong> menu.
+    </li>
+    <li>Click the <strong>Advanced</strong> icon at the top of the dialog box.</li>
+    <li>Click the <strong>Encryption</strong> tab, and then the <strong>Authorities</strong> tab.</li>
+    <li>Click the <strong>View certificates</strong> button.</li>
+    <li>Continue from <strong>Import</strong> above.</li>
+</ol>
+
+<div class="modal" id="FirefoxWarning">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">If Firefox pops up the warning, "This certificate is already installed as a certificate authority", then</h4>
+    <div class="modal-body">
+    <br/>
+    <p>
+        <ol>
+            <li>Click the <strong>OK</strong> button</li>
+            <li>Highlight the <strong>ca.mitm.com</strong> item in the list</li>
+            <li>Click the <strong>Delete or Distrust</strong> button and confirm when prompted</li>
+            <li>Resume the procedure by restarting with <strong>Click the Import button</strong> step.
+        </ol>
+    </p>
+    </div>
+  </div></div></div>
+</div>
+<p>&nbsp;</p>
+
+<a name="safari"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Safari</h3>
+<ol>
+    <li>Navigate to any site that uses TLS/SSL (i.e., https).</li>
+    <li>Safari will pop up a window that says, "Safari can't verify the identity of the website "???".</li>
+    <li>Click the <strong>Show Certificate</strong> button.</li>
+    <li>Verify the information is for ???</li>
+    <li>Add a check mark in the <strong>Always trust "???" when connecting to "???"</strong> box.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="android"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Android</h3>
+<ol>
+    <li>Copy the certificate file to the /sdcard folder. You can use the file manager or
+    <strong>adb push</strong>.</li>
+    <li>Go into adb shell ( adb shell from commandline), or open the 'terminal'-application on your android device. You will get a command prompt similar like shell@android:/ $ Gain superuser/root rights, neccessary to perform privileged actions:
+
+su
+
+Make the /system folder writable (will return to read-only upon reboot):
+
+mount -o remount,rw /system
+
+Copy the new certificate files to the correct folder on your Android device:
+
+cp /sdcard/5ed36f99.0 /system/etc/security/cacerts/
+cp /sdcard/e5662767.0 /system/etc/security/cacerts/
+
+Correct the file permissions to u=rw, g=r, o=r:
+
+cd /system/etc/security/cacerts/
+chmod 644 5ed36f99.0
+chmod 644 e5662767.0
+
+
+    <li>Look for the <strong>Preferences</strong> or <strong>Options</strong> for your browser.</li>
+    <li>You'll likely find a tab or button which lets you manage certificate or
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="opera"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Opera</h3>
+<ol>
+    <li>Click on the <strong>wrench icon</strong>, select <strong>Options</strong>, and select <strong>Under the Hood</strong></li>
+    <li>Scroll down to <strong>Security</strong> section and click on the <strong>Manage certificates</strong> button.</li>
+    <li>Click on the <strong>Import</strong> button and use the Certificate import wizard to import a certificate.</li>
+    <li>Click <strong>Next</strong>, use the <strong>Browse</strong> button to locate the file that you saved in Step 1 of these instructions, and <strong>hightlight</strong> the filename.</li>
+    <li>Click <strong>Next</strong> to continue with Certificate Import Wizard.</li>
+    <li>Select the <strong>Trusted Root Certification Authorities</strong> store.</li>
+    <li>Click the <strong>Finish</strong> button to complete the process.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Server"></a>
+            <p>&nbsp;</p>
+            <p><h3>Server</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="53"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I sign in to my GoodCrypto Server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li>Click the <strong>Sign in</strong> menu</li>
+ <li>Enter the email address and password that you received via email from your GoodCrypto Server or if you're the administrator, then the email address and password you supplied when configuring your GoodCrypto Server.</li>
+</ol>
+
+<p>
+Reminder: GoodCrypto never receives a copy of passwords used by your GoodCrypto Server so keep them in a safe place.
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="97"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I install my GoodCrypto private server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+<li><a href="/server/download.html">Download the ISO</a></li>
+
+<li>Install the ISO on a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-computer.html">new computer</a> or
+in a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-virtual-machine.html">virtual machine</a></li>
+
+<li>Use your browser to go to the IP address at port 8080 for the computer where you installed the ISO. <em> If your browser reports the site it not accessible, wait a few minutes and try reloading.</em>
+<br/>
+<ul>
+It's better to go connect via https with port 8443, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert.
+</ul>
+</li>
+
+<li>Enter an email address that uses the domain you want to protect on your GoodCrypto private server.<br/>
+This address will be used to receive notices (e.g., error messages) from your GoodCrypto private server. You may also opt to receive security alerts from GoodCrypto at this address.</li>
+
+<li>Follow the instructions on your private server to finish the integration.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="99"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I secure my GoodCrypto private server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Your GoodCrypto private server reduces the vectors of attack by limiting the software installed on the server to the bare minimum. For example, the server does not include ssh and includes a firewall to restrict access.
+
+<p>
+Your primary concern should be securing the computer running GoodCrypto and keeping up-to-date with security releases.
+
+<p>
+The most secure way to operate GoodCrypto is on a headless machine. Regardless where you've installed your server it should be behind a well secured network firewall and with limited physical access.
+</p>
+
+<p>
+Keeping all security software current is essential so you're not exposed to vulnerabilities.
+<p>
+
+<p>
+Other suggestions...
+<ul>
+<li>You should not add any other software to your server</li>
+<li>If you're running GoodCrypto in a VM, then don't have any other software running on the computer.</li>
+<li>Change the <a href="/qna/knowledge-base/change-mail-options/index.html">Mail | Options</a> on <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server's</a>  so users must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> to verify fingerprints and export keys.  This will reduce unauthorized users from figuring out your group's contacts.</a>
+</ul>
+
+You might also want to require a new key be verified before it can be used by changing the <a href="/qna/knowledge-base/change-mail-options.html">Mail | Options</a> on <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server's</a>. A disadvantage might be that it's more hassle for users before they can communicate privately.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="95"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I backup the data from my server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Your backup procedure depends on where you've installed your GoodCrypto private server.
+
+<h5>Stand alone computer</h5>
+
+It's best to back up the entire drive where you installed GoodCrypto. This will make restoration quick and easy.
+
+If you are limited in space and you have physical access, then you can just backup /media/drive/persistence.
+
+<h5>Virtual machine</h5>
+
+You simply need to back up the the VDI file that you created when you set up the virtual machine.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="96"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I trouble shoot my GoodCrypto server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Regardless how many tests we run or how long we operate a GoodCrypto private server, there are times when something goes wrong. If you're experiencing any difficulties, we're eager to resolve them.
+<p>
+The best way to trouble shoot is to review the <a href="/qna/knowledge-base/index.html">knowledge base</a> to see if this is a known issue.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="88"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Forbidden (403) CSRF verification failed. Request aborted.
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Allow cookies for the site you're trying to access.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        GoodCrypto uses cross-site request forgery (CSRF) verification to prevent someone from exploiting the trust that a site has in a user's browser.
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="93"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        EXT4-fs (sda): VFS: Can't find ext4 filesystem
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You may see this message while booting the the GoodCrypto private server.
+
+<p>
+It may take a few more minutes for the server to boot, but if it boots with a message about "What to do next", then you can safely ignore this message.
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Mail"></a>
+            <p>&nbsp;</p>
+            <p><h3>Mail</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="122"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I know if a message I send will be encrypted?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Check if you have an encryption key for your contact.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+    <li> Browse to your GoodCrypto private server.
+    <li> Click "Mail"
+    <li> Under "Keys" click "View ID"
+    <li> Enter your contact's email address.
+</ol>
+
+If there's a fingerprint for the email's key, your message will be encrypted.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="84"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I verify a message arrived privately?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            GoodCrypto adds a tag with a unique validation code at the bottom of each message it decrypts.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        It would be easy for someone else to fake a message so it appears that the message arrived privately when it didn't. Only the recipient of the message can verify that it was received privately.
+
+<p>
+If your administrator entered the URL for your GoodCrypto private server in the <a href="/qna/knowledge-base/change-mail-options.html">GoodCrypto private server options</a>, then a URL is included at the bottom of the message which lets you confirm the message was received privately by your GoodCrypto private server. You must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> with the email address of the recipient of the message to verify the status.
+
+<p>
+If you only see the unique validation code, then connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>, sign in with the credentials for the user that received the message, click the
+<strong>Mail</strong> menu and then the <strong>Verify</strong> button next to <strong>Private messages</strong>, and enter the validation code.
+<p>
+If you do not know the validation code, then click the <strong>Received</strong> button next to <strong>Private messages</strong>. You'll see a list of all messages that you received securely. The list shows the sender's email address, date, message id, and validation code.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="85"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I confirm a message was sent privately?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Only the sender of a message may confirm if a message was sent privately.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the user that sent the message</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>Sent</strong></li>
+  <li>Scan for the recipient's email address, date, and message-id from the header of the message</li>
+</ol>
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="68"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What do I do with a key someone sent me?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>If you encounter one of those rare, brave people who
+isn't using GoodCrypto Mail but is using encryption, you'll need to import
+their public key <strong>before</strong> mail to them will be protected.
+</p>
+<ol>
+    <li>Ask them to send you their public key as an attachment.</li>
+    <li>Browse to your GoodCrypto server website</a>.</li>
+    <li>Click <strong>Mail</strong> menu.</li>
+    <li>Click the <strong>Import</strong> button.</li>
+    <li>Click the <strong>Browse</strong> button and select the file name.</li>
+    <li><a href="/qna/knowledge-base/user-verify-key.html">Verify their key</a></li>
+</ol>
+<p>
+Of course, the easiest way to exchange keys is to suggest the other person install GoodCrypto Server, too.
+Keys are automatically exchanged.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="67"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I send my key to someone?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>If the recipient isn't using encryption
+yet, then ask them to install GoodCrypto, exchange messages with them until you both receive email letting you know future communication will be private. That's it. GoodCrypto automatically exchanges keys for both of you unless your administrator configured GoodCrypto not to exchange keys.</p>
+
+<p>If the other person isn't using GoodCrypto or your aren't using the auto-exchange featuren, then you can still exchange keys manually. <a href="/qna/knowledge-base/export-public-key.html">Export your key</a> and email the file to them.
+Ask them to send you their key, and then <a href="/qna/knowledge-base/import-key.html">import it</a>.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="44"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I verify a key, or a fingerprint?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            For safety, verify keys in at least two ways.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        The most common way is when your contact appears to have successfully read a message you encrypted to them, but you need at least one more verification to be safe.
+
+<p>
+Ask the contact to provide their public key or its <a href="/qna/technical/fingerprint.html">fingerprint</a> through a channel other than email. The key or fingerprint must match your own copy.  Compare fingerprints as described below.
+
+<p>
+Best is face to face.
+Other examples are for them to publish their key's fingerprint on a public
+site or service, or provide it by phone, SMS (if encrypted), or snail mail.
+
+<p>
+If you are verifying by hand, the longest version of the fingerprint is best.
+You don't have to verify the whole key by hand.
+A fingerprint is a really good summary of a key.
+If you verify the key's fingerprint, you have verified the key.
+
+<p>
+If you got a public key from a web site,
+it doesn't help much to verify using a fingerprint from the same web site.
+An attacker can spoof the web site and provide a matching fake fingerprint.
+
+<h4>To compare a fingerprint using GoodCrypto:</h4>
+<ol>
+    <li>Browse to <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server website</a>.</li>
+  <li>Click on the <strong>Verify fingerprint</strong>; if the button is not on the screen, then click the <strong>Mail</strong> menu</li>
+  <li>Type in the email address and click the <strong>Verify</strong> button.</li>
+  <li>
+        A fingerprint and a key summary are the same thing.
+        Compare the <strong>Key summary</strong> with the other person's <strong>Key summary</strong>.
+        Ignore spaces and whether a character is upper or lower case.
+        Otherwise they must match.
+  </li>
+  <li>
+        <font color="red"><strong>
+            If they don't match, do NOT use that key to communicate.
+        </strong></font>
+  </li>
+  <li>If the fingerprint is not flagged as verified and you have verified it, then you should <a href="/qna/knowledge-base/mark-key-verified.html">flag the fingerprint as verified in the database</a></li>
+</ol>
+</p>
+
+<p>
+If the other person is also using GoodCrypto Mail, then they should follow this same procedure. Otherwise, they must use their encryption software program to get the key summary, known as the fingerprint in most encryption software, for the matching email address.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="49"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I mark a key as verified?
+                    </h4>
+
+                        <h4 class="dropcap">
+                             You must be logged in to mark a key as verified.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Fingerprint</strong></li>
+  <li>Enter the <strong>Email</strong> address and select the type of encryption</li>
+  <li>Add a check mark to <strong>Verified</strong></li>
+  <li>Click <strong>OK</strong></li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="130"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I import a key?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You have two options: <a href="/qna/knowledge-base/import-from-file/index.html">import a key from a file</a> or <a href="/qna/knowledge-base/import-from-keyserver.html">import it from a keyserver</a>. It's probably most reliable to ask your contact to export their key into a file and send it to you.
+
+<p>
+If your contact has stored their key on a public keyserver, then you can import the key from the keyserver. You can use their email address to find their key, but it's more reliable if you use their fingerprint. If your GoodCrypto private server can't find the key on the keyserver, then ask which keyserver the key is on. Then ask your mail administrator to add that server to your private server.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="47"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I import a key from a file?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Import key</strong></li>
+  <li>Click on <strong>From file</strong> tab</li>
+  <li>Click on <strong>Browse</strong></li>
+  <li>Select the key file that you want to import</li>
+  <li>Select the type of key (PGP and GPG are the same for this purpose)</li>
+  <li>Optionally, enter the user's name</li>
+  <li>Optionally, enter the fingerprint if you'd like it automatically marked as verified</li>
+  <li>If you're importing a private key, then you must enter the matching passphrase. Otherwise, leave the field blank.</li>
+  <li>Click on <strong>Import</strong></li>
+  <li>If successful, a message appears with the email address of the key and you're ready to import another key if you want</li>
+</ol>
+
+<p>
+You can also import a key from a <a href="/qna/knowledge-base/import-from-keyserver.html">keyserver</a>.
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="128"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I import a key from a keyserver?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Import key</strong></li>
+  <li>Click on <strong>From keyserver</strong> tab</li>
+  <li>Enter the email address or the key's fingerprint</li>
+  <li>Select the type of key (PGP and GPG are the same for this purpose)</li>
+  <li>Click on <strong>Search and import</strong></li>
+  <li>The process can take a long time depending how many keyservers must be searched. You'll receive email with the results. Connecting to keyservers can be unreliable so you may need to try a few times.</li>
+</ol>
+
+<p>
+You can also import a key from a <a href="/qna/knowledge-base/import-from-file.html">file</a>.
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="51"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I import a private key?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Export your public and private key into one file. The public key must be the first key in the file.</li>
+  <li><a href="/qna/knowledge-base/import-from-file.html">Import the key</a> into your GoodCrypto private server.
+ </ol>
+
+<p>
+Be sure to enter the matching passphrase when you fill out the form to import your key.</li>
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="48"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I export a public key?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>. You may need to sign in if the administrator is using tight security for your server.</li>
+  <li>click on the <strong>Mail</strong> menu</li>
+  <li>click on <strong>Export key</strong></li>
+  <li>type in the <strong>Email</strong> address</li>
+  <li>select the <strong>Encryption software</strong> (GPG and PGP are the same for this purpose)</li>
+  <li>click on <strong>Export</strong></li>
+  <li>select a location and name for the file that will contain the key</li>
+  <li>click on <strong>Save</strong></li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="54"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I simplify managing keys?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Use the defaults for auto exchanging keys and creating keys.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Options</strong>. This button only appears if you sign in as an administrator.</li>
+  <li>Click on the <strong>MTA address</strong></li>
+  <li>Add a check mark to <strong>Auto-exchange keys</strong> if there isn't one</li>
+  <li>Add a check mark to <strong>Create private keys</strong> if there isn't one</li>
+  <li>Click <strong>Save</strong></li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="129"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I manage the keyservers?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a> with the administrator credentials</li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Keyservers</strong> button. This button only appears if you're logged in as the administrator.</li>
+  <li>You can add, change, or delete keyservers. If you don't want to delete a keyserver, but no longer use it, then simply remove the <strong>Active</strong> check mark while editing it.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="50"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I configure GoodCrypto to create private keys automatically?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Options</strong> button. This button only appears if you're logged in as the administrator.</li>
+  <li>Click on the <strong>MTA address</strong></li>
+  <li>Add a check mark to <strong>Create private keys</strong> if there isn't one</li>
+  <li>Click <strong>Save</strong></li>
+</ol>
+
+<p>
+GoodCrypto will automatically create a private key, if one doesn't exist, whenever a user sends email to anyone.
+</p>
+
+<p>
+Key generation can take a minute or more so after the first message is sent, the user probably wants to wait a few minutes before sending another.
+</p>
+
+<p>
+If you elect to turn off automatic key generation in the <a href="/qna/knowledge-base/configure-mail-options">Options</a>. If you elect to do this, then you'll need to <a href="/qna/knowledge-base/gen-key-manually.html">generate the keys manually</a>.
+</p>
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="131"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I manage contacts?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Your GoodCrypto private server adds a record in the database every time someone sends or receives private email. Each record shows the type of encryption the contact uses and their fingerprint.
+
+<p>
+Also, the administrator can flag each contact so email must always be encrypted or never be encrypted. This allows you to maintain the appropriate level of security on a person by person basis.
+</p>
+
+<p>
+If there's a contact that you know you never want to send encrypted email, then you might want to add that contact and select the "Never encrypt" option.
+</p>
+
+<ol>
+  <li>Connect to the Goodcrypto Server website.
+  <li>Sign in with the credentials you supplied when you configured your GoodCrypto Server</li>
+  <li>Click on the Mail menu item</li>
+  <li>Click on Contacts</li>
+  <li>Don't forget to sign out when you're finished.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="83"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I manage users?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Your GoodCrypto private server automatically creates a user every time someone in your company sends or receives email. Each user receives a message with their credentials when their account is ready. Of course, the administrator can also add or delete users manually, too.
+
+<ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li>Sign in with the credentials you supplied when you configured your GoodCrypto Server.</li>
+  <li>Click on the <strong>Mail</strong> menu item.<li>
+  <li>Click on <strong>Users</strong></li>
+  <li>Click on <strong>Add user</strong></li>
+  <li>Fill in all the information, including the email address field for the user<br>If you'd like to follow the convention that GoodCrypto uses, then the username and email address will be the same.</li>
+  <li>Don't forget to sign out when you're finished.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="113"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Can I change the mail options?
+                    </h4>
+
+                        <h4 class="dropcap">
+                             Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You must be <a href="/qna/knowledge-base/access-goodcrypto-server.html">logged into your GoodCrypto private server</a>
+with administrative privileges to see or change any of the options.
+
+<ul>
+    <li><a href="/qna/knowledge-base/crypt-options.html#GeneralMailOptions">General</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options.html#MetadataProtectionMailOptions">Metadata and Traffic Analysis Protection</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options.html#TighterSecurityMailOptions">Tighter security</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options.html#SignaturesMailOptions">Signatures</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options.html#OtherMailOptions">Other</a></li>
+</ul>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="46"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I change options for GoodCrypto Mail?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            You must have administrative privileges to change options.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Options</strong> button. This button only appears if your signed in as an administrator.</li>
+  <li>Click on the <strong>MTA address</strong</li>
+</ol>
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="114"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What options are available for encryption and decryption?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <a name="GeneralMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>General</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Mail server address:</strong> The ip address for your mail server (i.e., the server running postfix or exim for your mail).
+</p>
+
+<p>
+<strong>GoodCrypto server url:</strong> The full url, including port, to access your GoodCrypto server.
+</p>
+
+<!--p>
+<strong>Exchange public keys P2P:</strong> When enabled, GoodCrypto automatically:
+<ul>
+<li>adds the sender's key(s) to every outbound message</li>
+<li>imports keys received in the header and alerts the recipient to verify the new key</li>
+<li>verifies the key in the header matches the key already in GoodCrypto's database</li>
+</ul>
+</p>
+
+<p>
+Automatic key exchange eliminates one of the major headaches of using crypto. When you're communicating
+with compatible software, then there's no need to import contacts' keys nor send yours.
+</p>
+
+<p>
+We strongly recommend that you have a check mark in this field.
+</p>
+
+<p>
+<strong>Create keys:</strong> If enabled, then GoodCrypto automatically creates a
+key for every user in your domain. The first time a user with your domain sends or receives a
+message, GoodCrypto generates a public and private key. Email is sent letting them know
+when the key is ready.
+</p>
+
+<p>If you already have private keys for some or all of your users, then you can export both the public and private key into one file, and <a href="/qna/knowledge-base/import-private-key.html">import</a> it.
+<p>
+We strongly recommend that you have a check mark in this field.
+</p-->
+</div>
+
+<a name="MetadataProtectionMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Metadata and Traffic Analysis Protection</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Encrypt metadata:</strong> When enabled, GoodCrypto protects all the
+metadata, except the date, the domain address for each group, and basic email header
+details (like originating server) when it sends messages to recipients with compatible software
+<a href="/server/docs/metadata.html">Learn more</a> about how metadata protection works.
+</p>
+
+<p>
+<strong>Padding and packetization:</strong> If enabled, then GoodCrypto holds messages for each domain
+it has a special "metadata key". On a regular schedule it combines the individual messages going to
+a domain, pads them to a standard size to create a single message, encrypts the message
+that protects all the messages and hides all individual metadata, and sends it.
+</p>
+
+<p>
+If there are no messages that need to be sent to a domain, then a message is still sent at the
+regular schedule.
+</p>
+
+<p>
+<a href="/server/docs/metadata.html#TrafficAnalysis">Learn more</a> about traffic analysis protection.
+</p>
+
+<p>
+<strong>Packet size:</strong> The minimum size of the message containing one or more messages.
+If the total of pending outgoing individual messages are too big for a single standard group message,
+unsent messages are queued for later. If a message is bigger than the group message size it is
+returned to the sender with an explanation.
+</p>
+
+<p>
+<strong>Frequency:</strong> The schedule packetized messages will be sent.
+</p>
+</div>
+
+<a name="TighterSecurityMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Tighter security</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Require outbound encryption:</strong> If enabled, then GoodCrypto requires all outbound mail be encrypted. This means that if someone sends a message and there is no key for the recipient, then the message will bounce to the sender.
+</p>
+
+<p>
+<strong>Require verify new key:</strong> If enabled, then GoodCrypto requires that you
+must log into
+<a href="/qna/knowledge-base/access-goodcrypto-server/.html">your GoodCrypto private server</a>
+after you verify a new key and add a check mark that they
+key has been verified. If someone tries to send a message to a contact with an unverified key, then
+the sender's message is returned to them with details about how to proceed.
+</p>
+
+<p>
+<strong>Require login to view fingerprint:</strong> When enabled, GoodCrypto
+requires that you login to your GoodCrypto private server to view a fingerprint, also known as a key id.
+Your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> should be behind your firewall configured so only your own people can reach it. But if you do not require login, it is possible that an unauthorized person could learn which individuals communicate securely.
+</p>
+
+<p>
+<strong>Require login to export keys:</strong>If enabled, then you must login to
+<a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto private server</a>
+to export a fingerprint, also known as a key id.
+Your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> should be behind your firewall configured so only your own people can reach it. But if you do not require login, it is possible that an unauthorized person could learn which individuals communicate securely.
+</p>
+
+<p>
+<strong>Filter HTML:</strong> When enabled, GoodCrypto removes known malware vectors from
+encrypted, inbound email. This is not</strong> a replacement for spam and virus filters.
+</p>
+<p>
+We strongly recommend that you run anti-spam and anti-virus software after
+GoodCrypto runs so unencrypted messages can be checked and filtered.
+</p>
+</div>
+
+<a name="SignaturesMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Signatures </strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Clear sign mail:</strong> If enabled, then GoodCrypto adds a GPG signature after an outbound message
+is encrypted. If you're not protecting your metadata, then clear signing
+makes it easier to track your messages.</p>
+<p>
+All encrypted messages are also signed as part of the encryption
+if the sender's key exists at the time of encryption. When signing is done as part of the
+encryption, instead of clear signed, then the recipient will know the message
+was encrypted by the sender, but not someone who intercepts the message will not be able to
+determine the sender's signature.
+</p>
+
+<p>
+<strong>Add DKIM signature:</strong> When enabled, GoodCrypto adds a DKIM signature to each outbound message.
+Many large companies rely on DKIM signatures to identify whether a message originated from the sender.
+We'd also advise that you add SPF support to your DNS configuration to add further credibility to
+your messages.
+</p>
+
+<p>
+<strong>Verify DKIM signatures:</strong> If enabled, then GoodCrypto verifies the first DKIM signature of
+each signed message. If the message passes verification, then a tag is added to the bottom of the
+message and the signature is removed from the header so other filters don't inacurrately report
+the signature was bad.
+</p>
+
+<p>
+<strong>DKIM delivery policy:</strong> If an inbound message contains a DKIM signature and you enabled
+<strong>verify DKIM signatures</strong>, but the key does not verify for any reason, then you
+can decide whether to <strong>drop</strong> the message or delivery it with a warning.
+</p>
+<p>
+If the message is dropped, then it is not delivered and the sender is not informed about the error.
+The reason that GoodCrypto does not report the error to the user is because some spammers use
+bounced messages as a way to abuse mailing systems.
+</p>
+
+<a name="DkimPublicKey"></a>
+<p>
+<strong>DKIM public key:</strong> The public key for your domain used by DKIM. You must include this
+key in a TXT record for your domain. The selector is <strong>mail</strong>, the hash code is
+<strong>rsa-sha256</strong>, the key type is <strong>rsa></strong>, and the key length is 2048 bits.
+</p>
+</div>
+
+<a name="OtherMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Other</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Use keyservers:</strong> If enabled, then GoodCrypto will check the <a href="/qna/knowledge-base/manage-keyservers.html">active keyservers</a> to find keys for contacts without keys. If a key is found, then the first user who tried to send a message to that contact receives email alerting them about the new key.
+</p>
+
+<p>
+This option does not impact whether someone can import a key <a href="/qna/knowledge-base/import-from-keyserver.html">from a keyserver</a>.
+</p>
+
+<p>
+<strong>Enable diagnostic logs:</strong> If enabled, then GoodCrypto logs the encryption
+and decryption process.
+</p>
+
+<p>
+We strongly recommend that you only enable this option if you're having trouble with GoodCrypto or
+processing messages. Logs may contain sensitive data.
+</p>
+</div>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="118"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I know whether my mail's metadata will be protected and traffic analysis stopped?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Go to <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto private server</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click the <strong>Mail</strong> menu item or button.</li>
+  <lI>Click the <strong>Protection</strong> button to see which options your administrator has configured.</li>
+  <li><a href="/qna/knowledge-base/known-metadata-domains.html">Check if your contact's company</a> is also ready to protect metadata and stop traffic analysis.</li>
+</ol>
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="119"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I know if a contact is ready to protect metadata and stop traffic analysis?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>Go to <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto private server</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click the <strong>Mail</strong> menu item or button.</li>
+  <lI>Click the <strong>Metadata</strong> button.</li>
+  <li>If you see the domain for the contac's email (i.e., the portion to the right of the @ sign) in the list, then you know that messages to this company will be protected <a href="/qna/knowledge-base/learn-whether-metadata-protected.html">if your company is protecting your metadata and stopping traffic analysis</a>.</li>
+  <li>If you don't see the domain for the contact's email, then you can exchange one or two messages with them (which will not have metadata protection) and then recheck if the domain is in the list. Or, you can use another form of communication then email, and <a href="/qna/knowledge-base/export-public-key.html">exchange keys manually</a> for the _no_metadata_ key for each domain.</li>
+</ol>
+
+<p>
+Remember that until other packages implement the open source protocol for metadata protection, you will need GoodCrypto on both ends. Encourage others to use GoodCrypto so <em>your</em> mail is fully protected.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="123"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I verify an outgoing message will be protected
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li><a href="/qna/knowledge-base/access-goodcrypto-server.html">Go to your GoodCrypto private server</a>.</li>
+  <li>Click the <strong>Mail</strong> menu item.</li>
+  <lI>Click the <strong>View ID</strong> button. If your administrator requires you to sign in, then use the credentials you received via email from the GoodCrypto Mail Daemon.</li>
+  <li>Enter your contact's email address and click OK.</li>
+</ol>
+
+<p>
+The message will be sent privately if:
+<ul>
+  <li>you see the contact's fingerprint</li>
+  <li>the key is active</li>
+  <li>the key is verified or the key is not required to be verified</li>
+</ul>
+
+<p>
+Your message may still be sent privately if the contact's company is protecting metadata via GoodCrypto.  Any messages sent to a domain that has metadata protection have the body of the message protected, too. Learn how to see if a <a href="/qna/knowledge-base/known-metadata-domains/index.html">company is ready to protect metatdata</a>.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="125"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How do I control whether an outbound message is encrypted or not?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p class="dropcap">
+The administrator has a lot of flexibility about when encryption is used. Of course, the recipient or the recipient's company must also being using encryption for any messages to be encrypted.
+</p>
+
+<p>
+You can require all outbound message be encrypted by going to the Mail | Options and adding a check mark to the appropriate field. Of course, it's not likely that everyone you exchange messages will also be using encryption so you can add each email address to the Mail | Contact list and select <strong>Never</strong> to the <strong>Encrypt to contact</strong> field.
+</p>
+
+<p>
+You can also decide that there are particular individuals that you only want to exchange encrypted message. Again, add a Contact and select strong>Always</strong> to the <strong>Encrypt to contact</strong> field.
+</p>
+
+<p>
+Here's a chart showing how the global option <strong>Require outbound encryption</strong>, and a Contact's <strong>Encrypt to contact</strong> fields impact which messages are sent as plain text, which are encrypted, and which will bounce to the sender.
+</p>
+
+<p>
+Of course, if the recipient's system is also using GoodCrypto and you are protecting metadata, then all messages to the recipient's system will be encrypted regardless of the other global or contact's settings.
+</p>
+
+<div class="table-responsive btn-group">
+    <table class="table table-responsive">
+        <tr>
+            <th align="center">
+                <p>&nbsp;</p>
+                Require outbound encryption
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Encrypt to contact
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Have public key for contact
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Action
+                <p>&nbsp;</p>
+            </th>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bounce to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bounce to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plan text
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bound to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+    </table>
+</div>
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Mail issues"></a>
+            <p>&nbsp;</p>
+            <p><h3>Mail issues</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="36"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Your system has already been customized."
+                    </h4>
+
+                        <h4 class="dropcap">
+                            The GoodCrypto Server has already been configured. You cannot configure it multiple times.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You can adjust the MTA address after the initial configuration.
+
+<ol>
+  <li>Go to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto Server's website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu.</li>
+  <li>Click on <strong>Options</strong>. This button only appears if you log in as an administrator.</li>
+  <li>Change and save the <strong>MTA address</strong>.</li>
+  <li>Logout.</li>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="37"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Unable to configure GoodCrypto Mail"
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Something unexpected has happened and we'd like as much information about the computer you're running your GoodCrypto private server to help us identify the challenge.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="38"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why aren't private keys created?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        There are a few possibilities so check:
+<ol>
+ <li>Is GoodCrypto Mail active? Go to the GoodCrypto Server's website and click the <strong>Status</strong> menu item.</li>
+
+<li>Do you have the Mail Options set to create private keys? If not, enable this option from your <a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">GoodCrypto Server's website</a>. Click the Mail menu item, and then click "Options".</li>
+
+<li>If there was an error while the key was being created, then a semaphore might have been left in the queue.</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="43"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Postfix log shows "Relay access denied"
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Check the mail server address, also know as the MTA address, is set correctly.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+<ol>
+  <li>click on <strong>Mail</strong> in the menu</li>
+  <li>click on <strong>Options</strong> button</li>
+  <li>login</li>
+  <li>verify the <strong>MTA address</strong> so it matches the address of the computer where postfix runs</li>
+  <li>if the MTA address is wrong, then click on it and adjust it</li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="58"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What do I do when postfix reports, "Cannot assign requested address"?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You should remove the IP address before the port in your /etc/postfix/master.cf. For example, if the line now reads:
+
+<pre>
+12.167.295.8:10026 inet  n       -       n       -       10      smtpd
+</pre>
+
+Change the line to look like this:
+<pre>
+:10026 inet  n       -       n       -       10      smtpd
+</pre>
+
+If you are running multiple instances of postfix, then you should also consider adding the following line to the main.cf for the postfix configuration that is reporting the error:
+
+<pre>
+smtp_bind_address = 0.0.0.0
+</pre>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="70"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Message contained a bad GPG key in header
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        If you receive this message, you should look very carefully at the attachment. It's possible that someone has included a key for another user in the header. GoodCrypto will only import a key if the sender matches the key.
+
+If you participate in a mailing list, then you might see this message because some mailing list servers forward messages with the original headers. You can simply ignore it.
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="71"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Undelivered Mail Returned to Sender. This is the mail system at host goodcrypto.private.server.
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        You should only receive this message if something unexpected happened on your GoodCrypto private server.
+<p>
+We would love you to forward the message to us after you replace any personal email addresses and IP addresses with XXX.
+<p>
+If you look at the bottom of the message you may find some details that you can act upon. For example, if the GoodCrypto private server runs out of memory, the message will include, "Cannot allocate memory". You'll need to add memory to the server.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="65"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        I got a message from a GoodCrypto user. Why didn't I get their key?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Their key probably hasn't been generated yet.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        It takes a while to generate and exchange keys.
+
+<p>
+Your messages from someone aren't encrypted until they have your key. They get a message from you with a line added by GoodCrypto saying "You received a new public key." After that, messages from them to you will be encrypted. Not before.
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Web issues"></a>
+            <p>&nbsp;</p>
+            <p><h3>Web issues</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="24"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Secure Connection Failed . . . Your certificate contains the same serial number as another"
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Restart your browser
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+This appears to be a false alarm that happens when your GoodCrypto Private Server is rebooted.
+
+<p>
+If the error shows again after you restart your browser, reboot your own system.
+
+<p>
+If you see the same error again right after you reboot, it's probably real. Follow the instructions on the screen.
+
+<p>
+Sometimes this error is temporary. It disappears when you restart your browser or reboot. Or it may be a real attack.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="60"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "This Connection is Untrusted . . . because no issuer chain was provided."
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Firefox says no issuer chain.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        See <a href="/qna/knowledge-base/secure-connection-failed-certificate-extension-value-invalid.html">"Secure Connection Failed . . . Certificate . . . is invalid."</a>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="59"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Secure Connection Failed . . . Certificate . . . is invalid."
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Firefox claims certificate is invalid.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Try <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21680147" target =" _blank ">IBM's simple fix</a>:
+<ol>
+    <li> Type <strong>about:config</strong> in the Firefox address bar to access Advance settings. Read the warning presented, and then click the "I'll be careful, I promise" prompt to accept and proceed.
+    <li> Scroll down to <strong>security.use_mozillapkix_verification</strong> and set it to <strong>false</strong>. Double-click to toggle its value (or, right-click on it and select Toggle)
+</ol>
+
+Firefox has had this intermittent error since version 31.0.
+The simplest solution is to use an earlier version of Firefox.
+
+<p>
+IBM has more <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21680147" target =" _blank ">suggestions</a>.
+
+<p>
+Firefox Error codes:
+<ul>
+  <li> sec_error_extension_value_invalid
+  <li> sec_error_ca_cert_invalid
+  <li> sec_error_unknown_issuer
+</ul>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="82"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Broken pipe" in browser
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Try to load the page again.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        A broken pipe while sending data usually means the browser quit listening. The browser may have timed out or the user may have canceled the request.
+
+<p>
+Example:
+<pre>
+2013-10-22 19:09:21,655 DEBUG     self.request.sendall(self.mitm_response(res))
+2013-10-22 19:09:21,655 DEBUG   File "/usr/lib/python2.7/ssl.py", line 229, in sendall
+2013-10-22 19:09:21,659 DEBUG ----------------------------------------
+2013-10-22 19:09:21,660 DEBUG     v = self.send(data[count:])
+2013-10-22 19:09:21,660 DEBUG   File "/usr/lib/python2.7/ssl.py", line 198, in send
+2013-10-22 19:09:21,661 DEBUG     v = self._sslobj.write(data)
+2013-10-22 19:09:21,661 DEBUG error: [Errno 32] Broken pipe
+</pre>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="34"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        "Secure Connection Failed . . . Peer's certificate has an invalid signature."
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Import the new web certificate.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ol>
+  <li>In your browser, delete the "GoodCrypto Private Server" certificate.</li>
+  <li>Import the new certificate. See <a href="/qna/knowledge-base/import-web-certificate.html">How do I import the web certificate</a></li>
+</ol>
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

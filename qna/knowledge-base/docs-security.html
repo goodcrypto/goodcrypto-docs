@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I secure my GoodCrypto private server?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    Your GoodCrypto private server reduces the vectors of attack by limiting the software installed on the server to the bare minimum. For example, the server does not include ssh and includes a firewall to restrict access.
+
+<p>
+Your primary concern should be securing the computer running GoodCrypto and keeping up-to-date with security releases.
+
+<p>
+The most secure way to operate GoodCrypto is on a headless machine. Regardless where you've installed your server it should be behind a well secured network firewall and with limited physical access.
+</p>
+
+<p>
+Keeping all security software current is essential so you're not exposed to vulnerabilities.
+<p>
+
+<p>
+Other suggestions...
+<ul>
+<li>You should not add any other software to your server</li>
+<li>If you're running GoodCrypto in a VM, then don't have any other software running on the computer.</li>
+<li>Change the <a href="/qna/knowledge-base/change-mail-options.html">Mail | Options</a> on <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server's</a>  so users must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> to verify fingerprints and export keys.  This will reduce unauthorized users from figuring out your group's contacts.</a>
+</ul>
+
+You might also want to require a new key be verified before it can be used by changing the <a href="/qna/knowledge-base/change-mail-options.html">Mail | Options</a> on <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server's</a>. A disadvantage might be that it's more hassle for users before they can communicate privately.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I verify an outgoing message will be protected</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <ol>
+  <li><a href="/qna/knowledge-base/access-goodcrypto-server.html">Go to your GoodCrypto private server</a>.</li>
+  <li>Click the <strong>Mail</strong> menu item.</li>
+  <lI>Click the <strong>View ID</strong> button. If your administrator requires you to sign in, then use the credentials you received via email from the GoodCrypto Mail Daemon.</li>
+  <li>Enter your contact's email address and click OK.</li>
+</ol>
+
+<p>
+The message will be sent privately if:
+<ul>
+  <li>you see the contact's fingerprint</li>
+  <li>the key is active</li>
+  <li>the key is verified or the key is not required to be verified</li>
+</ul>
+
+<p>
+Your message may still be sent privately if the contact's company is protecting metadata via GoodCrypto.  Any messages sent to a domain that has metadata protection have the body of the message protected, too. Learn how to see if a <a href="/qna/knowledge-base/known-metadata-domains.html">company is ready to protect metatdata</a>.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

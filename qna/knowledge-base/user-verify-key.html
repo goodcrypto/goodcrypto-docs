@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I verify a key, or a fingerprint?</h2>
+
+
+            <h4 class="dropcap">
+                For safety, verify keys in at least two ways.
+            </h4>
+
+                <p>
+                    The most common way is when your contact appears to have successfully read a message you encrypted to them, but you need at least one more verification to be safe.
+
+<p>
+Ask the contact to provide their public key or its <a href="/qna/technical/fingerprint.html">fingerprint</a> through a channel other than email. The key or fingerprint must match your own copy.  Compare fingerprints as described below.
+
+<p>
+Best is face to face.
+Other examples are for them to publish their key's fingerprint on a public
+site or service, or provide it by phone, SMS (if encrypted), or snail mail.
+
+<p>
+If you are verifying by hand, the longest version of the fingerprint is best.
+You don't have to verify the whole key by hand.
+A fingerprint is a really good summary of a key.
+If you verify the key's fingerprint, you have verified the key.
+
+<p>
+If you got a public key from a web site,
+it doesn't help much to verify using a fingerprint from the same web site.
+An attacker can spoof the web site and provide a matching fake fingerprint.
+
+<h4>To compare a fingerprint using GoodCrypto:</h4>
+<ol>
+    <li>Browse to <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server website</a>.</li>
+  <li>Click on the <strong>Verify fingerprint</strong>; if the button is not on the screen, then click the <strong>Mail</strong> menu</li>
+  <li>Type in the email address and click the <strong>Verify</strong> button.</li>
+  <li>
+        A fingerprint and a key summary are the same thing.
+        Compare the <strong>Key summary</strong> with the other person's <strong>Key summary</strong>.
+        Ignore spaces and whether a character is upper or lower case.
+        Otherwise they must match.
+  </li>
+  <li>
+        <font color="red"><strong>
+            If they don't match, do NOT use that key to communicate.
+        </strong></font>
+  </li>
+  <li>If the fingerprint is not flagged as verified and you have verified it, then you should <a href="/qna/knowledge-base/mark-key-verified.html">flag the fingerprint as verified in the database</a></li>
+</ol>
+</p>
+
+<p>
+If the other person is also using GoodCrypto Mail, then they should follow this same procedure. Otherwise, they must use their encryption software program to get the key summary, known as the fingerprint in most encryption software, for the matching email address.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I configure GoodCrypto to create private keys automatically?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a></li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Options</strong> button. This button only appears if you're logged in as the administrator.</li>
+  <li>Click on the <strong>MTA address</strong></li>
+  <li>Add a check mark to <strong>Create private keys</strong> if there isn't one</li>
+  <li>Click <strong>Save</strong></li>
+</ol>
+
+<p>
+GoodCrypto will automatically create a private key, if one doesn't exist, whenever a user sends email to anyone.
+</p>
+
+<p>
+Key generation can take a minute or more so after the first message is sent, the user probably wants to wait a few minutes before sending another.
+</p>
+
+<p>
+If you elect to turn off automatic key generation in the <a href="/qna/knowledge-base/configure-mail-options">Options</a>. If you elect to do this, then you'll need to <a href="/qna/knowledge-base/gen-key-manually.html">generate the keys manually</a>.
+</p>
+
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

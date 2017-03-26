@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I run my GoodCrypto ISO on a new computer?</h2>
+
+
+            <h4 class="dropcap">
+                To reduce the possibility of hidden malware, GoodCrypto will reformat the system data drive.
+            </h4>
+
+                <p>
+                    <ol>
+        <li> <strong>Save the iso to a bootable device.</strong> We recommend you burn to readonly media such as a DVD.
+                If you choose to use a usb drive, you can just copy the iso straight to the drive.
+       </li>
+        <li> <strong>System requirements</strong>:
+              <div class="well">
+                  <ul>
+                      <li> Intel 64 bit processor with virtual machine support</li>
+                      <li> 4+ GB RAM + mail needs (8 GB or more suggested)</li>
+                      <li> 10 GB drive + mail space (500 GB or more suggested) <br/>
+                               The drive must be empty. </li>
+                      <li> Bootable from ISO (DVD recommended, USB, etc.) </li>
+                      <li> DHCP access </li>
+                      <li> Internet access </li>
+                  </ul>
+              </div>
+        </li>
+        <li> <strong>Back up any data from the hard drive.</strong> GoodCrypto will reformat the drive to reduce the possibility of hidden malware.</li>
+        <li> <strong>Boot the new computer from the iso.</strong> GoodCrypto needs a dedicated data drive. If it can't find an empty one to format, it will say so and not boot. You might see an error message about the wrong file type which you can ignore. GoodCrypto will automatically format the drive with the correct type. On the first boot, you may notice a delay. GoodCrypto is reformatting the empty drive and creating unique keys.
+        </li>
+        <li> <strong>Configure and maintain your GoodCrypto server on your private website.</strong> Browse to the new computer's IP address using port 8443 if you're using https, or 8080 if you're using http. Examples: http://199.18.0.50:8080 or https://199.18.0.50:8443. We recommend you use https, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert. <em> If your browser says it can't contact the site, wait a few minutes and try again.</em> </li>
+        <li> <strong>Enter the administrator's address for the domain you want to protect on your GoodCrypto private server.</strong>
+                This address will be used to find your mail server, and to receive admin messages from your GoodCrypto private server.
+                You may also opt to receive security alerts from GoodCrypto at this address.</li>
+       <li>Follow the rest of the instructions provided on your GoodCrypto private server.</li>
+    </ol>
+
+    <p class="important dropcap">
+        <strong>We strongly recommend</strong> that you:
+        <ol>
+           <li> Maintain your GoodCrypto Server in a secure location. </li>
+            <li> Limit access to authorized users. </li>
+            <li> Maintain a <a href="/qna/knowledge-base/configure-firewall.html">correctly configured firewall</a>. </li>
+        </ol>
+    </p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

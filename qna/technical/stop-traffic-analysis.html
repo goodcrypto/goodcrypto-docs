@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How does GoodCrypto stop traffic analysis?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    GoodCrypto uses packetization, padding, and encryption to stop both network and traffic analysis. On a regular schedule it combines individual messages going to a group, pads them to a standard size, and wraps them in an extra layer of encryption that protects all the messsages and hides all individual metadata.
+
+<p>
+The default settings send a single one MB group-to-group message every hour, even when no individuals have sent mail to the other group.
+That allows the equivalent of one entire book of email text every hour. It adds just one GB of traffic per month per group to stop traffic analysis. The administrator can <a href="/qna/knowledge-base/change-mail-options.html">change these settings</a>.
+</p>
+
+<p>
+If the total of pending outgoing individual messages are too big for a single standard group message, unsent messages are queued for later.
+If a message is bigger than the group message size it is returned to the sender with an explanation.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

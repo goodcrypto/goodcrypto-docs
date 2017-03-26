@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Overview | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+<h3>Overview</h3>
+
+    <p class="dropcap">GoodCrypto is a private server that runs on your computer which protects email and browsing for a group. It automatically encrypts and decrypts email including metadata, and manages keys. Everyone in the group gets <a href="https://www.youtube.com/watch?v=JWII85UlzKw">Tor</a> anonymity plus malware blocking and tracker removal. GoodCrypto is based on the most tested and trusted crypto, GPG and Tor. Snowden relied on them, and he is alive and free. It's hard to imagine a better test.
+</p>
+
+    <p>GoodCrypto is distributed as a preconfigured, bootable ISO. It contains all the software that you need to protect your group's mail and browsing, including full source. You simply need to integrate it with your mail server and browsers.
+
+<p>
+As years of experience with TLS, SSH, and GPG have shown, configuring crypto is hard. GoodCrypto is preconfigured to remove the hassles and improve security.
+
+<p>The smaller your group is, the less you can afford to install and configure your own crypto. The larger your organization is, the less you can afford users to install and configure their own crypto.
+</p>
+</p>
+
+    <p>GoodCrypto is a security server and should be in a secure location with restricted access. For maximum security, we recommend that you run GoodCrypto on a headless computer.
+
+<p>
+Your GoodCrypto private server has <a href="/qna/knowledge-base/access-goodcrypto-server.html">its own web site</a>. It's organized to reflect the two main components of GoodCrypto:
+Mail and Web.</p>
+
+<p>
+You will get the best protection by encouraging others to use GoodCrypto or PGP so exchanged messages are private and secure.  Whenever GoodCrypto receives a new key from another GoodCrypto private server,  the key is automatically imported. GoodCrypto sends mail to the user reminding them to  <a href="/qna/knowledge-base/user-verify-key/index.html">verify the fingerprint</a>.  If some of your contacts use PGP without GoodCrypto, <a href="/qna/knowledge-base/sign-in-to-goodcrypto-server/index.html">sign into</a> your GoodCrypto private server and  <a href="/qna/knowledge-base/import-key.html">import</a> their public keys.
+</p>
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

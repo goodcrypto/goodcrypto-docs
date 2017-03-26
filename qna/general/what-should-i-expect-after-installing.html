@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: General Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What should I expect after installing?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+
+When you first install GoodCrypto, you customize it. Then you configure your existing mail server and browsers for it. Then nothing much seems to happen. Your GoodCrypto private server is almost invisible. That's what makes it so easy.
+
+<h3>Mail</h3>
+
+<p>
+Don't expect to see anything different for local mail. That should already be protected by TLS. (If your mail server doesn't require TLS for local mail, take a few minutes now to fix that. It's important.)
+
+<p>
+As soon as someone sends their next message to anywhere, GoodCrypto generates their PGP key. You can see it on your private server's web site.
+
+<p>
+When two groups both use GoodCrypto, each person has to send one last unencrypted message to the other.
+
+<p>
+After that, the connection is encrypted. At the bottom of each message from your contact you'll see, "This message was received privately."
+
+<p>
+Here's what they <em>didn't</em> have to do:
+<ul>
+    <li> Create a key
+    <li> Publish their public key
+    <li> Find every other person's public key
+    <li> Import every other public key they need
+    <li> Encrypt and sign each outgoing message
+    <li> Decrypt and check the signature on each incoming message
+</ul>
+</p>
+
+<p>
+GoodCrypto sends its own messages letting you know what's going on behind the scenes. At the beginning you get a message when your new key is ready. You also hear when a new public key from a contact comes in.
+</p>
+
+<p>
+You can also communicate privately with anyone who uses OpenPGP. But if they aren't using GoodCrypto it's not completely automatic.
+</p>
+
+<h3>Web</h3>
+
+<p>
+Some changes when you browse are obvious at a glance. Everything looks different. The whole web appears much calmer. No pictures. No videos. No javascript. These are unfortunately all ways attackers can take over your computer without you knowing it happened. So GoodCrypto blocks them.
+</p>
+
+<p>
+Some web sites are very unhappy when they can't spy on you. They complain that your browser is old or misconfigured. Ignore them.
+</p>
+
+<p>
+There's also a lot you can't see. All your web traffic goes through Tor. Outgoing private information that you didn't send is stripped.
+</p>
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: General Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How does GoodCrypto Mail work?</h2>
+
+
+            <h4 class="dropcap">
+                You continue to read and write your email as usual.
+            </h4>
+
+                <p>
+                    <img src="/static/images/diagrams/decrypt_email.png" alt="Decrypting inbound mail"><br/>
+
+<p class="dropcap">GoodCrypto Mail works between your mail server and the world, automatically making your messages private. Without GoodCrypto, anyone can read your mail. With GoodCrypto, whenever you <em>and</em> your contacts use GoodCrypto or other privacy software, no one can read it until it's unlocked. You don't have to do anything. You just read and write mail as usual. GoodCrypto locks and unlocks private messages for you.</p>
+
+<p>&nbsp;</p>
+
+<h4> Step by Step </h4>
+
+<p>Let's look at how mail between Ted and Alice works.  Assume:
+<ol>
+    <li> They've never used crypto, and don't know much about it.</li>
+    <li> They work at different companies</li>
+    <li> Both businesses have installed GoodCrypto. GoodCrypto works with other PGP packages, too.</li>
+</ol>
+
+<p>Ted sends a message to Alice using his favorite mail client. He doesn't do anything differently. This first message is unprotected, since Ted and Alice don't have any keys yet. The message goes to Alice immediately. Then the GoodCrypto server creates keys for Ted.</p>
+
+<p>Alice responds to Ted's message. Like Ted, she sends mail exactly the way she always does.  Because Ted's key isn't ready yet, this message from Alice isn't encrypted. GoodCrypto adds a note to every message telling you whether it was encrypted. Her company's GoodCrypto server creates her keys. Both Ted and Alice will receive email from the GoodCrypto server when their keys are ready. </p>
+
+<p>After Ted's key is ready, when he sends Alice a message his public key will be in the header. This message is also unencrypted because Ted doesn't have Alice's key yet.</p>
+
+<p>When Alice receives this message, her company's GoodCrypto server sends two notifications. One tells Alice she now has Ted's key. The other goes to the administrator to say the no-metadata key for Ted's company arrived. Both Alice and the administrator should <a href="/qna/knowledge-base/user-verify-key.html">verify these keys</a>. Alice's GoodCrypto server also sends Ted's GoodCrypto server the no-metadata key for Alice's company.</p>
+
+<p>Here's the magic. Ted and Alice didn't have to do anything. They just exchanged email as usual. No one has to remember passphrases or click extra buttons. GoodCrypto's key management creates, exchanges, and pins keys automatically. Now whenever Ted and Alice exchange a message, it's protected. Both content and metadata are encrypted, mixed, and padded.  In fact, anyone in either company can send encrypted mail to anyone at the other company. The metadata protection includes its own layer of encryption. No one has to do anything. </p>
+
+<p>
+For encryption and decryption, the GoodCrypto server never connects directly to the Internet. It only talks to your mail server. GoodCrypto benefits from any protection the mail server has.
+</p>
+
+<p>
+The layers of encryption, hopefully including SMTP TLS, mean that when one layer fails you're still protected. GoodCrypto encrypts from individual to individual, then it mixes messages from one group to another, pads, and encrypts again. A well configured mail server encrypts one more time. Encryption fails over time. With layered encryption, if even one layer works, you have time to fix or replace the failed layer. If you rely on a single layer of encryption, any failure is catastrophic. A defense in depth is much safer.
+</p>
+
+<p><a href="/qna/technical/goodcrypto-and-other-encryption.html">Learn how GoodCrypto works if a contact does not have GoodCrypto.</a></p>
+
+<p><a href="/qna/technical/metadata-protection-security-viewpoint.html">Learn how GoodCrypto protects metadata.</a></p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

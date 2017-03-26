@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What are GoodCrypto's security features?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Encrypts content <em>and</em> metadata</strong>
+It's easy to understand how someone who can read your mail gains
+a lot of valuable information about your business deals,
+financial data and more. As articles in
+<a href="http://www.theguardian.com/technology/interactive/2013/jun/12/what-is-metadata-nsa-surveillance">The Guardian</a>
+and
+<a href="http://www.thewire.com/technology/2013/06/email-metadata-nsa/66657/">Wired</a>
+showed, metadata (i.e., sender and recipient addresses, subjects, etc.) reveals much more
+private information about you than you might realize. The ex-NSA chief admitted that
+
+"<a href="http://www.thenewamerican.com/usnews/crime/item/18244-we-kill-people-based-on-metadata-admits-former-cia-nsa-boss">We kill people based on metadata.</a>"
+GoodCrypto lets you protect both <a href="/qna/technical/protect-metadata-and-stop-traffic-analysis.html">metadata and content</a>.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Mixes and packetizes messages to resist both network and traffic analysis</strong>
+You can protect your connections with others even more by using GoodCrypto's
+<a href="/qna/knowledge-base/packetization-details.html">bundling and packetization</a>. Messages between two domains are sent in padded and encrypted bundles on a regular
+schedule. So no one knows which individuals in the companies are communicating,
+how often, or even whether messages are long or short. GoodCrypto encrypts each individual message,
+then periodically bundles all messages that are going to the other domain, pads the new combined
+message, and finally encrypts the entire bundle. If no one has a message for the
+other domain, GoodCrypto still sends a padded encrypted message. Snoops don't know if anyone is actually talking.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Pins keys</strong>
+GoodCrypto includes the sender's key in the header
+of every message. Whenever a message arrives from
+someone else using GoodCrypto, the key is verified
+that it matches the key in your local database. That
+way someone can't fake sending an encrypted message from someone else.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Blocks web malware</strong>
+GoodCrypto's web proxy strips images and other malware vectors so your users'
+computers aren't infected.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Resists user tracking</strong>
+Everyone's web requests can automatically be routed through Tor so it's
+difficult to track what sites users visit. By sharing the same Tor connection,
+everyone in your company's web activity is aggregated which amplifies the
+protection against tracking of online activity.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Your administrator runs our software on your server</strong>
+We strongly recommend that you install your GoodCrypto private
+server on a headless machine. It is fully self-contained with no
+SSH access. Your administrator manages your GoodCrypto private server
+via the web with no interface to keys, passphrases, or messages.
+</p>
+<p>
+All encryption and decryption happens on your servers.
+Your administrator manages your mail just like always.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>All private keys and passphrases stay on your server</strong>
+You don't need to trust any thirdparty. You
+can secure your GoodCrypto private server to meet your standards --
+not rely on others.</p>
+<p>
+Any government requests for encryption keys comes to your company so
+you'll know if the keys are no longer secure.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Easy verification that email was decrypted by your GoodCrypto private server</strong>
+You can click on a tag added to each decrypted message to verify the message
+was decrypted by your GoodCrypto private server. This ensures that someone doesn't
+simply add a tag to a regular message to mislead you into thinking it arrived privately.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Open source so anyone can audit code</strong>
+All of the source code we've written for this project is open source and included
+with every distribution. Plus we rely on other open source projects for the
+crypto (GPG and Tor) and the OS itself (Linux). We encourage anyone with the skill
+to audit our software and publish the results.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Warning if message signed by user other than SMTP sender</strong>
+GoodCrypto verifies that a signed message was signed by the SMTP sender and reports
+if it's not. The SMTP sender is not always the same user as the one that appears in
+the header of a message so if someone is trying to trick you into believing a message
+was signed by someone it wasn't, GoodCrypto will help you spot the attempted deception.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Sender notification when new key received or created</strong>
+GoodCrypto sends an email message whenever a new key from a sender is received.
+It also reminds you to verify the key id with the sender so you can be confident
+you're communicating privately with the person you think you are instead of a
+man-in-the-middle.
+</p>
+
+
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

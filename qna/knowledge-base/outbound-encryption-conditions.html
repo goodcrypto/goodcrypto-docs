@@ -1,0 +1,355 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I control whether an outbound message is encrypted or not?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <p class="dropcap">
+The administrator has a lot of flexibility about when encryption is used. Of course, the recipient or the recipient's company must also being using encryption for any messages to be encrypted.
+</p>
+
+<p>
+You can require all outbound message be encrypted by going to the Mail | Options and adding a check mark to the appropriate field. Of course, it's not likely that everyone you exchange messages will also be using encryption so you can add each email address to the Mail | Contact list and select <strong>Never</strong> to the <strong>Encrypt to contact</strong> field.
+</p>
+
+<p>
+You can also decide that there are particular individuals that you only want to exchange encrypted message. Again, add a Contact and select strong>Always</strong> to the <strong>Encrypt to contact</strong> field.
+</p>
+
+<p>
+Here's a chart showing how the global option <strong>Require outbound encryption</strong>, and a Contact's <strong>Encrypt to contact</strong> fields impact which messages are sent as plain text, which are encrypted, and which will bounce to the sender.
+</p>
+
+<p>
+Of course, if the recipient's system is also using GoodCrypto and you are protecting metadata, then all messages to the recipient's system will be encrypted regardless of the other global or contact's settings.
+</p>
+
+<div class="table-responsive btn-group">
+    <table class="table table-responsive">
+        <tr>
+            <th align="center">
+                <p>&nbsp;</p>
+                Require outbound encryption
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Encrypt to contact
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Have public key for contact
+                <p>&nbsp;</p>
+            </th>
+            <th align="center">
+                <p>&nbsp;</p>
+                Action
+                <p>&nbsp;</p>
+            </th>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bounce to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bounce to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Send plan text
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Bound to sender
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                No
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Always encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Never encrypt
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send plain text message
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Use global setting
+            </td>
+            <td align="center">
+                Yes
+            </td>
+            <td align="center">
+                Send encrypted message
+            </td>
+        </tr>
+    </table>
+</div>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

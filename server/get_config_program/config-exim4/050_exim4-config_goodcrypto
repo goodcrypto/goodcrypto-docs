@@ -1,0 +1,16 @@
+# instruct Exim to pass all mail using SMTP to goodcrypto,
+# except the mail that just came-in back to Exim from goodcrypto
+# through the local port 10028, as these messages were already
+# checked and approved by goodcrypto
+
+goodcrypto:
+        driver = manualroute
+        condition = "${if eq {$interface_port}{10028} {0}{1}}"
+        # if scanning incoming mails, uncomment the following line and
+        # change local_domains accordingly
+        domains = +local_domains
+        transport = goodcrypto
+        route_list = "* localhost byname"
+        self = send
+
+

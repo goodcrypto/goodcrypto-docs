@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Is there a script to configure postfix to work with GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+                Yes.
+            </h4>
+
+                <p>
+                    <ol>
+  <li>Verify your mail server has the <a href="#prereqs">requirements</a>. If not, then <a href="/qna/knowledge-base/config-postfix-securely.html">use the cut and paste method</a> to configure your server.</li>
+<li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/goodcrypto-postfix.tgz/download" class="btn btn-primary btn-sm" title="Configuration program for postfix" <strong>postfix configuration script</strong></a>.  The program automatically makes a backup copy of your existing postfix configuration before making any changes to the configuration files. It also configures postfix to "soft bounce" any messages in case of unexpected issues.</li>
+  <li>Verify the downloaded file:
+          <ul>
+          <li> Filesize: 26,445 bytes</li>
+          <li> SHA512(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 4f86f2fdf8ac00da8a4126e2e269c5d56b96d9f410d91af45b47f794c81242f831f81ab42a9dd7dd0251f0e43c5a807704fee76e915c716bba9eac020fb8cd28
+</li>
+          <li> SHA256(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 8d85dc214f50a32d98ce864dd58b310f7e64eab42b720887c5e78c7cb571ae47
+</li>
+          <li> MD5(/var/local/projects/goodcrypto/website/src/server/goodcrypto-postfix.tgz)= 3102f0409cd2e284798157272644b405</li>
+          <li> PGP signature: <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/goodcrypto-postfix.tgz.sig/download">tgz sig</a> </li>
+         </ul>
+  <li>Move the downloaded file to the computer that runs postfix for your mail server</li>
+  <li>Expand the file using the command: <strong>tar xvzf goodcrypto-postfix.tgz</strong><br/>
+          You will see a new subdirectory named config-postfix.</li>
+  <li> Change to the config-postfix subdirectory.</li>
+  <li> The postfix-gc script makes a backup before changing anything.
+         With root or admin privileges, run
+          <pre>postfix-gc IP_ADDRESS_FOR_YOUR_PRIVATE_GOODCRYPTO_SERVER</pre>
+           Replace IP_ADDRESS_FOR_YOUR_PRIVATE_GOODCRYPTO_SERVER
+           with the IP address of your GoodCrypto private server. </li>
+  <li>Review the postfix configuration files. If everything looks ok, then restart postfix. If you have any problems, you can restore your original configuration by copying the original files from the Backup directory in /etc/postfix.</li>
+  <li> Send a message to someone outside of your domain to verify that postfix is working.</li>
+  <li> Once you are comfortable, you can remove the "soft_bounce = yes" line from /etc/postfix/main.cf</li>
+</ol>
+
+<p>
+We strongly recommend that you configure your SMTP/IMAP/POP servers and clients to default to TLS.
+ </p>
+
+<a name="prereqs"></a>
+<h3>Requirements</h3>
+<ul>
+<li> a working postfix configuration with TLS support. Learn more at <a href="http://www.postfix.org/TLS_README.html#server_tls">postfix.org</a></li>
+<li> postfix's configuration files are in /etc/postfix. If your files are in a different location, let us know.</li>
+  <li> python 2.7 or later installed. If you're running on Windows and you do not
+have it installed already, then you can https://www.python.org/downloads/windows/ Unix and Mac users should already have python installed.</li>
+<li> you can run the program with root or admin privileges </li>
+</ul>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

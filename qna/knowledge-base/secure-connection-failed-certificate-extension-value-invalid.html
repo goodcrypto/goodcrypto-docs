@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>"Secure Connection Failed . . . Certificate . . . is invalid."</h2>
+
+
+            <h4 class="dropcap">
+                Firefox claims certificate is invalid.
+            </h4>
+
+                <p>
+                    Try <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21680147" target =" _blank ">IBM's simple fix</a>:
+<ol>
+    <li> Type <strong>about:config</strong> in the Firefox address bar to access Advance settings. Read the warning presented, and then click the "I'll be careful, I promise" prompt to accept and proceed.
+    <li> Scroll down to <strong>security.use_mozillapkix_verification</strong> and set it to <strong>false</strong>. Double-click to toggle its value (or, right-click on it and select Toggle)
+</ol>
+
+Firefox has had this intermittent error since version 31.0.
+The simplest solution is to use an earlier version of Firefox.
+
+<p>
+IBM has more <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21680147" target =" _blank ">suggestions</a>.
+
+<p>
+Firefox Error codes:
+<ul>
+  <li> sec_error_extension_value_invalid
+  <li> sec_error_ca_cert_invalid
+  <li> sec_error_unknown_issuer
+</ul>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

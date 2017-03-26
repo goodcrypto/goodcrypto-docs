@@ -1,0 +1,500 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Whitepaper | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <h2>GoodCrypto Whitepaper</h2>
+
+    <div class="row">
+        <div class="col-md-2">
+            <a href="#Overview"><h4>Overview</h4></a>
+
+            <a href="#Solution"><h4>Solution</h4></a>
+
+            <a href="#Threat Model"><h4>Threat Model</h4></a>
+
+            <a href="#Design"><h4>Design &amp; Integration</h4></a>
+
+            <a href="#SecurityFeatures"><h4>Security Features</h4></a>
+
+            <a href="#MailWorks"><h4>How mail works</h4></a>
+
+            <a href="#WebWorks"><h4>How browsing works</h4></a>
+
+            <a href="#Limitations"><h4>Limitations</h4></a>
+
+            <a href="#MoreInfo"><h4>More Details</h4></a>
+        </div>
+
+        <div class="col-md-10">
+            <a name="Overview">&nbsp;</a>
+            <h3>Overview</h3>
+                 <p class="dropcap">
+
+<p><img src="/static/images/diagrams/email_overview.png" alt="Automatically encrypt and decrypt email"></p>
+<p>&nbsp;</p>
+
+<p>It's easy to think that when you exchange an email message or browse
+the web in the privacy of your office or home, no one else can see it.
+Prior to Edward Snowden's revelations, most of us probably thought economic espionage was
+just a Hollywood story line, not reality. Just a small sampling of recent news stories shows us how wrong that misconception was.
+
+<ul>
+    <li> <a href="http://www.theguardian.com/world/2014/jan/26/edward-snowden-nsa-industrial-sabotage" target =" _blank ">Edward Snowden tells German TV that NSA is involved in industrial espionage</a>.
+    (<em>Censored</em>. Copies
+    <a href="http://www.cbc.ca/m/touch/world/story/1.2511635" target =" _blank ">1</a>,
+    <a href="https://web.archive.org/web/20140127020717/http://www.theguardian.com/world/2014/jan/26/edward-snowden-nsa-industrial-sabotage" target =" _blank ">2</a>,
+    <a href="https://web.archive.org/save/http://www.cbc.ca/m/touch/world/story/1.2511635" target =" _blank ">3</a>, <a href="http://mobile.reuters.com/article/idUSBREA0P0DE20140126?irpc=932" target =" _blank ">4</a>)</li>
+    <li>US and Canadian spies have targeted Brazilian companies,
+    <a href="http://www.theguardian.com/world/2013/sep/09/nsa-spying-brazil-oil-petrobras" target =" _blank ">Petrobras</a> and
+    <a href="http://m.g1.globo.com/fantastico/noticia/2013/10/american-and-canadian-spies-target-brazilian-energy-and-mining-ministry.html" target =" _blank ">Energy and Mining Ministry</a>.</li>
+   <li>The Australian spy agency helped
+    <a href="http://www.smh.com.au/national/australian-spy-agency-helped-bhp-negotiate-trade-deals-20131106-2x1sw.html" target =" _blank ">BHP</a> negotiate trade deals.</li>
+    <li>The Guardian reported that XKeyscore is an NSA tool that collects
+    <a href="http://www.theguardian.com/world/2013/jul/31/nsa-top-secret-program-online-data" target =" _blank ">"nearly everything a user does on the internet"</a>.</li>
+</ul>
+
+<p>GoodCrypto stops spies from reading your email in transit and watching where you surf on the web.</p>
+</p>
+
+                <p><strong>Preconfigured</strong></p>
+
+                <p>GoodCrypto is distributed as a preconfigured, bootable ISO. It contains all the software that you need to protect your group's mail and browsing, including full source. You simply need to integrate it with your mail server and browsers.
+
+<p>
+As years of experience with TLS, SSH, and GPG have shown, configuring crypto is hard. GoodCrypto is preconfigured to remove the hassles and improve security.
+
+<p>The smaller your group is, the less you can afford to install and configure your own crypto. The larger your organization is, the less you can afford users to install and configure their own crypto.
+</p>
+</p>
+                </p>
+
+            <a name="Solution"><p>&nbsp;</p></a>
+            <h3>Solution: GoodCrypto Private Server</h3>
+
+                <p class="dropcap">GoodCrypto is a private server that runs on your computer which protects email and browsing for a group. It automatically encrypts and decrypts email including metadata, and manages keys. Everyone in the group gets <a href="https://www.youtube.com/watch?v=JWII85UlzKw">Tor</a> anonymity plus malware blocking and tracker removal. GoodCrypto is based on the most tested and trusted crypto, GPG and Tor. Snowden relied on them, and he is alive and free. It's hard to imagine a better test.
+</p>
+
+            <a name="Threat Model"><p>&nbsp;</p></a>
+            <h3>Threat Model</h3>
+
+                <p><strong>GoodCrypto's threat model is global passive and active attackers.</strong></p>
+
+                <p>Attackers include states, businesses, and ordinary criminals.
+<p>
+There is at least one global passive attacker, NSA. They strive to <a href="http://www.foxnews.com/tech/2013/06/11/inside-nsas-secret-utah-data-center/" target =" _blank ">tap and store everything</a>.
+
+<p>
+Counters to global passive attacks include:
+<ul>
+  <li> Encrypt (examples: TLS, GPG)
+  <li> Use combinatorial explosions such as mixing (examples: groups, Tor)
+</ul>
+
+<p>
+NSA is also the worst active attacker, although there are many.
+They sabotage and crack standards, products, and services.
+They inject packets and infect systems with malware.
+They embed compromised keys and bugs in hardware, at the factory and in transit.
+
+<p>
+Counters to active attacks include:
+<ul>
+  <li> Use tested and trusted products and services
+  <li> Avoid state sponsored standards
+  <li> Use firewalls
+  <li> Virtualize systems
+</ul></p>
+
+            <a name="Design"><p>&nbsp;</p></a>
+            <h3>Design and Integration</h3>
+
+                <p><strong>GoodCrypto's design is transparent protection for whole groups at a time.</strong></p>
+
+                <p>Our guiding principles are:
+<ul>
+<li><strong>Protect everyone at once</strong>
+
+<p>No training. No clicks.</p>
+
+<p>
+Bruce Schneier points out, "If there is anything PGP has taught us,
+it's that one click is one click too many."
+Protecting one person at a time is inefficient.
+You have to try to train each one to protect themselves.
+The success rate is not high.</p>
+
+<p>
+Most cracked systems are user systems because ordinary people have no idea how to protect themselves online.</p>
+</li>
+
+<li><strong>Layered protection</strong>
+<p>
+For example, web access is filtered, aggregated by groups and protected by Tor.  And, mail can be configured to use multiple encryption methods.
+</p>
+</li>
+
+<li><strong>Use tested and trusted components, such as GPG and Tor</strong>
+<p>We are very slow to use new protection schemes until they have been audited and their reliability proven.</p>
+</li>
+
+<li><strong>Preconfigured distribution</strong>
+
+<p>
+Just boot it. Preconfigured. Support. Security updates. Reproducible build.</p>
+</li>
+
+<li><strong>Decentralized</strong>
+
+<p>
+All your private information is on <em>your own server</em>.
+Automatic key management with no central servers. P2P public key distribution. Key pinning.</p>
+
+<li><strong>Integrate with existing mail and browsers</strong>
+
+<p>
+Uses the same SMTP, IMAP, and POP servers you use now. Same mail clients and browsers. Same antispam and antivirus. Integrates at the MTA level.</p>
+</li>
+
+<li><strong>Don't use known compromised encryption</strong>
+
+<p>
+This may seem obvious, but some compromised crypto is standard. State sponsored standards are generally crippled so the state can crack them, which of course means others can crack them.
+</p>
+</li>
+
+<li><strong>Don't trust too much</strong>
+
+<p>
+That includes us. Encourage people to audit GoodCrypto.
+The goal is to be tested and trusted, not blindly trusted.</p>
+</li>
+
+<li><strong>Virtualization to protect against embedded malware</strong>
+
+<p>
+Ed Snowden says that VMs are
+"<a href="https://theintercept.com/2015/11/12/edward-snowden-explains-how--to-reclaim-your-privacy/">a big step up</a>"
+against persistent threats. That matches our
+<a href="/news/how_to_protect_against_apts">experience</a>.
+</p>
+
+</li>
+</ul>
+</p>
+
+                <p> </p>
+
+            <a name="SecurityFeatures"><p>&nbsp;</p></a>
+            <h3>Special Security Features</h3>
+                <p class="dropcap"><p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Encrypts content <em>and</em> metadata</strong>
+It's easy to understand how someone who can read your mail gains
+a lot of valuable information about your business deals,
+financial data and more. As articles in
+<a href="http://www.theguardian.com/technology/interactive/2013/jun/12/what-is-metadata-nsa-surveillance">The Guardian</a>
+and
+<a href="http://www.thewire.com/technology/2013/06/email-metadata-nsa/66657/">Wired</a>
+showed, metadata (i.e., sender and recipient addresses, subjects, etc.) reveals much more
+private information about you than you might realize. The ex-NSA chief admitted that
+
+"<a href="http://www.thenewamerican.com/usnews/crime/item/18244-we-kill-people-based-on-metadata-admits-former-cia-nsa-boss">We kill people based on metadata.</a>"
+GoodCrypto lets you protect both <a href="/qna/technical/protect-metadata-and-stop-traffic-analysis.html">metadata and content</a>.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Mixes and packetizes messages to resist both network and traffic analysis</strong>
+You can protect your connections with others even more by using GoodCrypto's
+<a href="/qna/knowledge-base/packetization-details.html">bundling and packetization</a>. Messages between two domains are sent in padded and encrypted bundles on a regular
+schedule. So no one knows which individuals in the companies are communicating,
+how often, or even whether messages are long or short. GoodCrypto encrypts each individual message,
+then periodically bundles all messages that are going to the other domain, pads the new combined
+message, and finally encrypts the entire bundle. If no one has a message for the
+other domain, GoodCrypto still sends a padded encrypted message. Snoops don't know if anyone is actually talking.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Pins keys</strong>
+GoodCrypto includes the sender's key in the header
+of every message. Whenever a message arrives from
+someone else using GoodCrypto, the key is verified
+that it matches the key in your local database. That
+way someone can't fake sending an encrypted message from someone else.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Blocks web malware</strong>
+GoodCrypto's web proxy strips images and other malware vectors so your users'
+computers aren't infected.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Resists user tracking</strong>
+Everyone's web requests can automatically be routed through Tor so it's
+difficult to track what sites users visit. By sharing the same Tor connection,
+everyone in your company's web activity is aggregated which amplifies the
+protection against tracking of online activity.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Your administrator runs our software on your server</strong>
+We strongly recommend that you install your GoodCrypto private
+server on a headless machine. It is fully self-contained with no
+SSH access. Your administrator manages your GoodCrypto private server
+via the web with no interface to keys, passphrases, or messages.
+</p>
+<p>
+All encryption and decryption happens on your servers.
+Your administrator manages your mail just like always.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>All private keys and passphrases stay on your server</strong>
+You don't need to trust any thirdparty. You
+can secure your GoodCrypto private server to meet your standards --
+not rely on others.</p>
+<p>
+Any government requests for encryption keys comes to your company so
+you'll know if the keys are no longer secure.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Easy verification that email was decrypted by your GoodCrypto private server</strong>
+You can click on a tag added to each decrypted message to verify the message
+was decrypted by your GoodCrypto private server. This ensures that someone doesn't
+simply add a tag to a regular message to mislead you into thinking it arrived privately.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Open source so anyone can audit code</strong>
+All of the source code we've written for this project is open source and included
+with every distribution. Plus we rely on other open source projects for the
+crypto (GPG and Tor) and the OS itself (Linux). We encourage anyone with the skill
+to audit our software and publish the results.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Warning if message signed by user other than SMTP sender</strong>
+GoodCrypto verifies that a signed message was signed by the SMTP sender and reports
+if it's not. The SMTP sender is not always the same user as the one that appears in
+the header of a message so if someone is trying to trick you into believing a message
+was signed by someone it wasn't, GoodCrypto will help you spot the attempted deception.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Sender notification when new key received or created</strong>
+GoodCrypto sends an email message whenever a new key from a sender is received.
+It also reminds you to verify the key id with the sender so you can be confident
+you're communicating privately with the person you think you are instead of a
+man-in-the-middle.
+</p>
+
+
+</p>
+
+            <a name="MailWorks"><p>&nbsp;</p></a>
+            <h3>How GoodCrypto mail works</h3>
+                <p>&nbsp;</p>
+                <p class="dropcap"><img src="/static/images/diagrams/decrypt_email.png" alt="Decrypting inbound mail"><br/>
+
+<p class="dropcap">GoodCrypto Mail works between your mail server and the world, automatically making your messages private. Without GoodCrypto, anyone can read your mail. With GoodCrypto, whenever you <em>and</em> your contacts use GoodCrypto or other privacy software, no one can read it until it's unlocked. You don't have to do anything. You just read and write mail as usual. GoodCrypto locks and unlocks private messages for you.</p>
+
+<p>&nbsp;</p>
+
+<h4> Step by Step </h4>
+
+<p>Let's look at how mail between Ted and Alice works.  Assume:
+<ol>
+    <li> They've never used crypto, and don't know much about it.</li>
+    <li> They work at different companies</li>
+    <li> Both businesses have installed GoodCrypto. GoodCrypto works with other PGP packages, too.</li>
+</ol>
+
+<p>Ted sends a message to Alice using his favorite mail client. He doesn't do anything differently. This first message is unprotected, since Ted and Alice don't have any keys yet. The message goes to Alice immediately. Then the GoodCrypto server creates keys for Ted.</p>
+
+<p>Alice responds to Ted's message. Like Ted, she sends mail exactly the way she always does.  Because Ted's key isn't ready yet, this message from Alice isn't encrypted. GoodCrypto adds a note to every message telling you whether it was encrypted. Her company's GoodCrypto server creates her keys. Both Ted and Alice will receive email from the GoodCrypto server when their keys are ready. </p>
+
+<p>After Ted's key is ready, when he sends Alice a message his public key will be in the header. This message is also unencrypted because Ted doesn't have Alice's key yet.</p>
+
+<p>When Alice receives this message, her company's GoodCrypto server sends two notifications. One tells Alice she now has Ted's key. The other goes to the administrator to say the no-metadata key for Ted's company arrived. Both Alice and the administrator should <a href="/qna/knowledge-base/user-verify-key.html">verify these keys</a>. Alice's GoodCrypto server also sends Ted's GoodCrypto server the no-metadata key for Alice's company.</p>
+
+<p>Here's the magic. Ted and Alice didn't have to do anything. They just exchanged email as usual. No one has to remember passphrases or click extra buttons. GoodCrypto's key management creates, exchanges, and pins keys automatically. Now whenever Ted and Alice exchange a message, it's protected. Both content and metadata are encrypted, mixed, and padded.  In fact, anyone in either company can send encrypted mail to anyone at the other company. The metadata protection includes its own layer of encryption. No one has to do anything. </p>
+
+<p>
+For encryption and decryption, the GoodCrypto server never connects directly to the Internet. It only talks to your mail server. GoodCrypto benefits from any protection the mail server has.
+</p>
+
+<p>
+The layers of encryption, hopefully including SMTP TLS, mean that when one layer fails you're still protected. GoodCrypto encrypts from individual to individual, then it mixes messages from one group to another, pads, and encrypts again. A well configured mail server encrypts one more time. Encryption fails over time. With layered encryption, if even one layer works, you have time to fix or replace the failed layer. If you rely on a single layer of encryption, any failure is catastrophic. A defense in depth is much safer.
+</p>
+
+<p><a href="/qna/technical/goodcrypto-and-other-encryption.html">Learn how GoodCrypto works if a contact does not have GoodCrypto.</a></p>
+
+<p><a href="/qna/technical/metadata-protection-security-viewpoint.html">Learn how GoodCrypto protects metadata.</a></p>
+</p>
+
+            <a name="WebWorks"><p>&nbsp;</p></a>
+            <h3>How GoodCrypto browsing works</h3>
+                <p class="dropcap">Everyone continues to surf the web as usual. There's no new browser to learn.
+
+<p>Web access is filtered, aggregated by groups and protected by <a href="https://www.youtube.com/watch?v=JWII85UlzKw">Tor</a> after the administrator adjusts users' favorite browsers to rely on the GoodCrypto web filter.
+</p>
+
+<p>
+Web requests have identifying information stripped or replaced. Incoming responses are filtered for malware vectors.
+</p>
+
+<p>
+Individuals are mixed in a group. Groups are mixed by Tor. Even if someone cracks Tor, they don't know who accessed the page. They only know it was someone in a group.
+</p>
+
+<p>
+And if they do identify an individual, targeted malware is blocked.
+</p>
+</p>
+
+            <a name="Limitations"><p>&nbsp;</p></a>
+            <h3>Limitations</h3>
+                <p><strong>Do not use GoodCrypto...</strong>
+<ul>
+  <li> if you don't trust your administrator. Right now anyone can spy on your mail and browsing. GoodCrypto limits that risk to the administrator you already trust.
+  <li> if you don't trust your server. A server in the cloud can be especially vulnerable.
+  <li> if you're waiting for a solution that stops every imaginable attack. There isn't one. GoodCrypto stops mass surveillance for mail and web.
+</ul>
+
+<strong>Do not use GoodCrypto for mail encryption...</strong>:
+<ul>
+  <li> if you are a whistleblower or member of a suppressed group. GoodCrypto's metadata protection hasn't had enough field testing yet.
+  <li> if you are already encrypting mail. We don't want a monoculture.
+</ul>
+
+<strong>Do not use GoodCrypto for browsing...</strong>
+<ul>
+  <li> if you can't live without pictures, videos, etc. GoodCrypto blocks these malware vectors.
+</ul>
+
+<strong>Private and safe mail</strong>
+
+<p>
+GoodCrypto keeps the content of your mail private.
+It is safe from prying eyes. Think of it as an envelope for your email.
+</p>
+
+<p>
+GoodCrypto protects mail as it crosses the Internet. This stops mass surveillance and many targeted attacks. Your contacts can use GoodCrypto or any other OpenPGP package. Any properly configured mail server with TLS already protects between your own device and your mail server. GoodCrypto enhances your connection to add encryption, mixing, and padding between you and your contact. The result is end to end protection. Someone might possibly read your mail before it is sent, or after it arrives. But that's a <em>lot</em> harder.
+</p>
+
+<p>
+There are tradeoffs to everything. Automatic PGP for a group requires a group key store. If your GoodCrypto server is cracked, everyone in your group is exposed. The alternative is to store private keys on relatively unprotected user machines. Public internet servers already are trusted to store private keys. Your GoodCrypto server is private, not public. It is carefully configured and protected. This is safer than users protecting themselves, which they simply don't know how to do. </p>
+
+
+
+<strong>Don't trust too much</strong>
+
+<p>
+Please don't trust unencrypted communications with your life or liberty.  Choose your crypto carefully. Watch for reasons to review that decision.
+</p>
+
+<p>
+GoodCrypto is based on GPG and Tor.
+They are the safest crypto available, and are tested and trusted. But perfect crypto does not exist.
+</p>
+
+<p>
+GoodCrypto has been independently audited, but needs many more independent audits. Any bug reports are very welcome.
+</p>
+
+<p>
+Whatever tools you choose, any good crypto is much safer than no crypto.
+</p>
+
+            <a name="MoreInfo"><p>&nbsp;</p></a>
+            <h3>More details</h3>
+            <ul>
+                <li><a href="/qna/general/index.html">General FAQ</a></li>
+                <li><a href="/qna/technical/index.html">Technical FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

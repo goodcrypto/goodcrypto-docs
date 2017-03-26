@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>"Broken pipe" in browser</h2>
+
+
+            <h4 class="dropcap">
+                Try to load the page again.
+            </h4>
+
+                <p>
+                    A broken pipe while sending data usually means the browser quit listening. The browser may have timed out or the user may have canceled the request.
+
+<p>
+Example:
+<pre>
+2013-10-22 19:09:21,655 DEBUG     self.request.sendall(self.mitm_response(res))
+2013-10-22 19:09:21,655 DEBUG   File "/usr/lib/python2.7/ssl.py", line 229, in sendall
+2013-10-22 19:09:21,659 DEBUG ----------------------------------------
+2013-10-22 19:09:21,660 DEBUG     v = self.send(data[count:])
+2013-10-22 19:09:21,660 DEBUG   File "/usr/lib/python2.7/ssl.py", line 198, in send
+2013-10-22 19:09:21,661 DEBUG     v = self._sslobj.write(data)
+2013-10-22 19:09:21,661 DEBUG error: [Errno 32] Broken pipe
+</pre>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

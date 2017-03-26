@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I run my GoodCrypto private server in a virtual machine?</h2>
+
+
+            <h4 class="dropcap">
+                Here's the configuration for VirtualBox
+            </h4>
+
+                <p>
+
+
+
+<p class="well">
+    Start VirtualBox. Click <strong>New</strong>. Use these settings in the wizard.
+</p>
+
+<p>
+    This is for Virtualbox 4.3.14. Other versions should be similar.
+</p>
+
+<p>
+    <strong>Name and operating system</strong>
+
+    <ul>
+        <li><strong>Name</strong>: GoodCrypto Private Server</li>
+
+        <li><strong>Type</strong>: Linux</li>
+
+        <li><strong>Version</strong>: Debian (64 bit)</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Memory size</strong>
+
+    <ul>
+        <li>2048
+            <br>
+            <font size="-2">This is the minumum, but more is better if you have it.</font>
+        </li>
+    </ul>
+</p>
+
+<p>
+    <strong>Hard drive</strong>
+
+    <ul>
+        <li>Create a virtual hard drive now</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Hard drive file type</strong>
+
+    <ul>
+        <li>VDI (VirtualBox Disk Image)</li>
+    </ul>
+</p>
+
+<p>
+    <strong>Storage on physical hard drive</strong>
+
+    <ul>
+        <li>Dynamically allocated</li>
+    </ul>
+</p>
+
+<p>
+    <strong>File location and size</strong>
+
+    <ul>
+
+        <li>goodcrypto_private_server.vdi
+            <br>
+            <font size="-2">You can also select the path on your system where you want the vdi file.</font>
+        </li>
+
+        <li>10 GB
+            <br>
+            <font size="-2">This is the minumum, but more is better if you have it.</font>
+        </li>
+    </ul>
+
+<p>
+    That's all for the <strong>New</strong> wizard.
+</p>
+
+<p class="well">
+    There are a few adjustments to the regular settings.
+    Select <strong>GoodCrypto Private Server</strong>.
+</p>
+
+<p>
+    <strong>Storage</strong>
+
+    <ul>
+        <li>Remove the check mark from <strong>Enable IO APIC</strong></li>
+    </ul>
+</p>
+
+<p>
+    <strong>Storage</strong>
+
+    <ul>
+        <li>Highlight <strong>Controller: IDE</strong></li>
+
+        <li>Under <strong>Controller: IDE</strong>, highlight the <strong>Empty</strong> item and click
+            the icon with the blue disk and a red minus sign.</li>
+
+        <li>Click the small icon with a round circle and a plus sign. When you pass your cursor over the
+            icon it shows "Add CD/DVD Device"</li>
+
+        <li>In the pop up window, click the <strong>Choose disk</strong> button.</li>
+
+        <li>Move to the directory where you saved goodcrypto_private_server.iso,
+            highlight the filename, and click the <strong>Open</strong> button.</li>
+
+        <li>Under <strong>Controller: IDE</strong>, goodcrypto_private_server.iso should appear. Click on the name.</li>
+
+        <li>In the <strong>Attributes</strong>, add a check mark to <strong>Live CD/DVD</strong></li>
+    </ul>
+</p>
+
+<p>
+    <strong>Network</strong>
+
+    <ul>
+        <li>
+        Configure the VM to forward the following ports by clicking <strong>Advanced</strong> and then
+        <strong>Port forwarding</strong>.
+
+        <table border=1 width="60%">
+            <tr>
+                <th><center>Name</center></th>
+                <th><center>Protocol</center></th>
+                <th><center>Host IP</center></th>
+                <th><center>Host Port</center></th>
+                <th><center>Guest IP</center></th>
+                <th><center>Guest Port</center></th>
+            </tr>
+
+            <tr>
+<td>Rule 1</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>9350</td>
+<td>&nbsp;</td>
+<td>9350</td>
+</tr>
+<tr>
+<td>Rule 2</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8398</td>
+<td>&nbsp;</td>
+<td>8398</td>
+</tr>
+<tr>
+<td>Rule 3</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8080</td>
+<td>&nbsp;</td>
+<td>8080</td>
+</tr>
+<tr>
+<td>Rule 4</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>8443</td>
+<td>&nbsp;</td>
+<td>8443</td>
+</tr>
+<tr>
+<td>Rule 5</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>11371</td>
+<td>&nbsp;</td>
+<td>11371</td>
+</tr>
+<tr>
+<td>Rule 6</td>
+<td>TCP</td>
+<td>&nbsp;</td>
+<td>10027</td>
+<td>&nbsp;</td>
+<td>10027</td>
+</tr>
+
+        </table>
+        </li>
+    </ul>
+</p>
+
+
+
+<p class="well"><strong>Final Steps</strong></p>
+
+<p>
+    <ol>
+        <li><strong><a href="/qna/knowledge-base/configure-firewall">Change your firewall</a></strong> to permit access to the forwarded ports.</li>
+        <li> <strong>Start the GoodCrypto private server.</strong>.</li>
+        <li> <strong>Configure and maintain your GoodCrypto server on your private website.</strong> Browse to the new computer's IP address using port 8443 if you're using https, or 8080 if you're using http. Examples: http://199.18.0.50:8080 or https://199.18.0.50:8443. We recommend you use https, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert. If your browser says it can't contact the site, wait a few minutes and try again.</li>
+        <li><strong>Enter the administrator's address for the domain you want to protect on your GoodCrypto private server.</strong> This address will be used to find your mail server, and to receive admin messages from your GoodCrypto private server. You may also opt to receive security alerts from GoodCrypto at this address.</li>
+      <li>Follow the rest of the instructions provided on your GoodCrypto private server.</li>
+    </ol>
+
+    <p class="important dropcap">
+        <strong>We strongly recommend</strong> that you:
+        <ol>
+            <li> Maintain your GoodCrypto Server in a secure location. </li>
+            <li> Limit access to authorized users. </li>
+            <li> Do not run other programs on the same computer as the VM. Encryption can use a lot of resources plus you would be opening yourself up to additional security risks.</li>
+        </ol>
+</p>
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

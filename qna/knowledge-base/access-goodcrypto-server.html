@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I access my GoodCrypto private server?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    Your GoodCrypto private server has its own web site. This is not on goodcrypto-private-server.sourceforge.io, but on the computer where you installed GoodCrypto.
+
+<p>
+Ask your administrator for the correct URL for your GoodCrypto server website.
+</p>
+
+<p>
+Use your browser to connect to your server's website. We recommend that you use a secure connection (i.e., https). The https key for your site is dynamically generated to be unique just for you. The first time you access your new site, you'll need to approve its self signed key. When your browser says it can't verify the site, <strong>that is normal</strong>. It's a private site so no public certificate authority knows about it.
+
+<p>
+<strong>Secure access:</strong> Prefix the IP address for your GoodCrypto server with <strong>https:</strong> and add <strong>:8443</strong> after the IP address.
+Don't forget the colon (:) between the IP address and the port number.
+</p>
+
+<p>
+<strong>Insecure access:</strong> Prefix the IP address for your GoodCrypto server with <strong>http:</strong> and add <strong>:8080</strong> after the IP address. Don't forget the colon (:) between the IP address and the port number.
+</p>
+
+<p>
+For example, if your private server's IP address is: 192.168.10.200, then the url for your server would be:
+</p>
+
+<ul>
+https://192.168.10.200:8443 (example only)<br/>
+http://192.168.10.200:8080 (example only)
+</ul>
+
+You must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> for some actions (e.g., verify a message arrived privately).
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

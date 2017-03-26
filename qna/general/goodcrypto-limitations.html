@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: General Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What are the limitations of GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <strong>Do not use GoodCrypto...</strong>
+<ul>
+  <li> if you don't trust your administrator. Right now anyone can spy on your mail and browsing. GoodCrypto limits that risk to the administrator you already trust.
+  <li> if you don't trust your server. A server in the cloud can be especially vulnerable.
+  <li> if you're waiting for a solution that stops every imaginable attack. There isn't one. GoodCrypto stops mass surveillance for mail and web.
+</ul>
+
+<strong>Do not use GoodCrypto for mail encryption...</strong>:
+<ul>
+  <li> if you are a whistleblower or member of a suppressed group. GoodCrypto's metadata protection hasn't had enough field testing yet.
+  <li> if you are already encrypting mail. We don't want a monoculture.
+</ul>
+
+<strong>Do not use GoodCrypto for browsing...</strong>
+<ul>
+  <li> if you can't live without pictures, videos, etc. GoodCrypto blocks these malware vectors.
+</ul>
+
+<strong>Private and safe mail</strong>
+
+<p>
+GoodCrypto keeps the content of your mail private.
+It is safe from prying eyes. Think of it as an envelope for your email.
+</p>
+
+<p>
+GoodCrypto protects mail as it crosses the Internet. This stops mass surveillance and many targeted attacks. Your contacts can use GoodCrypto or any other OpenPGP package. Any properly configured mail server with TLS already protects between your own device and your mail server. GoodCrypto enhances your connection to add encryption, mixing, and padding between you and your contact. The result is end to end protection. Someone might possibly read your mail before it is sent, or after it arrives. But that's a <em>lot</em> harder.
+</p>
+
+<p>
+There are tradeoffs to everything. Automatic PGP for a group requires a group key store. If your GoodCrypto server is cracked, everyone in your group is exposed. The alternative is to store private keys on relatively unprotected user machines. Public internet servers already are trusted to store private keys. Your GoodCrypto server is private, not public. It is carefully configured and protected. This is safer than users protecting themselves, which they simply don't know how to do. </p>
+
+
+
+<strong>Don't trust too much</strong>
+
+<p>
+Please don't trust unencrypted communications with your life or liberty.  Choose your crypto carefully. Watch for reasons to review that decision.
+</p>
+
+<p>
+GoodCrypto is based on GPG and Tor.
+They are the safest crypto available, and are tested and trusted. But perfect crypto does not exist.
+</p>
+
+<p>
+GoodCrypto has been independently audited, but needs many more independent audits. Any bug reports are very welcome.
+</p>
+
+<p>
+Whatever tools you choose, any good crypto is much safer than no crypto.
+</p>
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Key Management | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+<h3>Key Management</h3>
+
+<p class="dropcap">A major hassle with crypto is managing keys. Each user must have their own key and each contact has theirs.
+
+<p>
+GoodCrypto simplifies key management. It can automatically generate a key for each user in your group. It can also exchange keys with contacts that also use GoodCrypto. This means that the only task left for users is to <a href="/qna/knowledge-base/user-verify-key.html">verify a contact's key</a>.
+</p>
+
+<p>
+Users are kept up-to-date about keys via email. Your GoodCrypto private server automatically sends email to a user when their key is ready. And, the first user that receives a new key from a contact is reminded to <a href="#VerifyKey">verify the key</a>.
+</p>
+
+<p>
+Of course, users will likely be exchanging private messages with contacts that use PGP products other than GoodCrypto. When that happens, the user must <a href="#ImportKey">import the contact's key</a> and <a href="#ExportKey">export their own key</a>.
+</p>
+
+<p>&nbsp;</p>
+<a name="AutoKeyExchange"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>How Automatic Key Exchange Works</h4>
+
+<p class="dropcap"><img src="/static/images/diagrams/decrypt_email.png" alt="Decrypting inbound mail"><br/>
+
+<p class="dropcap">GoodCrypto Mail works between your mail server and the world, automatically making your messages private. Without GoodCrypto, anyone can read your mail. With GoodCrypto, whenever you <em>and</em> your contacts use GoodCrypto or other privacy software, no one can read it until it's unlocked. You don't have to do anything. You just read and write mail as usual. GoodCrypto locks and unlocks private messages for you.</p>
+
+<p>&nbsp;</p>
+
+<h4> Step by Step </h4>
+
+<p>Let's look at how mail between Ted and Alice works.  Assume:
+<ol>
+    <li> They've never used crypto, and don't know much about it.</li>
+    <li> They work at different companies</li>
+    <li> Both businesses have installed GoodCrypto. GoodCrypto works with other PGP packages, too.</li>
+</ol>
+
+<p>Ted sends a message to Alice using his favorite mail client. He doesn't do anything differently. This first message is unprotected, since Ted and Alice don't have any keys yet. The message goes to Alice immediately. Then the GoodCrypto server creates keys for Ted.</p>
+
+<p>Alice responds to Ted's message. Like Ted, she sends mail exactly the way she always does.  Because Ted's key isn't ready yet, this message from Alice isn't encrypted. GoodCrypto adds a note to every message telling you whether it was encrypted. Her company's GoodCrypto server creates her keys. Both Ted and Alice will receive email from the GoodCrypto server when their keys are ready. </p>
+
+<p>After Ted's key is ready, when he sends Alice a message his public key will be in the header. This message is also unencrypted because Ted doesn't have Alice's key yet.</p>
+
+<p>When Alice receives this message, her company's GoodCrypto server sends two notifications. One tells Alice she now has Ted's key. The other goes to the administrator to say the no-metadata key for Ted's company arrived. Both Alice and the administrator should <a href="/qna/knowledge-base/user-verify-key.html">verify these keys</a>. Alice's GoodCrypto server also sends Ted's GoodCrypto server the no-metadata key for Alice's company.</p>
+
+<p>Here's the magic. Ted and Alice didn't have to do anything. They just exchanged email as usual. No one has to remember passphrases or click extra buttons. GoodCrypto's key management creates, exchanges, and pins keys automatically. Now whenever Ted and Alice exchange a message, it's protected. Both content and metadata are encrypted, mixed, and padded.  In fact, anyone in either company can send encrypted mail to anyone at the other company. The metadata protection includes its own layer of encryption. No one has to do anything. </p>
+
+<p>
+For encryption and decryption, the GoodCrypto server never connects directly to the Internet. It only talks to your mail server. GoodCrypto benefits from any protection the mail server has.
+</p>
+
+<p>
+The layers of encryption, hopefully including SMTP TLS, mean that when one layer fails you're still protected. GoodCrypto encrypts from individual to individual, then it mixes messages from one group to another, pads, and encrypts again. A well configured mail server encrypts one more time. Encryption fails over time. With layered encryption, if even one layer works, you have time to fix or replace the failed layer. If you rely on a single layer of encryption, any failure is catastrophic. A defense in depth is much safer.
+</p>
+
+<p><a href="/qna/technical/goodcrypto-and-other-encryption.html">Learn how GoodCrypto works if a contact does not have GoodCrypto.</a></p>
+
+<p><a href="/qna/technical/metadata-protection-security-viewpoint.html">Learn how GoodCrypto protects metadata.</a></p>
+</p>
+
+<p>&nbsp;</p>
+<a name="VerifyKey"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>Verify Key</h4>
+
+<p class="dropcap">The most common way is when your contact appears to have successfully read a message you encrypted to them, but you need at least one more verification to be safe.
+
+<p>
+Ask the contact to provide their public key or its <a href="/qna/technical/fingerprint.html">fingerprint</a> through a channel other than email. The key or fingerprint must match your own copy.  Compare fingerprints as described below.
+
+<p>
+Best is face to face.
+Other examples are for them to publish their key's fingerprint on a public
+site or service, or provide it by phone, SMS (if encrypted), or snail mail.
+
+<p>
+If you are verifying by hand, the longest version of the fingerprint is best.
+You don't have to verify the whole key by hand.
+A fingerprint is a really good summary of a key.
+If you verify the key's fingerprint, you have verified the key.
+
+<p>
+If you got a public key from a web site,
+it doesn't help much to verify using a fingerprint from the same web site.
+An attacker can spoof the web site and provide a matching fake fingerprint.
+
+<h4>To compare a fingerprint using GoodCrypto:</h4>
+<ol>
+    <li>Browse to <a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto server website</a>.</li>
+  <li>Click on the <strong>Verify fingerprint</strong>; if the button is not on the screen, then click the <strong>Mail</strong> menu</li>
+  <li>Type in the email address and click the <strong>Verify</strong> button.</li>
+  <li>
+        A fingerprint and a key summary are the same thing.
+        Compare the <strong>Key summary</strong> with the other person's <strong>Key summary</strong>.
+        Ignore spaces and whether a character is upper or lower case.
+        Otherwise they must match.
+  </li>
+  <li>
+        <font color="red"><strong>
+            If they don't match, do NOT use that key to communicate.
+        </strong></font>
+  </li>
+  <li>If the fingerprint is not flagged as verified and you have verified it, then you should <a href="/qna/knowledge-base/mark-key-verified.html">flag the fingerprint as verified in the database</a></li>
+</ol>
+</p>
+
+<p>
+If the other person is also using GoodCrypto Mail, then they should follow this same procedure. Otherwise, they must use their encryption software program to get the key summary, known as the fingerprint in most encryption software, for the matching email address.
+</p>
+</p>
+
+<p>&nbsp;</p>
+<a name="ImportKey"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>Import Key</h4>
+
+<p class="dropcap">You have two options: <a href="/qna/knowledge-base/import-from-file/index.html">import a key from a file</a> or <a href="/qna/knowledge-base/import-from-keyserver/index.html">import it from a keyserver</a>. It's probably most reliable to ask your contact to export their key into a file and send it to you.
+
+<p>
+If your contact has stored their key on a public keyserver, then you can import the key from the keyserver. You can use their email address to find their key, but it's more reliable if you use their fingerprint. If your GoodCrypto private server can't find the key on the keyserver, then ask which keyserver the key is on. Then ask your mail administrator to add that server to your private server.
+</p>
+</p>
+
+<p>&nbsp;</p>
+<a name="ExportKey"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>Export Key</h4>
+
+<p class="dropcap"><ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>. You may need to sign in if the administrator is using tight security for your server.</li>
+  <li>click on the <strong>Mail</strong> menu</li>
+  <li>click on <strong>Export key</strong></li>
+  <li>type in the <strong>Email</strong> address</li>
+  <li>select the <strong>Encryption software</strong> (GPG and PGP are the same for this purpose)</li>
+  <li>click on <strong>Export</strong></li>
+  <li>select a location and name for the file that will contain the key</li>
+  <li>click on <strong>Save</strong></li>
+</ol>
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

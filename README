@@ -1,0 +1,9 @@
+
+Documentation for GoodCrypto Private Server
+
+The 'qna' and 'server' subdirectories should be added to your
+GoodCrypto private server's /var/local/projects/goodcrypto/server/src/templates
+directory. You will then be able to read the files as they are
+filtered through your server's website.
+
+You can also find the docs on https://goodcrypto-private-server.sourceforge.io

@@ -1,0 +1,19 @@
+# SMTP transport to be used for the Exim -> goodcrypto path;
+# by default goodcrypto listens on the loopback interface on port 10027
+
+goodcrypto:
+       driver = smtp
+       port = 10027
+       allow_localhost
+
+
+# The default input configuration needs to be changed to:
+
+# Tell Exim to accept SMTP also (besides the usual port 25) on the
+# loopback interface (localhost) on port 10027, which is where
+# the checked messaged come from goodcrypto back to Exim
+# (goodcryptod.conf: $relayhost = "127.0.0.1"; $relayhost_port = "10027")
+
+##local_interfaces = 0.0.0.0.25 : 127.0.0.1.10027
+##main/01_exim4-config_listmacrosdefs:local_interfaces =
+

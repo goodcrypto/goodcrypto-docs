@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I configure my browser to reduce tracking?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    We strongly recommend that you ask your administrator to help configure your browser using <a href="#ProxySettings">the proxy settings</a>:
+
+<ul>
+        <li><a href="/qna/knowledge-base/configure-browsers.html#chrome">Chrome</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#ie">Internet Explorer</a></li-->
+       <li><a href="/qna/knowledge-base/configure-browsers.html#firefox">Firefox</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#safari">Safari</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#android">Android</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#opera">Opera</a></li-->
+ </ul>
+
+<a name="ProxySettings"></a>
+<p>&nbsp;</p>
+<h3>Proxy Settings</h3>
+<div class="table-responsive">
+<table class="table">
+        <tr>
+            <td> HTTP Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> SSL Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> FTP Proxy: </td>
+            <td> <em>leave blank</em> </td>
+            <td> 0 </td>
+        </tr>
+        <tr>
+            <td> SOCKS Host: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 9350 </td>
+        </tr>
+    </table>
+</div>
+
+<a name="chrome"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Chrome</h3>
+<ol>
+  <li>Click on the menu and select <strong>Settings</strong></li>
+  <li>Click on the <strong>Show advanced settings</strong> link</li>
+  <li>Under the <strong>Network</strong> section, click <strong>Change proxy settings</strong></li>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="firefox"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Firefox</h3>
+<p>
+Edit / Preferences / Advanced / Network / Settings
+<ol>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

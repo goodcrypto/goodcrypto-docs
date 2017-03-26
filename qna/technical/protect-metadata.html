@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How does GoodCrypto protect metadata?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <p>
+This overview  is for IT administrators. If you prefer security details see <a href="/qna/technical/mail_metadata_protection_security_viewpoint.html">Security focus: How does mail metadata protection work?</a>
+</p>
+
+<p>
+GoodCrypto uses Ed Snowden's design from HOPE X to protect email metadata.
+Very quickly, GoodCrypto :
+<ol>
+  <li> Uses GPG to encrypt from individual to individual.
+  <li> Periodically mixes all messages to a domain into the body of a single message.
+  <li> Pads and uses GPG to encrypt the mixed group message. This encrypts all end user metadata.
+</ol>
+</p>
+
+<p>
+When GoodCrypto first boots it prepares an email address and key for your domain. This is separate from the keys for individuals. Keys are automatically exchanged the first time that two GoodCrypto mail domains connect.
+</p>
+
+<p>
+On a regular schedule GoodCrypto:
+<ul>
+  <li> Signs and encrypts messages going to a domain with each individual's key.
+  <li> Attaches all the messages for that domain to one new message.
+  <li> Pads the mixed group message to a fixed size.
+  <li> Encrypts the group message.
+</ul>
+Because all individual metadata is in the group message body, the metadata is encrypted. The sender, recipient, subject, and content of messages are completely hidden. Useless domain metadata is all that's visible, only showing that the two groups might be exchanging private email.
+</p>
+
+<p>
+When a message arrives at the destination, GoodCrypto reverses the process and delivers individual messages
+</p>
+
+<p>
+Usually both the sender and recipient have personal keys. Then their individual messages are encrypted in layers, first with the individual key and then with the metadata key.
+</p>
+
+<p>
+GoodCrypto automatically exchanges keys. The administrator receives email whenever a new metadata key arrives so so it can be <a href="/qna/knowledge-base/user-verify-key.html">verified</a>.
+</p>
+
+<p>
+As both systems generate and exchange keys, GoodCrypto continuously makes your mail more secure.
+If you need to be sure that your first contact is safe, <a href="/qna/knowledge-base/known-metadata-domains.html">check that your GoodCrypto private server has a metadata key</a> for the other domain.
+</p>
+
+<p>
+Of course, until other packages implement this open source protocol for metadata protection, you will need GoodCrypto on both ends.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

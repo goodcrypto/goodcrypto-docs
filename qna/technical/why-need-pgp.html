@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Why do I need PGP? Isn't TLS/SSL enough?</h2>
+
+
+            <h4 class="dropcap">
+                PGP is P2P and decentralized.
+            </h4>
+
+                <p>
+                    TLS/SSL itself is generally secure. But on the Internet it is dependent on public DNS and Certificate Authorities. Both of these types of centralized servers are prime targets. Just one CA has to fail.
+
+<p>
+Worse, some ISPs and organizations <a href="https://www.eff.org/deeplinks/2014/11/starttls-downgrade-attacks" target =" _blank ">sabotage TLS/SSL</a> directly.
+
+<p>
+You can exchange TLS public keys in some other way, and pin the keys. These are promising approaches, and GoodCrypto may use them.
+
+<p>
+DNSSEC may help some, but it is still very dependent on DNS and not yet widely trusted.
+
+<p>
+Many mail servers don't encrypt at all. Especially in large organizations, mail may go through multiple servers. You can't force intermediate mail servers to encrypt. SMTP doesn't require it. So there's no guarantee that messages between mail servers are encrypted.
+
+<p>
+PGP is end to end, from domain to domain or user to user, and decentralized.
+
+<p>
+The GoodCrypto mail server handles everything for you transparently.
+You aren't as vulnerable to TLS attacks.You don't need cooperation from intermediate mail servers.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

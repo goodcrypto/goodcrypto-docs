@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Administration | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+
+<h3>Administration</h3>
+
+<p class="dropcap">We've designed your GoodCrypto private server so there is little or no administration needed.
+
+<p>
+The default behavior is to create and exchange keys for everyone in your group automatically. Users are notified when their new key is ready and whenever they receive a new key from a contact. Users also receive email from your GoodCrypto private server with their sign in credentials so they can verify which messages were exchanged privately.
+</p>
+
+<strong>Administrator </strong>
+
+<p>
+Of course, you do have full control over how automatic the server operates. Use your browser to access your GoodCrypto <a href="/qna/knowledge-base/access-goodcrypto-server.html">private server website</a>. Use the credentials supplied when you initially customized your GoodCrypto private server.
+</p>
+
+<p>
+For added security, you might want to set the Mail Options to restrict access to viewing fingerprints and exporting keys to logged in users. Otherwise, anyone who can reach your GoodCrypto private server's website can learn who communicates securely.</p>
+</p>
+
+<p>
+If you decide that you want to create keys for your users manually (which we strongly discourage) or you don't want keys exchanged automatically (which we also strongly discourage) , then you and your users will have a lot of administrative tasks (i.e., <a href="/qna/knowledge-base/import-key/index.html">importing</a> and <a href="/qna/knowledge-base/export-public-key/index.html">exporting</a> keys.
+</p>
+
+<strong>End Users</strong>
+
+<p>
+Users in your group will probably also want to access your GoodCrypto private server website. They can 1) access information about private messages they send and receive; 2) view fingerprints; 3) export keys. After they sign in, they can also verify and import keys.
+</p>
+
+<p>
+Of course, end users can't access any of the administrator areas without you <a href="/qna/knowledge-base/manage-users/index.html">increasing their privileges</a>.
+</p>
+</p>
+
+<p>&nbsp;</p>
+<a name="MailOptions"></a>
+<h4>Mail Options</h4>
+
+<p class="dropcap">You must be <a href="/qna/knowledge-base/access-goodcrypto-server.html">logged into your GoodCrypto private server</a>
+with administrative privileges to see or change any of the options.
+
+<ul>
+    <li><a href="/qna/knowledge-base/crypt-options/index.html#GeneralMailOptions">General</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options/index.html#MetadataProtectionMailOptions">Metadata and Traffic Analysis Protection</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options/index.html#TighterSecurityMailOptions">Tighter security</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options/index.html#SignaturesMailOptions">Signatures</a></li>
+    <li><a href="/qna/knowledge-base/crypt-options/index.html#OtherMailOptions">Other</a></li>
+</ul>
+</p>
+
+<p>&nbsp;</p>
+<a name="Contacts"></a>
+<h4>Contacts</h4>
+
+<p class="dropcap">Your GoodCrypto private server adds a record in the database every time someone sends or receives private email. Each record shows the type of encryption the contact uses and their fingerprint.
+
+<p>
+Also, the administrator can flag each contact so email must always be encrypted or never be encrypted. This allows you to maintain the appropriate level of security on a person by person basis.
+</p>
+
+<p>
+If there's a contact that you know you never want to send encrypted email, then you might want to add that contact and select the "Never encrypt" option.
+</p>
+
+<ol>
+  <li>Connect to the Goodcrypto Server website.
+  <li>Sign in with the credentials you supplied when you configured your GoodCrypto Server</li>
+  <li>Click on the Mail menu item</li>
+  <li>Click on Contacts</li>
+  <li>Don't forget to sign out when you're finished.</li>
+</ol>
+</p>
+
+<p>&nbsp;</p>
+<a name="Users"></a>
+<h4>Users</h4>
+
+<p class="dropcap">Your GoodCrypto private server automatically creates a user every time someone in your company sends or receives email. Each user receives a message with their credentials when their account is ready. Of course, the administrator can also add or delete users manually, too.
+
+<ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>.</li>
+  <li>Sign in with the credentials you supplied when you configured your GoodCrypto Server.</li>
+  <li>Click on the <strong>Mail</strong> menu item.<li>
+  <li>Click on <strong>Users</strong></li>
+  <li>Click on <strong>Add user</strong></li>
+  <li>Fill in all the information, including the email address field for the user<br>If you'd like to follow the convention that GoodCrypto uses, then the username and email address will be the same.</li>
+  <li>Don't forget to sign out when you're finished.</li>
+</ol>
+</p>
+
+<p>&nbsp;</p>
+<a name="Keyservers"></a>
+<h4>Keyservers</h4>
+
+<p class="dropcap"><ol>
+  <li>Connect to the <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a> with the administrator credentials</li>
+  <li>Click on <strong>Mail</strong> in the menu</li>
+  <li>Click on <strong>Keyservers</strong> button. This button only appears if you're logged in as the administrator.</li>
+  <li>You can add, change, or delete keyservers. If you don't want to delete a keyserver, but no longer use it, then simply remove the <strong>Active</strong> check mark while editing it.</li>
+</ol>
+</p>
+
+<a name="Backups"><p>&nbsp;</p><p>&nbsp;</p></a>
+<h4>Backups</h4>
+
+<p class="dropcap">Your backup procedure depends on where you've installed your GoodCrypto private server.
+
+<h5>Stand alone computer</h5>
+
+It's best to back up the entire drive where you installed GoodCrypto. This will make restoration quick and easy.
+
+If you are limited in space and you have physical access, then you can just backup /media/drive/persistence.
+
+<h5>Virtual machine</h5>
+
+You simply need to back up the the VDI file that you created when you set up the virtual machine.
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

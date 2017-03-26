@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What's wrong with DSA?</h2>
+
+
+            <h4 class="dropcap">
+                It is a state-sponsored standard
+            </h4>
+
+                <p>
+                    State sponsored standards are high risk. They are usually crippled so the state can crack them. We know that the US government has been spending more than $250 million per year to sabotage crypto (see <a href="http://www.nytimes.com/interactive/2013/09/05/us/documents-reveal-nsa-campaign-against-encryption.html?_r=0" target =" _blank ">New York Times</a>, <a href="http://www.propublica.org/article/the-nsas-secret-campaign-to-crack-undermine-internet-encryption" target =" _blank ">ProPublica</a>, and <a href="http://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security" target =" _blank ">Guardian</a> articles). This results in <a href="http://www.gossamer-threads.com/lists/openssh/users/38055" target =" _blank ">nonsense</a>, such as "Simply put --- larger key sizes --- more risk of compromise."
+
+<p>One of the earliest specifications for DSA required that keys be "exactly 1024 bits". The ssh-keygen man page still says this is still a requirement, even though some later specs were supposed to supersede the limit.</p>
+
+<p>
+It is a very serious concern any time someone arbitrarily restricts key size. There are too many ways (think rainbow tables) that shortened keys can be compromised. It is reasonable to be deeply concerned about any standards from the same source.</p>
+
+<p>
+RSA is a tested and trusted alternative to DSA. Why trust an algorithm that was sabotaged, from an organization that is known to be working against secure encryption?</p>
+
+
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

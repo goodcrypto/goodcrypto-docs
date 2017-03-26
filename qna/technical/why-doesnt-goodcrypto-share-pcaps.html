@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Why doesn't GoodCrypto share PCAPs?</h2>
+
+
+            <h4 class="dropcap">
+                People who want crypto don't want geolocation, etc. Anonymization is unreliable.
+            </h4>
+
+                <p>
+                    <p>
+PCAPs are packet logs. Some things even PCAPs of encrypted sessions reveal about you:
+<ul>
+  <li> Where you are</li>
+  <li> The sites you visit</li>
+  <li> Which sites are most interesting to you</li>
+</ul>
+</p>
+
+These details are from IP addresses and timestamps, especially timestamp differentials. It's available even in an encrypted session.
+
+<p>
+If your session is unencrypted, PCAPs reveal everything you do online:
+<ul>
+  <li> Logins</li>
+  <li> Passwords</li>
+  <li> Banking access</li>
+  <li> Medical details</li>
+  <li> What topics interest you most</li>
+  <li> Who you contact</li>
+  <li> Who contacts you</li>
+  <li> Every private word you speak</li>
+  <li> Everything others tell you</li>
+</ul>
+</p>
+
+<p>
+PCAPs of sessions that don't involve people are less sensitive. But even those can be traced to the people who set up the system.
+</p>
+
+<p>
+Anonymization is unreliable. If NSA is storing session metadata, then anonymization of PCAPs appears to be a hard problem.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

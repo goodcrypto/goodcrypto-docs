@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Are all outgoing messages encrypted?</h2>
+
+
+            <h4 class="dropcap">
+                Yes, if you both use GoodCrypto or any open PGP.
+            </h4>
+
+                <p>
+                    If both ends have GoodCrypto, it all happens automatically:
+<ul>
+  <li> GoodCrypto generates keys for you and your contact.
+  <li> GoodCrypto exchanges public keys P2P.
+</ul>
+
+<p>
+Generating and exchanging keys can take a little time. Remember your messages are not encrypted until that's done. After you both get mail reminding you to verify your contact's key, your messages are encrypted both ways.
+</p>
+
+<p>
+The mail administrator also has the <a href="/qna/knowledge-base/crypt-options.html">option</a> of only allowing outgoing mail if it is encrypted. Of course, that means that you are requiring all recipients of email from your server use encryption, too. This is probably too restrictive for most groups.
+</p>
+
+<p>
+If your contact doesn't use GoodCrypto:
+<ul>
+  <li> They have to generate a key.
+  <li> You have to <a href="/qna/knowledge-base/export-public-key.html">export</a> your public key and send it to them.
+  <li> You each have to <a href="/qna/knowledge-base/import-key.html">import your contact's public key</a>.
+</ul>
+Then GoodCrypto will automatically encrypt to that contact.
+
+<p>
+Make sure your mail server is configured to encrypt local traffic with TLS-SSL.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

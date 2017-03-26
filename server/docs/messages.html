@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Messages | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+<h3>Messages</h3>
+
+<p class="dropcap">
+As each message a user sends or receives passes through your GoodCrypto private server,
+a tag is added to the bottom of the message to let the user know whether the message arrived
+privately. Of course, tags can be faked so users can verify whether your GoodCrypto
+server added the tag or not by using your
+<a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private website</a>.
+</p>
+
+<a name="VerifyArrival"><p>&nbsp;</p></a>
+<h3>Verify a Message Arrived Privately</h3>
+<p class="dropcap">It would be easy for someone else to fake a message so it appears that the message arrived privately when it didn't. Only the recipient of the message can verify that it was received privately.
+
+<p>
+If your administrator entered the URL for your GoodCrypto private server in the <a href="/qna/knowledge-base/change-mail-options.html">GoodCrypto private server options</a>, then a URL is included at the bottom of the message which lets you confirm the message was received privately by your GoodCrypto private server. You must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> with the email address of the recipient of the message to verify the status.
+
+<p>
+If you only see the unique validation code, then connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>, sign in with the credentials for the user that received the message, click the
+<strong>Mail</strong> menu and then the <strong>Verify</strong> button next to <strong>Private messages</strong>, and enter the validation code.
+<p>
+If you do not know the validation code, then click the <strong>Received</strong> button next to <strong>Private messages</strong>. You'll see a list of all messages that you received securely. The list shows the sender's email address, date, message id, and validation code.
+</p>
+
+<a name="ViewSentl"><p>&nbsp;</p></a>
+<h3>View List of Messages Sent Privately</h3>
+<p class="dropcap">
+You can easily review which messages you sent privately by:
+</p>
+
+<p><ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the user that sent the message</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>Sent</strong></li>
+  <li>Scan for the recipient's email address, date, and message-id from the header of the message</li>
+</ol>
+
+</p>
+
+<p>If you have javascript enabled, then you can click the headers (e.g., To, Date) to
+change the sort order of the list.</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

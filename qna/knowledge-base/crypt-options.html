@@ -1,0 +1,329 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What options are available for encryption and decryption?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <a name="GeneralMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>General</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Mail server address:</strong> The ip address for your mail server (i.e., the server running postfix or exim for your mail).
+</p>
+
+<p>
+<strong>GoodCrypto server url:</strong> The full url, including port, to access your GoodCrypto server.
+</p>
+
+<!--p>
+<strong>Exchange public keys P2P:</strong> When enabled, GoodCrypto automatically:
+<ul>
+<li>adds the sender's key(s) to every outbound message</li>
+<li>imports keys received in the header and alerts the recipient to verify the new key</li>
+<li>verifies the key in the header matches the key already in GoodCrypto's database</li>
+</ul>
+</p>
+
+<p>
+Automatic key exchange eliminates one of the major headaches of using crypto. When you're communicating
+with compatible software, then there's no need to import contacts' keys nor send yours.
+</p>
+
+<p>
+We strongly recommend that you have a check mark in this field.
+</p>
+
+<p>
+<strong>Create keys:</strong> If enabled, then GoodCrypto automatically creates a
+key for every user in your domain. The first time a user with your domain sends or receives a
+message, GoodCrypto generates a public and private key. Email is sent letting them know
+when the key is ready.
+</p>
+
+<p>If you already have private keys for some or all of your users, then you can export both the public and private key into one file, and <a href="/qna/knowledge-base/import-private-key.html">import</a> it.
+<p>
+We strongly recommend that you have a check mark in this field.
+</p-->
+</div>
+
+<a name="MetadataProtectionMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Metadata and Traffic Analysis Protection</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Encrypt metadata:</strong> When enabled, GoodCrypto protects all the
+metadata, except the date, the domain address for each group, and basic email header
+details (like originating server) when it sends messages to recipients with compatible software
+<a href="/server/docs/metadata.html">Learn more</a> about how metadata protection works.
+</p>
+
+<p>
+<strong>Padding and packetization:</strong> If enabled, then GoodCrypto holds messages for each domain
+it has a special "metadata key". On a regular schedule it combines the individual messages going to
+a domain, pads them to a standard size to create a single message, encrypts the message
+that protects all the messages and hides all individual metadata, and sends it.
+</p>
+
+<p>
+If there are no messages that need to be sent to a domain, then a message is still sent at the
+regular schedule.
+</p>
+
+<p>
+<a href="/server/docs/metadata.html#TrafficAnalysis">Learn more</a> about traffic analysis protection.
+</p>
+
+<p>
+<strong>Packet size:</strong> The minimum size of the message containing one or more messages.
+If the total of pending outgoing individual messages are too big for a single standard group message,
+unsent messages are queued for later. If a message is bigger than the group message size it is
+returned to the sender with an explanation.
+</p>
+
+<p>
+<strong>Frequency:</strong> The schedule packetized messages will be sent.
+</p>
+</div>
+
+<a name="TighterSecurityMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Tighter security</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Require outbound encryption:</strong> If enabled, then GoodCrypto requires all outbound mail be encrypted. This means that if someone sends a message and there is no key for the recipient, then the message will bounce to the sender.
+</p>
+
+<p>
+<strong>Require verify new key:</strong> If enabled, then GoodCrypto requires that you
+must log into
+<a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto private server</a>
+after you verify a new key and add a check mark that they
+key has been verified. If someone tries to send a message to a contact with an unverified key, then
+the sender's message is returned to them with details about how to proceed.
+</p>
+
+<p>
+<strong>Require login to view fingerprint:</strong> When enabled, GoodCrypto
+requires that you login to your GoodCrypto private server to view a fingerprint, also known as a key id.
+Your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> should be behind your firewall configured so only your own people can reach it. But if you do not require login, it is possible that an unauthorized person could learn which individuals communicate securely.
+</p>
+
+<p>
+<strong>Require login to export keys:</strong>If enabled, then you must login to
+<a href="/qna/knowledge-base/access-goodcrypto-server.html">your GoodCrypto private server</a>
+to export a fingerprint, also known as a key id.
+Your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> should be behind your firewall configured so only your own people can reach it. But if you do not require login, it is possible that an unauthorized person could learn which individuals communicate securely.
+</p>
+
+<p>
+<strong>Filter HTML:</strong> When enabled, GoodCrypto removes known malware vectors from
+encrypted, inbound email. This is not</strong> a replacement for spam and virus filters.
+</p>
+<p>
+We strongly recommend that you run anti-spam and anti-virus software after
+GoodCrypto runs so unencrypted messages can be checked and filtered.
+</p>
+</div>
+
+<a name="SignaturesMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Signatures </strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Clear sign mail:</strong> If enabled, then GoodCrypto adds a GPG signature after an outbound message
+is encrypted. If you're not protecting your metadata, then clear signing
+makes it easier to track your messages.</p>
+<p>
+All encrypted messages are also signed as part of the encryption
+if the sender's key exists at the time of encryption. When signing is done as part of the
+encryption, instead of clear signed, then the recipient will know the message
+was encrypted by the sender, but not someone who intercepts the message will not be able to
+determine the sender's signature.
+</p>
+
+<p>
+<strong>Add DKIM signature:</strong> When enabled, GoodCrypto adds a DKIM signature to each outbound message.
+Many large companies rely on DKIM signatures to identify whether a message originated from the sender.
+We'd also advise that you add SPF support to your DNS configuration to add further credibility to
+your messages.
+</p>
+
+<p>
+<strong>Verify DKIM signatures:</strong> If enabled, then GoodCrypto verifies the first DKIM signature of
+each signed message. If the message passes verification, then a tag is added to the bottom of the
+message and the signature is removed from the header so other filters don't inacurrately report
+the signature was bad.
+</p>
+
+<p>
+<strong>DKIM delivery policy:</strong> If an inbound message contains a DKIM signature and you enabled
+<strong>verify DKIM signatures</strong>, but the key does not verify for any reason, then you
+can decide whether to <strong>drop</strong> the message or delivery it with a warning.
+</p>
+<p>
+If the message is dropped, then it is not delivered and the sender is not informed about the error.
+The reason that GoodCrypto does not report the error to the user is because some spammers use
+bounced messages as a way to abuse mailing systems.
+</p>
+
+<a name="DkimPublicKey"></a>
+<p>
+<strong>DKIM public key:</strong> The public key for your domain used by DKIM. You must include this
+key in a TXT record for your domain. The selector is <strong>mail</strong>, the hash code is
+<strong>rsa-sha256</strong>, the key type is <strong>rsa></strong>, and the key length is 2048 bits.
+</p>
+</div>
+
+<a name="OtherMailOptions"><p>&nbsp;</p><p>&nbsp;</p></a>
+<strong>Other</strong>
+
+<div style="text-indent:25px">
+<p>
+<strong>Use keyservers:</strong> If enabled, then GoodCrypto will check the <a href="/qna/knowledge-base/manage-keyservers.html">active keyservers</a> to find keys for contacts without keys. If a key is found, then the first user who tried to send a message to that contact receives email alerting them about the new key.
+</p>
+
+<p>
+This option does not impact whether someone can import a key <a href="/qna/knowledge-base/import-from-keyserver.html">from a keyserver</a>.
+</p>
+
+<p>
+<strong>Enable diagnostic logs:</strong> If enabled, then GoodCrypto logs the encryption
+and decryption process.
+</p>
+
+<p>
+We strongly recommend that you only enable this option if you're having trouble with GoodCrypto or
+processing messages. Logs may contain sensitive data.
+</p>
+</div>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

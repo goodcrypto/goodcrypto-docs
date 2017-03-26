@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How does GoodCrypto minimize MITM attacks on my messages?</h2>
+
+
+            <h4 class="dropcap">
+                Encryption and multifactor authentication
+            </h4>
+
+                <p>
+                    Encryption is a great first step. But it's only reliable with good authentication.
+
+<p>All authentication methods have flaws. Any one by itself may be easy to crack, but cracking multiple authentication factors for the same key is much harder.  The standard form of this is called "Two factor authentication". GoodCrypto gives you more:
+<ul>
+    <li> Key pinning
+    <li> Out of band verification notice
+    <li> Public key in header
+    <li> Encrypts and signs
+    <li> Standard "the recipient got my encrypted message"
+</ul>
+
+<p>
+Remember that no authentication factor is perfect. But combined they can work well.
+
+<p>
+<strong>Key pinning.</strong>
+GoodCrypto pins PGP keys. Any time GoodCrypto generates or receives a new key, it records the fingerprint in GoodCrypto's database. It sends email to let you know about the new key. If that key ever changes, you get an alert.
+
+
+<p>
+When a signed message is received, GoodCrypto verifies the signature matches the message's 'From' and warns if it doesn't. Further, it verifies that the fingerprint of any keys in the message header match the fingerprint in GoodCrypto's database. Again, the user is warned if there are any inconsistencies and the key is blocked.
+</p>
+
+<p>
+<strong>Out of band verification notice.</strong> Whenever a new key comes in, the user gets a message strongly advising them to verify the new key's fingerprint using some method other than email. You get their fingerprint from your local GoodCrypto Server's web site. Then you need at least one more source to verify. Getting a fingerprint from somewhere else online is pretty good. A phone call is better.  Face to face is best.
+
+<p>
+<strong>Public key in header.</strong>
+Every message a GoodCrypto user sends has their public key in the header. Anyone can check it. GoodCrypto does.
+
+<p>
+<strong>Encrypts and signs.</strong>
+This is standard, but essential.
+GoodCrypto always both encrypts and signs messages. It checks signatures for you. If you exchange encrypted mail with PGP users who don't have GoodCrypto, ask them to also sign their messages.
+
+<p>
+<strong>"The recipient got my encrypted message."</strong>
+This is the most common method of verification. It's weak, but users seldom do more. That's why automated authentication is essential. If your contact has GoodCrypto, they get a tag line right in the message saying whether it was encrypted, so they can tell you. If the recipient replies saying something that clearly shows they really got your encrypted message, that helps.
+
+<p>
+<strong>Public key servers.</strong>
+In the future, we'll likely offer options such as verifying keys against public key servers. Key servers are convenient. They make PGP easier to use. That's crucial, because crypto that is hard to use is only used by experts. But relying on a few centralized crypto servers for the whole Internet is obviously very risky. </p>
+
+<strong>Use multiple factors.</strong>
+Most authentication methods aren't very strong by themselves. Always use multiple factors. GoodCrypto does it automatically, and helps you check things for yourself.
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

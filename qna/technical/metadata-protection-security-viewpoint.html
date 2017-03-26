@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Security focus: How does mail metadata protection work?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    This is a quick overview for security people. You may prefer an
+<a href="/server/docs/metadata.html">IT administrator's viewpoint</a>.
+
+<p>
+GoodCrypto protects email metadata in transit by using encryption, mixing, and padding. It follows <a href="/news/snowdens-goals-software-developers">Ed Snowden's recommendations</a> to resist both network and traffic analysis.
+
+<p>
+First each message is encrypted to the recipient using GPG if we have their key.
+On a regular schedule, GoodCrypto mixes all the individual encrypted messages going from group to group into a single padded PGP MIME message, encrypted again with the group's GPG key.
+At the other end GoodCrypto reverses the process.
+
+<p>
+Mixing resists traditional network analysis.
+Bundling and encryption resist social network analysis.
+The periodic group message is padded to a fixed size.
+The regular schedule and fixed size resist traffic analysis.
+One bit is known to be leaked: The two groups might be exchanging private email.
+
+<p>
+Email is perfect for this form of protection because we already expect some
+delay. Few people notice a half hour average delay in email.
+Instant messaging doesn't work with this kind of packetization.
+It wouldn't be instant. Phone and video calls have the same limitation.
+Voice or video mail would work well, and could even be routed over email.
+
+<p>
+The default packet size is a MB, enough for an entire book of text.
+A MB per hour adds up to
+less than a GB per month for each group to group connection. At server prices one GB usually costs nothing today.
+Most groups don't write more than a book an hour, but if yours does
+you can change the defaults.
+
+<p>
+Metadata encryption is an extra GPG layer applied to the bundled messages.
+This is in addition to the user to user GPG encryption already provided by
+GoodCrypto. The inner layer protects content. The outer layer protects
+metadata and content.
+
+<p>
+When SMTP servers use TLS they provide yet another layer of encryption.
+Some people believe a single layer is enough. This is called an Eggshell Defense because it is so fragile. Encryption fails over time. We don't know when each layer will fail, but with a defense in depth we have a very good chance
+that at least one layer will survive long enough to fix or replace the others.
+When a single layer of defense fails you are completely unprotected.
+Multiple strong layers make a catastrophic failure very unlikely, so you are
+much safer.
+
+<p>
+Individual messages are encrypted and periodically mixed into a single message. The bundled message is padded
+and encrypted again. This provides very good metadata protection to resist both network and traffic analysis.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

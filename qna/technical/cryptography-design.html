@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What is GoodCrypto's cryptography design?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <p>
+Cryptography design is sometimes called security design. This leads to the mistake that once you have checked the cryptography, you have checked the security. Other security issues are covered in our <a href="/qna/technical/index.html">Technical FAQ</a>, especially in the <a href="/qna/technical/goodcrypto-threat-model">threat model</a> and <a href="/qna/technical/goodcrypto-design.html">design</a>.
+
+<h3>Simplicity</h3>
+<p>
+GoodCrypto's cryptography is as simple as we could safely make it. If anything distinguishes our crypto it is what we leave out.
+
+<p>We try to avoid writing crypto. Instead we use GPG and TLS.
+
+<p>We try to avoid state sponsored standards. NSA alone spends at least US$250 (two hundred fifty million dollars) every year sabotaging crypto, including crippling standards. They influence much more in government grants and contracts. From <a href="http://www.spiegel.de/international/germany/inside-the-nsa-s-war-on-internet-security-a-1010361.html" target =" _blank ">Inside the NSA's War on Internet Security</a>:
+
+<div class="well">
+    This process of weakening encryption standards has been going on for some time. A classification guide, a document that explains how to classify certain types of secret information, labels "the fact that NSA/CSS makes cryptographic modifications to commercial or indigenous cryptographic information security devices or systems in order to make them exploitable" as Top Secret.
+</div>
+
+<p>
+We don't use Elliptic curve and generally avoid DSA. They are state sponsored standards.
+
+<p>
+We also try to avoid highly centralized servers. They are obvious targets. Each customer has their own GoodCrypto server running on their hardware and managed by them.
+
+<p>
+We reduce the attack surface on the GoodCrypto server in many ways, such as omitting an ssh server.
+
+<h3>Mail</h3>
+<p>
+We use GPG to encrypt and decrypt mail. GoodCrypto follows Jacob Appelbaum's GPG <a href="https://github.com/ioerror/duraconf/raw/master/configs/gnupg/gpg.conf" target =" _blank "> configuration </a> from his <a href="https://github.com/ioerror/duraconf" target =" _blank "> duraconf </a> project, modified to avoid key servers.  Keys are RSA 4096 bits. We currently don't use public key servers because they are obvious targets and, in our experience, unreliable. If customers want them as a convenience we may add an option to use them.
+
+<p>
+GoodCrypto distributes PGP public keys P2P in email headers. The protocol is described in the <a href="/server/whitepaper.html">whitepaper</a> under "Step by Step".
+The customer's GoodCrypto server stores PGP keys. Users can verify fingerprints for stored public keys on the server's local web site.
+
+<h3>Net</h3>
+<p>
+We use TLS to protect network connections. Again the keys are RSA 4096. Currently we allow fallback to TLS and DSA using SHA1. This is a vulnerability that is necessary for compatibility with other systems. It is an excellent example of why we use layered encryption, such as PGP for email. We will eliminate this fallback as soon as enough other systems are brought up to date.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

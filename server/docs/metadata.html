@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Metadata Protection | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+<h3>Metadata Protection</h3>
+
+<p class="dropcap"><p>
+GoodCrypto uses Ed Snowden's design from HOPE X to encrypt your email, both content and metadata.
+</p>
+
+<p>
+Exposed metadata can be more dangerous than content. As former CIA/NSA boss Gen. Michael Hayden admitted,
+"<a href="http://www.thenewamerican.com/usnews/crime/item/18244-we-kill-people-based-on-metadata-admits-former-cia-nsa-boss">We kill people based on metadata.</a>"
+</p>
+
+<p>
+With a <a href="/qna/knowledge-base/change-mail-options.html">simple click</a>, you can block both network and traffic analysis. Spies who tap your line get just one bit of data, that Group A communicates with Group B.  They don't know who, what, when or even how much information an individual exchanges with someone else. What spies see is useless, because it is always the same. The same schedule, the same amount, and always encrypted, including metadata.
+</p>
+
+<p>
+Of course, until other packages implement this open source protocol for metadata protection, you will need GoodCrypto on both ends.
+</p>
+
+<p>
+More:
+<ul>
+  <li> <a href="/qna/technical/protect-metadata.html">How does GoodCrypto protect metadata?</a>
+  <li> <a href="/qna/technical/metadata-protection-security-viewpoint.html">Security focus: How does mail metadata protection work?</a>
+</ul>
+</p>
+
+</p>
+
+<p>&nbsp;</p>
+<a name="ProtectMetadata"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>Protect metadata</h4>
+
+<p class="dropcap"><p>
+This overview  is for IT administrators. If you prefer security details see <a href="/qna/technical/mail_metadata_protection_security_viewpoint.html">Security focus: How does mail metadata protection work?</a>
+</p>
+
+<p>
+GoodCrypto uses Ed Snowden's design from HOPE X to protect email metadata.
+Very quickly, GoodCrypto :
+<ol>
+  <li> Uses GPG to encrypt from individual to individual.
+  <li> Periodically mixes all messages to a domain into the body of a single message.
+  <li> Pads and uses GPG to encrypt the mixed group message. This encrypts all end user metadata.
+</ol>
+</p>
+
+<p>
+When GoodCrypto first boots it prepares an email address and key for your domain. This is separate from the keys for individuals. Keys are automatically exchanged the first time that two GoodCrypto mail domains connect.
+</p>
+
+<p>
+On a regular schedule GoodCrypto:
+<ul>
+  <li> Signs and encrypts messages going to a domain with each individual's key.
+  <li> Attaches all the messages for that domain to one new message.
+  <li> Pads the mixed group message to a fixed size.
+  <li> Encrypts the group message.
+</ul>
+Because all individual metadata is in the group message body, the metadata is encrypted. The sender, recipient, subject, and content of messages are completely hidden. Useless domain metadata is all that's visible, only showing that the two groups might be exchanging private email.
+</p>
+
+<p>
+When a message arrives at the destination, GoodCrypto reverses the process and delivers individual messages
+</p>
+
+<p>
+Usually both the sender and recipient have personal keys. Then their individual messages are encrypted in layers, first with the individual key and then with the metadata key.
+</p>
+
+<p>
+GoodCrypto automatically exchanges keys. The administrator receives email whenever a new metadata key arrives so so it can be <a href="/qna/knowledge-base/user-verify-key.html">verified</a>.
+</p>
+
+<p>
+As both systems generate and exchange keys, GoodCrypto continuously makes your mail more secure.
+If you need to be sure that your first contact is safe, <a href="/qna/knowledge-base/known-metadata-domains.html">check that your GoodCrypto private server has a metadata key</a> for the other domain.
+</p>
+
+<p>
+Of course, until other packages implement this open source protocol for metadata protection, you will need GoodCrypto on both ends.
+</p>
+</p>
+
+<p>&nbsp;</p>
+<a name="TrafficAnalysis"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h4>Stop network and traffic analysis</h4>
+
+<p class="dropcap">GoodCrypto uses packetization, padding, and encryption to stop both network and traffic analysis. On a regular schedule it combines individual messages going to a group, pads them to a standard size, and wraps them in an extra layer of encryption that protects all the messsages and hides all individual metadata.
+
+<p>
+The default settings send a single one MB group-to-group message every hour, even when no individuals have sent mail to the other group.
+That allows the equivalent of one entire book of email text every hour. It adds just one GB of traffic per month per group to stop traffic analysis. The administrator can <a href="/qna/knowledge-base/change-mail-options.html">change these settings</a>.
+</p>
+
+<p>
+If the total of pending outgoing individual messages are too big for a single standard group message, unsent messages are queued for later.
+If a message is bigger than the group message size it is returned to the sender with an explanation.
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

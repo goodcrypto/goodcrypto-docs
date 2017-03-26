@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I configure my firewall for GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+                GoodCrypto comes with a preconfigured firewall. Your own firewall needs to allow access to the server.
+            </h4>
+
+                <p>
+                    You'll need to open the following ports for the GoodCrypto machine:
+
+<table>
+<tr>
+<th width="20%">Port</th>
+<th width="20%">Interface</th>
+<th width="20%">Direction</th>
+<th width="20%">Purpose</th>
+</tr>
+<tr>
+<td>9151</td>
+<td>tcp</td>
+<td>in</td>
+<td>tor</td>
+</tr>
+<tr>
+<td>8398</td>
+<td>tcp</td>
+<td>in</td>
+<td>web proxy</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>tcp</td>
+<td>in</td>
+<td>server website</td>
+</tr>
+<tr>
+<td>8443</td>
+<td>tcp</td>
+<td>in</td>
+<td>https for website</td>
+</tr>
+<tr>
+<td>10025</td>
+<td>tcp</td>
+<td>in</td>
+<td>milter port</td>
+</tr>
+<tr>
+<td>10026</td>
+<td>tcp</td>
+<td>out</td>
+<td>milter port</td>
+</tr>
+</tr>
+<tr>
+<td>11371</td>
+<td>tcp</td>
+<td>in</td>
+<td>hkp port (used by keyservers)</td>
+</tr>
+</table>
+
+<p>
+The directions in and out are from the viewpoint of your GoodCrypto Server.
+</p>
+
+<p>Also, if you run GoodCrypto in a VM, we recommend a firewall on the computer that runs the VM with the same ports open. These ports assume the hypervisor is <strong>not</strong> running as root.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

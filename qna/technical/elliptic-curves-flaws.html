@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>Why doesn't GoodCrypto use ECC?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <p class="dropcap">
+GoodCrypto's avoidance of elliptic curves is very controversial to some. Our biggest objection is that ECC is a state sponsored standard. You may disagree if you believe that state crypto standards are intended to protect you, and not <a href="www.it.slashdot.org/story/13/09/11/1224252/are-the-nist-standard-elliptic-curves-back-doored">crippled so the state can spy</a>.
+</p>
+
+<p>
+Multiple <a href="http://www.reuters.com/article/2014/03/31/us-usa-security-nsa-rsa-idUSBREA2U0TY20140331" target =" _blank ">compromises</a> of elliptic curves by NSA are now well known (<a href="http://www.theinquirer.net/inquirer/news/2296128/rsa-warns-against-nsa-code-in-its-encryption-software" target =" _blank ">RSA warning</a> and <a href="http://csrc.nist.gov/publications/nistbul/itlbul2013_09_supplemental.pdf" target =" _blank ">NIST alert</a>). In one case NSA paid <a href="http://www.reuters.com/article/2014/03/31/us-usa-security-nsa-rsa-idUSBREA2U0TY20140331" target =" _blank ">$10 million dollars for a backdoor</a> in ECC.
+</p>
+
+<p>We agree with Bruce Schneier when he <a href="https://www.schneier.com/blog/archives/2013/09/the_nsa_is_brea.html#c1675929">says</a>, "I no longer trust the constants. I believe the NSA has manipulated them through their relationships with industry". As Colin Percival suggests, "You should use elliptic curves <strong>only</strong> if your name is Daniel J. Bernstein." And <a href="https://projectbullrun.org/surveillance/2015/video-2015.html#bernstein">djb is very skeptical of ECC standards</a>.
+
+<p>
+It's also interesting that many mathematicians have found that they <a href="http://crypto.stackexchange.com/questions/10263/should-we-trust-the-nist-recommended-ecc-parameters">can't analyze the magic</a> ECC constants. That makes auditing a matter of "Trust me" with an implied "You're too stupid". That doesn't fly any more.
+
+<p>
+Mathematicians hate the implication that they are stupid. Many opt out of the discussion, leaving the field to elliptic curve promoters. This could be a good way to hide a backdoor.
+
+<p>
+There is no clear need for ECC. ECC is still a popular forward secrecy choice, and may be useful as an additional encryption layer for that purpose. The RSA algorithm is a tested and trusted alternative. RSA is auditable. The excuses for replacing RSA are not convincing to us.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

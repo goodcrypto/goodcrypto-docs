@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I configure exim to work with GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    Exim4 support is experimental.
+
+<ol>
+  <li>Edit <strong>/etc/exim4/update-exim4.conf.conf</strong> so the <strong>dc_local_interfaces</strong> line includes <strong>; GC_PRIVATE_SERVER_IP.10028</strong> before the closing quote mark. Change GC_PRIVATE_SERVER_IP to the IP address of your GoodCrypto private server.<p>&nbsp;</p></li>
+  <li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/050_exim4-config_goodcrypto/download" class="btn btn-primary btn-sm" title="Exim router" <strong>GoodCrypto router</strong></a> and save it in <strong>/etc/exim4/conf.d/router</strong> directory<p>&nbsp;</p></li>
+  <li>Download the <a href="https://sourceforge.net/projects/goodcrypto-private-server/files/20-exim4-config_goodcrypto/download" class="btn btn-primary btn-sm" title="Exim router" <strong>GoodCrypto transport</strong></a> and save it in <strong>/etc/exim4/conf.d/transport</strong> directory<br/><p>&nbsp;</p></li>
+<li>Restart exim and you're done</li>
+</ol>
+
+<!--ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the administrator</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>MTA configuration</strong> button</li>
+  <li>Click the <strong>For your Exim server</strong> tab</li>
+  <li><a href="/qna/knowledge-base/config-exim-securely.html">Copy and paste</a> your exim configuration to your GoodCrypto private server.
+  <li>Then copy the changes back to your mail server.</li>
+  <li>Restart exim4 and you're done.</li>
+</ol-->
+
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

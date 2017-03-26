@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Docs: Installation | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+<h3>Table of Content</h3>
+
+<p><a href="/server/docs/index.html"><h4>Overview</h4></a></p>
+
+<p><a href="/server/docs/install.html"><h4>Installation</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#QuickGuide">Quick guide</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#MailServer">Configure your mail server</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-postfix.html">Postfix</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/qna/knowledge-base/config-exim.html">Exim4</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/install.html#ConfigBrowsers">Configure your browsers</a><br/>
+</p>
+
+<p><a href="/server/docs/metadata.html"><h4>Metadata &amp; Traffic Analysis</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#ProtectMetadata">Protect metadata</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/metadata.html#TrafficAnalysis">Stop traffic analysis</a><br/>
+</p>
+
+<p><a href="/server/docs/keys.html"><h4>Key Management</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#AutoKeyExchange">How key exchange works</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#VerifyKey">Verify key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ImportKey">Import key</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/keys.html#ExportKey">Export key</a><br/>
+</p>
+
+<p><a href="/server/docs/messages.html"><h4>Messages</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#VerifyArrival">Verify arrived privately</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/messages.html#ViewSent">Check if sent privately</a><br/>
+</p>
+
+<p><a href="/server/docs/browsing.html"><h4>Web</h4></a></p>
+
+<p><a href="/server/docs/admin.html"><h4>Administration</h4></a>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#MailOptions">Mail Options</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Contacts">Contacts</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Users">Users</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Keyservers">Keyservers</a><br/>
+&nbsp;&nbsp;&nbsp;<a href="/server/docs/admin.html#Backups">Backups</a><br/>
+</p>
+
+<p><a href="/server/docs/security.html"><h4>Security</h4></a></p>
+
+<p><a href="/server/docs/trouble-shooting.html"><h4>Trouble Shooting</h4></a></p>
+
+
+        </div>
+
+        <div class="col-md-9">
+
+<h3>Installation</h3>
+
+<p class="dropcap">
+After installing the preconfigured ISO, you simply need to customize a few fields and
+integrate it with your mail server and browsers.
+</p>
+
+<a name="QuickGuide"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h3>Quick Guide</h3>
+
+<p class="dropcap"><ol>
+<li><a href="/server/download.html">Download the ISO</a></li>
+
+<li>Install the ISO on a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-computer.html">new computer</a> or
+in a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-virtual-machine.html">virtual machine</a></li>
+
+<li>Use your browser to go to the IP address at port 8080 for the computer where you installed the ISO. <em> If your browser reports the site it not accessible, wait a few minutes and try reloading.</em>
+<br/>
+<ul>
+It's better to go connect via https with port 8443, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert.
+</ul>
+</li>
+
+<li>Enter an email address that uses the domain you want to protect on your GoodCrypto private server.<br/>
+This address will be used to receive notices (e.g., error messages) from your GoodCrypto private server. You may also opt to receive security alerts from GoodCrypto at this address.</li>
+
+<li>Follow the instructions on your private server to finish the integration.</li>
+</ol>
+</p>
+
+<a name="MailServer"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h3>Configure Your Mail Server</h3>
+
+<p class="dropcap">
+<ul>
+<li><a href="/qna/knowledge-base/config-postfix.html">Postfix</a>
+</li>
+
+<li>
+<a href="/qna/knowledge-base/config-exim.html">Exim4</a>
+</li>
+</ul>
+</p>
+
+<a name="ConfigBrowsers"><p>&nbsp;</p></a>
+<p>&nbsp;</p>
+<h3>Configure Your Browsers</h3>
+
+<p class="dropcap">We strongly recommend that you ask your administrator to help configure your browser using <a href="#ProxySettings">the proxy settings</a>:
+
+<ul>
+        <li><a href="/qna/knowledge-base/configure-browsers.html#chrome">Chrome</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#ie">Internet Explorer</a></li-->
+       <li><a href="/qna/knowledge-base/configure-browsers.html#firefox">Firefox</a></li>
+       <!--li><a href="/qna/knowledge-base/configure-browsers.html#safari">Safari</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#android">Android</a></li>
+       <li><a href="/qna/knowledge-base/configure-browsers.html#opera">Opera</a></li-->
+ </ul>
+
+<a name="ProxySettings"></a>
+<p>&nbsp;</p>
+<h3>Proxy Settings</h3>
+<div class="table-responsive">
+<table class="table">
+        <tr>
+            <td> HTTP Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> SSL Proxy: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 8398 </td>
+        </tr>
+        <tr>
+            <td> FTP Proxy: </td>
+            <td> <em>leave blank</em> </td>
+            <td> 0 </td>
+        </tr>
+        <tr>
+            <td> SOCKS Host: </td>
+            <td> <em>Your GoodCrypto private server IP address</em> </td>
+            <td> 9350 </td>
+        </tr>
+    </table>
+</div>
+
+<a name="chrome"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Chrome</h3>
+<ol>
+  <li>Click on the menu and select <strong>Settings</strong></li>
+  <li>Click on the <strong>Show advanced settings</strong> link</li>
+  <li>Under the <strong>Network</strong> section, click <strong>Change proxy settings</strong></li>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="firefox"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Firefox</h3>
+<p>
+Edit / Preferences / Advanced / Network / Settings
+<ol>
+  <li>Select "Manual proxy configuration"</li>
+  <li><a href="/qna/knowledge-base/configure-browsers.html#ProxySettings">Fill in the proxy settings</a>
+  <li>Uncheck "Use this proxy for all protocols" after "HTTP Proxy".</li>
+  <li>Select "SOCKS v5".</li>
+</ol>
+<p>&nbsp;</p>
+</p>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>What is the most secure way to configure postfix to work with GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server website</a>.</li>
+  <li><a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">Sign in</a> with the Administrator credentials.</li>
+  <li>Click on <strong>Mail</strong>.
+  <li>Click on <strong>Postfix changes</strong>. This button only appears if you're logged in as the administrator. (If you don't see this button, then we recommend you <a href="/server/download.html">download the latest ISO</a> or <a href="/qna/knowledge-base/postfix-config-script.html">run the script</a> to update postfix.)</li>
+  <li>Enter the IP address for your GoodCrypto private server.</li>
+  <li>Copy the full contents from your postfix server's configuration files into the matching fields.</li>
+  <li>Click <strong>Generate config changes</strong>.</li>
+  <li>Review the changes and then copy the full contents from each field into the appropriate file on your mail server.</li>
+  <li>On your mail server, issue the command <strong>newaliases</strong>
+  <li>Restart postfix.</li>
+  <li>Send a message to someone outside of your domain to verify that postfix is working.</li>
+   <li>Once you are comfortable, you can remove the "soft_bounce = yes" line from /etc/postfix/main.cf</li>
+</ol>
+
+<p>
+We strongly recommend that you configure your SMTP/IMAP/POP servers and clients to default to TLS.
+</p>
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

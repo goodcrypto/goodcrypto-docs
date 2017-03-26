@@ -1,0 +1,695 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Knowledge Base | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+            <p><a href="/qna/knowledge-base/single_page/index.html">Single page</a></p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+            <h3>Topics</h3>
+
+
+
+                <a href="#Overview">
+                    <h4>Overview</h4>
+                </a>
+
+                <a href="#Configuration">
+                    <h4>Configuration</h4>
+                </a>
+
+                <a href="#Server">
+                    <h4>Server</h4>
+                </a>
+
+                <a href="#Mail">
+                    <h4>Mail</h4>
+                </a>
+
+                <a href="#Mail issues">
+                    <h4>Mail issues</h4>
+                </a>
+
+                <a href="#Web issues">
+                    <h4>Web issues</h4>
+                </a>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+
+
+
+                    <div class="col-md-12">
+                        <a name="Overview"></a>
+                        <p>&nbsp;</p>
+                        <h3>Overview</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/access-goodcrypto-server.html">
+                                How do I access my GoodCrypto private server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Configuration"></a>
+                        <p>&nbsp;</p>
+                        <h3>Configuration</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/goodcrypto-preconfigured.html">
+                                Is my GoodCrypto private server preconfigured?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-computer.html">
+                                How do I run my GoodCrypto ISO on a new computer?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-virtual-machine.html">
+                                How do I run my GoodCrypto private server in a virtual machine?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/integrate-mail-server.html">
+                                How do I integrate my mail system with GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/config-postfix/index.html">
+                                How do I configure my postfix server to work with GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/config-postfix-securely/index.html">
+                                What is the most secure way to configure postfix to work with GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/postfix-config-script/index.html">
+                                Is there a script to configure postfix to work with GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/config-exim/index.html">
+                                How do I configure exim to work with GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/configure-with-other-filters.html">
+                                How do I configure the mail server to work with GoodCrypto and other filters?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/configure-firewall.html">
+                                How do I configure my firewall for GoodCrypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/configure-browsers/index.html">
+                                How do I configure my browser to reduce tracking?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/import-web-certificate.html">
+                                How do I import my GoodCrypto private server's web certificate?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Server"></a>
+                        <p>&nbsp;</p>
+                        <h3>Server</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/sign-in-to-goodcrypto-server.html">
+                                How do I sign in to my GoodCrypto Server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/install-quick-guide.html">
+                                How do I install my GoodCrypto private server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/docs-security.html">
+                                How do I secure my GoodCrypto private server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/backup-data.html">
+                                How do I backup the data from my server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/trouble-shooting.html">
+                                How do I trouble shoot my GoodCrypto server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/csrf-verification-failed-request-aborted.html">
+                                Forbidden (403) CSRF verification failed. Request aborted.
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/ext4-fs-sda-vfs-cant-find-ext4-filesystem.html">
+                                EXT4-fs (sda): VFS: Can't find ext4 filesystem
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Mail"></a>
+                        <p>&nbsp;</p>
+                        <h3>Mail</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/will_message_be_encrypted.html">
+                                How do I know if a message I send will be encrypted?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/verify-message-arrived-privately.html">
+                                How do I verify a message arrived privately?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/confirm-message-was-sent-privately.html">
+                                How do I confirm a message was sent privately?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/someone-sent-key.html">
+                                What do I do with a key someone sent me?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/how-to-send-key.html">
+                                How do I send my key to someone?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/user-verify-key.html">
+                                How do I verify a key, or a fingerprint?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/mark-key-verified.html">
+                                How do I mark a key as verified?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/import-key.html">
+                                How do I import a key?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/import-from-file.html">
+                                How do I import a key from a file?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/import-from-keyserver.html">
+                                How do I import a key from a keyserver?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/import-private-key.html">
+                                How do I import a private key?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/export-public-key.html">
+                                How do I export a public key?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/how-to-simplify-managing-keys.html">
+                                How do I simplify managing keys?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/manage-keyservers.html">
+                                How do I manage the keyservers?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/gen-keys-automatically.html">
+                                How do I configure GoodCrypto to create private keys automatically?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/manage-contacts.html">
+                                How do I manage contacts?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/manage-users.html">
+                                How do I manage users?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/mail-options.html">
+                                Can I change the mail options?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/change-mail-options.html">
+                                How do I change options for GoodCrypto Mail?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/crypt-options.html">
+                                What options are available for encryption and decryption?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/learn-whether-metadata-protected.html">
+                                How do I know whether my mail's metadata will be protected and traffic analysis stopped?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/known-metadata-domains.html">
+                                How do I know if a contact is ready to protect metadata and stop traffic analysis?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/learn-whether-message-protected.html">
+                                How do I verify an outgoing message will be protected
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/outbound-encryption-conditions.html">
+                                How do I control whether an outbound message is encrypted or not?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Mail issues"></a>
+                        <p>&nbsp;</p>
+                        <h3>Mail issues</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/sysadmin-already-configured.html">
+                                "Your system has already been customized."
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/unable-to-configure-mail.html">
+                                "Unable to configure GoodCrypto Mail"
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/why-no-private-keys-created.html">
+                                Why aren't private keys created?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/postfix-relay-access-denied.html">
+                                Postfix log shows "Relay access denied"
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/postfix-fatal-cannot-assign-requested-address.html">
+                                What do I do when postfix reports, "Cannot assign requested address"?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/message-contained-bad-gpg-key-header.html">
+                                Message contained a bad GPG key in header
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/undelivered-mail-returned-sender.html">
+                                Undelivered Mail Returned to Sender. This is the mail system at host goodcrypto.private.server.
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/i-got-message-goodcrypto-user-why-didnt-i-get-their-key.html">
+                                I got a message from a GoodCrypto user. Why didn't I get their key?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Web issues"></a>
+                        <p>&nbsp;</p>
+                        <h3>Web issues</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/certificate-uses-same-serial-number.html">
+                                "Secure Connection Failed . . . Your certificate contains the same serial number as another"
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/connection-untrusted-because-no-issuer-chain-was-provided.html">
+                                "This Connection is Untrusted . . . because no issuer chain was provided."
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/secure-connection-failed-certificate-extension-value-invalid.html">
+                                "Secure Connection Failed . . . Certificate . . . is invalid."
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/broken-pipe-browser.html">
+                                "Broken pipe" in browser
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/knowledge-base/invalid-signature-in-peers-certificate.html">
+                                "Secure Connection Failed . . . Peer's certificate has an invalid signature."
+                            </a>
+                        </p>
+                    </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

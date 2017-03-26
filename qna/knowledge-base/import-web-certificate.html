@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I import my GoodCrypto private server's web certificate?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    We strongly recommend that you ask your administrator to help configure your browser.
+
+<p>
+After saving the certificate from your <a href="/qna/knowledge-base/access-goodcrypto-server.html">GoodCrypto private server</a> and verify the fingerprint, then follow the detailed instructions for your browser:
+</p>
+
+<p>
+    <ul>
+        <li><a href="/qna/knowledge-base/import-web-certificate.html#chrome">Chrome</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#ie">Internet Explorer</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#firefox">Firefox</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#safari">Safari</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#android">Android</a></li>
+       <li><a href="/qna/knowledge-base/import-web-certificate.html#opera">Opera</a></li>
+   </ul>
+</p>
+
+<p>If you're using a browser not listed above, then search online for instructions about importing a <strong>root certificate</strong>.</p>
+
+<a name="chrome"></a>
+<hr>
+<p>&nbsp;</p>
+<h3>Chrome</h3>
+<ol>
+    <li>Click on the <strong>wrench icon</strong>, select <strong>Options</strong>, and select <strong>Under the Hood</strong></li>
+    <li>Scroll down to <strong>Security</strong> section and click on the <strong>Manage certificates</strong> button.</li>
+    <li>Click on the <strong>Import</strong> button and use the Certificate import wizard to import a certificate.</li>
+    <li>Click <strong>Next</strong>, use the <strong>Browse</strong> button to locate the file that you saved in Step 1 of these instructions, and <strong>highlight</strong> the filename.</li>
+    <li>Click <strong>Next</strong> to continue with Certificate Import Wizard.</li>
+    <li>Select the <strong>Trusted Root Certification Authorities</strong> store.</li>
+    <li>Click the <strong>Finish</strong> button to complete the process.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="ie"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Internet Explorer</h3>
+<ol>
+    <li>Navigate to any site that uses TLS/SSL (i.e., https).</li>
+    <li>IE will display a warning that, "There is a problem with this web site's security certificate."</li>
+    <li>Click the, <strong>Continue to this website (not recommended)</strong> link.</li>
+    <li>Once the page has loaded, look to the right of the address bar. A red/pink button, labeled <strong>Certificate Error,</strong> should be visible. Click that button.</li>
+    <li>A pop-up, titled <strong>Untrusted Certificate</strong>, will appear. Click the <strong>View certificates</strong> link at the bottom of the pop-up.
+    <li>Another pop-up, titled <strong>Certificate</strong>, will appear.</li>
+    <li>Click the <strong>Install Certificate…</strong> button.</li>
+    <li>The <strong>Certificate Import Wizard</strong> will be started. Click the <strong>Next</strong> button.</li>
+    <li>For XP: Leave <strong>Automatically select the certificate…</strong> option selected, and click the <strong>Next</strong> button.</li>
+    <li>For Vista/Windows7/Windows8:
+        <ul>
+            <li>Choose <strong>Place all certificates in the following store</strong> option, and click the <strong>Browse</strong> button.
+            <li>Choose the <strong>Trusted Root Certification Authorities</strong> store and click <strong>OK</strong>.</li>
+            <li>Click the <strong>Next</strong> button.
+        </ul>
+    </li>
+    <li>This should display the <strong>Completing the Certificate Import Wizard</strong> dialog. Click the <strong>Finish</strong> button.
+</ol>
+<p>&nbsp;</p>
+
+<a name="firefox"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Firefox</h3>
+<ol>
+    <li>From the menu, select <strong>Preferences / Advanced / Certificates</strong>.</li>
+    <li>Click the <strong>Import</strong> button.</li>
+    <li>Locate the certificate file that you saved earlier. Click the filename and <strong>Open</strong> it.
+    <li>If Firefox pops up the warning, "This certificate is already installed as a certificate authority", then
+        <a data-toggle="modal" data-target="#FirefoxWarning" href="#GoodCryptoDefined">click here</a>
+    <li>Another dialog will pop up that asks, "Do you want to trust "CA Cert Signing Authority" for the following purposes?".</li>
+    <li>Add a check mark in the <strong>Trust this CA to identify web sites</strong> box and click the <strong>OK</strong> button.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+
+On older Firefox versions:
+<ol>
+    <li>Select <strong>Preferences</strong> from the <strong>Edit</strong> menu.<br/>
+        If you're running Firefox on Mac, then select <strong>Preferences...</strong> from the <strong>Firefox</strong> menu.
+    </li>
+    <li>Click the <strong>Advanced</strong> icon at the top of the dialog box.</li>
+    <li>Click the <strong>Encryption</strong> tab, and then the <strong>Authorities</strong> tab.</li>
+    <li>Click the <strong>View certificates</strong> button.</li>
+    <li>Continue from <strong>Import</strong> above.</li>
+</ol>
+
+<div class="modal" id="FirefoxWarning">
+  <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">If Firefox pops up the warning, "This certificate is already installed as a certificate authority", then</h4>
+    <div class="modal-body">
+    <br/>
+    <p>
+        <ol>
+            <li>Click the <strong>OK</strong> button</li>
+            <li>Highlight the <strong>ca.mitm.com</strong> item in the list</li>
+            <li>Click the <strong>Delete or Distrust</strong> button and confirm when prompted</li>
+            <li>Resume the procedure by restarting with <strong>Click the Import button</strong> step.
+        </ol>
+    </p>
+    </div>
+  </div></div></div>
+</div>
+<p>&nbsp;</p>
+
+<a name="safari"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Safari</h3>
+<ol>
+    <li>Navigate to any site that uses TLS/SSL (i.e., https).</li>
+    <li>Safari will pop up a window that says, "Safari can't verify the identity of the website "???".</li>
+    <li>Click the <strong>Show Certificate</strong> button.</li>
+    <li>Verify the information is for ???</li>
+    <li>Add a check mark in the <strong>Always trust "???" when connecting to "???"</strong> box.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="android"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Android</h3>
+<ol>
+    <li>Copy the certificate file to the /sdcard folder. You can use the file manager or
+    <strong>adb push</strong>.</li>
+    <li>Go into adb shell ( adb shell from commandline), or open the 'terminal'-application on your android device. You will get a command prompt similar like shell@android:/ $ Gain superuser/root rights, neccessary to perform privileged actions:
+
+su
+
+Make the /system folder writable (will return to read-only upon reboot):
+
+mount -o remount,rw /system
+
+Copy the new certificate files to the correct folder on your Android device:
+
+cp /sdcard/5ed36f99.0 /system/etc/security/cacerts/
+cp /sdcard/e5662767.0 /system/etc/security/cacerts/
+
+Correct the file permissions to u=rw, g=r, o=r:
+
+cd /system/etc/security/cacerts/
+chmod 644 5ed36f99.0
+chmod 644 e5662767.0
+
+
+    <li>Look for the <strong>Preferences</strong> or <strong>Options</strong> for your browser.</li>
+    <li>You'll likely find a tab or button which lets you manage certificate or
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+<p>&nbsp;</p>
+
+<a name="opera"></a>
+<hr>
+<p>&nbsp</p>
+<h3>Opera</h3>
+<ol>
+    <li>Click on the <strong>wrench icon</strong>, select <strong>Options</strong>, and select <strong>Under the Hood</strong></li>
+    <li>Scroll down to <strong>Security</strong> section and click on the <strong>Manage certificates</strong> button.</li>
+    <li>Click on the <strong>Import</strong> button and use the Certificate import wizard to import a certificate.</li>
+    <li>Click <strong>Next</strong>, use the <strong>Browse</strong> button to locate the file that you saved in Step 1 of these instructions, and <strong>hightlight</strong> the filename.</li>
+    <li>Click <strong>Next</strong> to continue with Certificate Import Wizard.</li>
+    <li>Select the <strong>Trusted Root Certification Authorities</strong> store.</li>
+    <li>Click the <strong>Finish</strong> button to complete the process.</li>
+    <li>Close all the windows and dialog boxes until you have returned to your main browser window.</li>
+</ol>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

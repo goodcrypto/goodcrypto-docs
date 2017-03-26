@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I configure my postfix server to work with GoodCrypto?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <ol>
+  <li>Connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a></li>
+  <li>Sign in with the credentials for the administrator</li>
+  <li>Click the <strong>Mail</strong> menu </li>
+  <li>Click the <strong>MTA configuration</strong> button</li>
+  <li> Click the <strong>For your Postfix server</strong> tab</li>
+  <li><a href="/qna/knowledge-base/config-postfix-securely.html">Copy and paste</a> your postfix configuration to your GoodCrypto private server.
+  <li>Then copy the changes back to your mail server.</li>
+  <li>Restart postfix and you're done.</li>
+</ol>
+
+<p>
+If you have multiple servers, you may prefer to
+<a href="/qna/knowledge-base/postfix-config-script.html"> run a script </a>
+on each mail server. You can automate this alternative.
+</p>
+
+<p>
+To make sure you don't lose any mail while you test the new configuration, GoodCrypto configures postfix to "soft bounce" messages. This means that if there are issues after you change your configuration, your mail server will tell the sender's mail server to try again after a few hours. Once you're happy that the configuration is working as expected, you can remove the soft bounce configuration line.
+</p>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

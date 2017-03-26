@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I install my GoodCrypto private server?</h2>
+
+
+            <h4 class="dropcap">
+
+            </h4>
+
+                <p>
+                    <ol>
+<li><a href="/server/download.html">Download the ISO</a></li>
+
+<li>Install the ISO on a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-computer.html">new computer</a> or
+in a <a href="/qna/knowledge-base/integrate-goodcrypto-iso-with-virtual-machine.html">virtual machine</a></li>
+
+<li>Use your browser to go to the IP address at port 8080 for the computer where you installed the ISO. <em> If your browser reports the site it not accessible, wait a few minutes and try reloading.</em>
+<br/>
+<ul>
+It's better to go connect via https with port 8443, but remember that your private server has a self-signed cert so you'll need to have your browser accept the cert.
+</ul>
+</li>
+
+<li>Enter an email address that uses the domain you want to protect on your GoodCrypto private server.<br/>
+This address will be used to receive notices (e.g., error messages) from your GoodCrypto private server. You may also opt to receive security alerts from GoodCrypto at this address.</li>
+
+<li>Follow the instructions on your private server to finish the integration.</li>
+</ol>
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto
+</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}

@@ -1,0 +1,431 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Technical FAQ | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+            <p><a href="/qna/technical/single_page/index.html">Single page</a></p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+            <h3>Topics</h3>
+
+
+
+                <a href="#Overview">
+                    <h4>Overview</h4>
+                </a>
+
+                <a href="#Mail">
+                    <h4>Mail</h4>
+                </a>
+
+                <a href="#Other">
+                    <h4>Other</h4>
+                </a>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+
+
+
+                    <div class="col-md-12">
+                        <a name="Overview"></a>
+                        <p>&nbsp;</p>
+                        <h3>Overview</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/goodcrypto-open-source.html">
+                                Is GoodCrypto open source?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/major-features.html">
+                                What are GoodCrypto's security features?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/goodcrypto-design.html">
+                                What is GoodCrypto's design?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/goodcrypto-threat-model.html">
+                                What is GoodCrypto's threat model?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/cryptography-design.html">
+                                What is GoodCrypto's cryptography design?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-not-tails.html">
+                                GoodCrypto provides the tools GPG and Tor that Ed Snowden used. Why not Tails?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Mail"></a>
+                        <p>&nbsp;</p>
+                        <h3>Mail</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/protect-metadata-and-stop-traffic-analysis.html">
+                                Does GoodCrypto protect metadata against traffic analysis?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/protect-metadata.html">
+                                How does GoodCrypto protect metadata?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/stop-traffic-analysis.html">
+                                How does GoodCrypto stop traffic analysis?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/metadata-protection-security-viewpoint.html">
+                                Security focus: How does mail metadata protection work?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/supported-encryption-software.html">
+                                Which encryption software does GoodCrypto support?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/all-outgoing-messages-encrypted.html">
+                                Are all outgoing messages encrypted?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/fingerprint.html">
+                                What is a fingerprint or key id?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/how-pgp-works.html">
+                                How does PGP work?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-cant-i-verify-someones-key-email.html">
+                                Why shouldn't I verify someone's key by email?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/plaintext-if-recipient-key.html">
+                                Will my email ever be sent as plaintext if there's a key for the recipient?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/goodcrypto-and-other-encryption.html">
+                                How does GoodCrypto work when the other person doesn't have it?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/encrypted-mail-filtered-spam-and-viruses.html">
+                                Can encrypted email be filtered for spam and viruses?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/crypto-between-user-mail-server.html">
+                                What encryption is used between the user and mail server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/minimize-mitm-attack-my-keys.html">
+                                How does GoodCrypto minimize MITM attacks on my messages?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/user-to-user-pgp.html">
+                                Why not user-to-user PGP?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-need-pgp.html">
+                                Why do I need PGP? Isn't TLS/SSL enough?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/javascript-crypto.html">
+                                Why can't I just use web mail with javascript crypto?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/smime-support.html">
+                                Why doesn't GoodCrypto support S/MIME?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/user-credentials-to-sign-in.html">
+                                Where does a user get credentials to sign in to our GoodCrypto private server?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <a name="Other"></a>
+                        <p>&nbsp;</p>
+                        <h3>Other</h3>
+                    </div>
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-an-appliance.html">
+                                Why a virtual appliance?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/dsa-flaws.html">
+                                What's wrong with DSA?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/elliptic-curves-flaws.html">
+                                Why doesn't GoodCrypto use ECC?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-not-hardware.html">
+                                Why not a small hardware box?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-sh-instead-of-standard-libraries.html">
+                                Why use the python sh module instead of standard libraries?
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-md-12" id="triggers">
+                        <p>
+                            <a href="/qna/technical/why-doesnt-goodcrypto-share-pcaps.html">
+                                Why doesn't GoodCrypto share PCAPs?
+                            </a>
+                        </p>
+                    </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

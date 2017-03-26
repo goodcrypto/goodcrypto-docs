@@ -1,0 +1,1839 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block titlevar %}Technical FAQ | GoodCrypto{% endblock %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>FAQ: Technical  Questions &amp; Answers</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/knowledge-base/index.html" title="Manual and trouble shooting guide for GoodCrypto.">Knowledge Base</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+            <h3>Topics</h3>
+
+
+
+                <a href="#Overview">
+                    <h4>Overview</h4>
+                </a>
+
+                <a href="#Mail">
+                    <h4>Mail</h4>
+                </a>
+
+                <a href="#Other">
+                    <h4>Other</h4>
+                </a>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Overview"></a>
+            <p>&nbsp;</p>
+            <p><h3>Overview</h3></p>
+        </div>
+
+
+
+
+                <div>
+                    <a name="16"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Is GoodCrypto open source?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+<strong> Security software without source code isn't secure. </strong> We wouldn't trust GoodCrypto without source code, and we don't think you should either.
+</p>
+
+<p>
+GoodCrypto is open source so others can help find the vulnerabilities and fix them.  All our software in the ISO is already source code.
+</p>
+
+<p>
+Also, the core software is on <a href="https://gibhub.com/goodcrypto/" target="_blank">github</a> under GPLv3. We usually update our github repositories later than the source distributed in each ISO so when you're verifying an ISO, use the source distributed with that ISO..
+</p>
+
+<p>
+We haven't made a decision on the license for the rest of our ISO software, but if you need more information, please <a href="contacts" target="_blank">contact us</a>.
+</p>
+
+<p>It's possible to hide malware in open source, but it's a lot harder. When you use security software without source code you make it easy for the bad guys.</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="75"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What are GoodCrypto's security features?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Encrypts content <em>and</em> metadata</strong>
+It's easy to understand how someone who can read your mail gains
+a lot of valuable information about your business deals,
+financial data and more. As articles in
+<a href="http://www.theguardian.com/technology/interactive/2013/jun/12/what-is-metadata-nsa-surveillance">The Guardian</a>
+and
+<a href="http://www.thewire.com/technology/2013/06/email-metadata-nsa/66657/">Wired</a>
+showed, metadata (i.e., sender and recipient addresses, subjects, etc.) reveals much more
+private information about you than you might realize. The ex-NSA chief admitted that
+
+"<a href="http://www.thenewamerican.com/usnews/crime/item/18244-we-kill-people-based-on-metadata-admits-former-cia-nsa-boss">We kill people based on metadata.</a>"
+GoodCrypto lets you protect both <a href="/qna/technical/protect-metadata-and-stop-traffic-analysis.html">metadata and content</a>.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Mixes and packetizes messages to resist both network and traffic analysis</strong>
+You can protect your connections with others even more by using GoodCrypto's
+<a href="/qna/knowledge-base/packetization-details/index.html">bundling and packetization</a>. Messages between two domains are sent in padded and encrypted bundles on a regular
+schedule. So no one knows which individuals in the companies are communicating,
+how often, or even whether messages are long or short. GoodCrypto encrypts each individual message,
+then periodically bundles all messages that are going to the other domain, pads the new combined
+message, and finally encrypts the entire bundle. If no one has a message for the
+other domain, GoodCrypto still sends a padded encrypted message. Snoops don't know if anyone is actually talking.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Pins keys</strong>
+GoodCrypto includes the sender's key in the header
+of every message. Whenever a message arrives from
+someone else using GoodCrypto, the key is verified
+that it matches the key in your local database. That
+way someone can't fake sending an encrypted message from someone else.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Blocks web malware</strong>
+GoodCrypto's web proxy strips images and other malware vectors so your users'
+computers aren't infected.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Resists user tracking</strong>
+Everyone's web requests can automatically be routed through Tor so it's
+difficult to track what sites users visit. By sharing the same Tor connection,
+everyone in your company's web activity is aggregated which amplifies the
+protection against tracking of online activity.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Your administrator runs our software on your server</strong>
+We strongly recommend that you install your GoodCrypto private
+server on a headless machine. It is fully self-contained with no
+SSH access. Your administrator manages your GoodCrypto private server
+via the web with no interface to keys, passphrases, or messages.
+</p>
+<p>
+All encryption and decryption happens on your servers.
+Your administrator manages your mail just like always.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>All private keys and passphrases stay on your server</strong>
+You don't need to trust any thirdparty. You
+can secure your GoodCrypto private server to meet your standards --
+not rely on others.</p>
+<p>
+Any government requests for encryption keys comes to your company so
+you'll know if the keys are no longer secure.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Easy verification that email was decrypted by your GoodCrypto private server</strong>
+You can click on a tag added to each decrypted message to verify the message
+was decrypted by your GoodCrypto private server. This ensures that someone doesn't
+simply add a tag to a regular message to mislead you into thinking it arrived privately.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Open source so anyone can audit code</strong>
+All of the source code we've written for this project is open source and included
+with every distribution. Plus we rely on other open source projects for the
+crypto (GPG and Tor) and the OS itself (Linux). We encourage anyone with the skill
+to audit our software and publish the results.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Warning if message signed by user other than SMTP sender</strong>
+GoodCrypto verifies that a signed message was signed by the SMTP sender and reports
+if it's not. The SMTP sender is not always the same user as the one that appears in
+the header of a message so if someone is trying to trick you into believing a message
+was signed by someone it wasn't, GoodCrypto will help you spot the attempted deception.
+</p>
+
+<p>
+<img width=10 height=10 src="/static/images/general/check_mark.png"/>
+<strong>Sender notification when new key received or created</strong>
+GoodCrypto sends an email message whenever a new key from a sender is received.
+It also reminds you to verify the key id with the sender so you can be confident
+you're communicating privately with the person you think you are instead of a
+man-in-the-middle.
+</p>
+
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="40"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What is GoodCrypto's design?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Transparent protection for whole groups at a time.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Our guiding principles are:
+<ul>
+<li><strong>Protect everyone at once</strong>
+
+<p>No training. No clicks.</p>
+
+<p>
+Bruce Schneier points out, "If there is anything PGP has taught us,
+it's that one click is one click too many."
+Protecting one person at a time is inefficient.
+You have to try to train each one to protect themselves.
+The success rate is not high.</p>
+
+<p>
+Most cracked systems are user systems because ordinary people have no idea how to protect themselves online.</p>
+</li>
+
+<li><strong>Layered protection</strong>
+<p>
+For example, web access is filtered, aggregated by groups and protected by Tor.  And, mail can be configured to use multiple encryption methods.
+</p>
+</li>
+
+<li><strong>Use tested and trusted components, such as GPG and Tor</strong>
+<p>We are very slow to use new protection schemes until they have been audited and their reliability proven.</p>
+</li>
+
+<li><strong>Preconfigured distribution</strong>
+
+<p>
+Just boot it. Preconfigured. Support. Security updates. Reproducible build.</p>
+</li>
+
+<li><strong>Decentralized</strong>
+
+<p>
+All your private information is on <em>your own server</em>.
+Automatic key management with no central servers. P2P public key distribution. Key pinning.</p>
+
+<li><strong>Integrate with existing mail and browsers</strong>
+
+<p>
+Uses the same SMTP, IMAP, and POP servers you use now. Same mail clients and browsers. Same antispam and antivirus. Integrates at the MTA level.</p>
+</li>
+
+<li><strong>Don't use known compromised encryption</strong>
+
+<p>
+This may seem obvious, but some compromised crypto is standard. State sponsored standards are generally crippled so the state can crack them, which of course means others can crack them.
+</p>
+</li>
+
+<li><strong>Don't trust too much</strong>
+
+<p>
+That includes us. Encourage people to audit GoodCrypto.
+The goal is to be tested and trusted, not blindly trusted.</p>
+</li>
+
+<li><strong>Virtualization to protect against embedded malware</strong>
+
+<p>
+Ed Snowden says that VMs are
+"<a href="https://theintercept.com/2015/11/12/edward-snowden-explains-how--to-reclaim-your-privacy/">a big step up</a>"
+against persistent threats. That matches our
+<a href="/news/how_to_protect_against_apts">experience</a>.
+</p>
+
+</li>
+</ul>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="39"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What is GoodCrypto's threat model?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Global passive and active attackers.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Attackers include states, businesses, and ordinary criminals.
+<p>
+There is at least one global passive attacker, NSA. They strive to <a href="http://www.foxnews.com/tech/2013/06/11/inside-nsas-secret-utah-data-center/" target =" _blank ">tap and store everything</a>.
+
+<p>
+Counters to global passive attacks include:
+<ul>
+  <li> Encrypt (examples: TLS, GPG)
+  <li> Use combinatorial explosions such as mixing (examples: groups, Tor)
+</ul>
+
+<p>
+NSA is also the worst active attacker, although there are many.
+They sabotage and crack standards, products, and services.
+They inject packets and infect systems with malware.
+They embed compromised keys and bugs in hardware, at the factory and in transit.
+
+<p>
+Counters to active attacks include:
+<ul>
+  <li> Use tested and trusted products and services
+  <li> Avoid state sponsored standards
+  <li> Use firewalls
+  <li> Virtualize systems
+</ul>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="80"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What is GoodCrypto's cryptography design?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+Cryptography design is sometimes called security design. This leads to the mistake that once you have checked the cryptography, you have checked the security. Other security issues are covered in our <a href="/qna/technical/index.html">Technical FAQ</a>, especially in the <a href="/qna/technical/goodcrypto-threat-model">threat model</a> and <a href="/qna/technical/goodcrypto-design.html">design</a>.
+
+<h3>Simplicity</h3>
+<p>
+GoodCrypto's cryptography is as simple as we could safely make it. If anything distinguishes our crypto it is what we leave out.
+
+<p>We try to avoid writing crypto. Instead we use GPG and TLS.
+
+<p>We try to avoid state sponsored standards. NSA alone spends at least US$250 (two hundred fifty million dollars) every year sabotaging crypto, including crippling standards. They influence much more in government grants and contracts. From <a href="http://www.spiegel.de/international/germany/inside-the-nsa-s-war-on-internet-security-a-1010361.html" target =" _blank ">Inside the NSA's War on Internet Security</a>:
+
+<div class="well">
+    This process of weakening encryption standards has been going on for some time. A classification guide, a document that explains how to classify certain types of secret information, labels "the fact that NSA/CSS makes cryptographic modifications to commercial or indigenous cryptographic information security devices or systems in order to make them exploitable" as Top Secret.
+</div>
+
+<p>
+We don't use Elliptic curve and generally avoid DSA. They are state sponsored standards.
+
+<p>
+We also try to avoid highly centralized servers. They are obvious targets. Each customer has their own GoodCrypto server running on their hardware and managed by them.
+
+<p>
+We reduce the attack surface on the GoodCrypto server in many ways, such as omitting an ssh server.
+
+<h3>Mail</h3>
+<p>
+We use GPG to encrypt and decrypt mail. GoodCrypto follows Jacob Appelbaum's GPG <a href="https://github.com/ioerror/duraconf/raw/master/configs/gnupg/gpg.conf" target =" _blank "> configuration </a> from his <a href="https://github.com/ioerror/duraconf" target =" _blank "> duraconf </a> project, modified to avoid key servers.  Keys are RSA 4096 bits. We currently don't use public key servers because they are obvious targets and, in our experience, unreliable. If customers want them as a convenience we may add an option to use them.
+
+<p>
+GoodCrypto distributes PGP public keys P2P in email headers. The protocol is described in the <a href="/server/whitepaper.html">whitepaper</a> under "Step by Step".
+The customer's GoodCrypto server stores PGP keys. Users can verify fingerprints for stored public keys on the server's local web site.
+
+<h3>Net</h3>
+<p>
+We use TLS to protect network connections. Again the keys are RSA 4096. Currently we allow fallback to TLS and DSA using SHA1. This is a vulnerability that is necessary for compatibility with other systems. It is an excellent example of why we use layered encryption, such as PGP for email. We will eliminate this fallback as soon as enough other systems are brought up to date.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="81"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        GoodCrypto provides the tools GPG and Tor that Ed Snowden used. Why not Tails?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        We use Tails almost daily. For many months it was the base Linux distro for GoodCrypto.
+
+<p>
+<a href="https://firstlook.org/theintercept/2014/10/28/smuggling-snowden-secrets/">Snowden relied on Tails</a>. Even though he used plain email with PGP for much of his communications, adding Tails makes you safer.
+
+<p>
+But for a server, Tails has flaws. It includes a GUI stack and many end user apps. That means it has a large attack surface. This is an unnecessary risk for a server. We removed the extra apps. But Tails is dependent on the GUI even during boot.
+
+<p>
+In our limited user testing with technical people, they found Tails very hard to use. We reported our results to the Tails team. They were already working on it. But they are a small underfunded team like us, and their resources are limited.
+
+<p>
+We finally moved to a much smaller custom distro. It was, and is, a difficult call.
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Mail"></a>
+            <p>&nbsp;</p>
+            <p><h3>Mail</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="106"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Does GoodCrypto protect metadata against traffic analysis?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+GoodCrypto uses Ed Snowden's design from HOPE X to encrypt your email, both content and metadata.
+</p>
+
+<p>
+Exposed metadata can be more dangerous than content. As former CIA/NSA boss Gen. Michael Hayden admitted,
+"<a href="http://www.thenewamerican.com/usnews/crime/item/18244-we-kill-people-based-on-metadata-admits-former-cia-nsa-boss">We kill people based on metadata.</a>"
+</p>
+
+<p>
+With a <a href="/qna/knowledge-base/change-mail-options.html">simple click</a>, you can block both network and traffic analysis. Spies who tap your line get just one bit of data, that Group A communicates with Group B.  They don't know who, what, when or even how much information an individual exchanges with someone else. What spies see is useless, because it is always the same. The same schedule, the same amount, and always encrypted, including metadata.
+</p>
+
+<p>
+Of course, until other packages implement this open source protocol for metadata protection, you will need GoodCrypto on both ends.
+</p>
+
+<p>
+More:
+<ul>
+  <li> <a href="/qna/technical/protect-metadata.html">How does GoodCrypto protect metadata?</a>
+  <li> <a href="/qna/technical/metadata-protection-security-viewpoint.html">Security focus: How does mail metadata protection work?</a>
+</ul>
+</p>
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="107"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How does GoodCrypto protect metadata?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+This overview  is for IT administrators. If you prefer security details see <a href="/qna/technical/mail_metadata_protection_security_viewpoint.html">Security focus: How does mail metadata protection work?</a>
+</p>
+
+<p>
+GoodCrypto uses Ed Snowden's design from HOPE X to protect email metadata.
+Very quickly, GoodCrypto :
+<ol>
+  <li> Uses GPG to encrypt from individual to individual.
+  <li> Periodically mixes all messages to a domain into the body of a single message.
+  <li> Pads and uses GPG to encrypt the mixed group message. This encrypts all end user metadata.
+</ol>
+</p>
+
+<p>
+When GoodCrypto first boots it prepares an email address and key for your domain. This is separate from the keys for individuals. Keys are automatically exchanged the first time that two GoodCrypto mail domains connect.
+</p>
+
+<p>
+On a regular schedule GoodCrypto:
+<ul>
+  <li> Signs and encrypts messages going to a domain with each individual's key.
+  <li> Attaches all the messages for that domain to one new message.
+  <li> Pads the mixed group message to a fixed size.
+  <li> Encrypts the group message.
+</ul>
+Because all individual metadata is in the group message body, the metadata is encrypted. The sender, recipient, subject, and content of messages are completely hidden. Useless domain metadata is all that's visible, only showing that the two groups might be exchanging private email.
+</p>
+
+<p>
+When a message arrives at the destination, GoodCrypto reverses the process and delivers individual messages
+</p>
+
+<p>
+Usually both the sender and recipient have personal keys. Then their individual messages are encrypted in layers, first with the individual key and then with the metadata key.
+</p>
+
+<p>
+GoodCrypto automatically exchanges keys. The administrator receives email whenever a new metadata key arrives so so it can be <a href="/qna/knowledge-base/user-verify-key.html">verified</a>.
+</p>
+
+<p>
+As both systems generate and exchange keys, GoodCrypto continuously makes your mail more secure.
+If you need to be sure that your first contact is safe, <a href="/qna/knowledge-base/known-metadata-domains.html">check that your GoodCrypto private server has a metadata key</a> for the other domain.
+</p>
+
+<p>
+Of course, until other packages implement this open source protocol for metadata protection, you will need GoodCrypto on both ends.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="103"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How does GoodCrypto stop traffic analysis?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        GoodCrypto uses packetization, padding, and encryption to stop both network and traffic analysis. On a regular schedule it combines individual messages going to a group, pads them to a standard size, and wraps them in an extra layer of encryption that protects all the messsages and hides all individual metadata.
+
+<p>
+The default settings send a single one MB group-to-group message every hour, even when no individuals have sent mail to the other group.
+That allows the equivalent of one entire book of email text every hour. It adds just one GB of traffic per month per group to stop traffic analysis. The administrator can <a href="/qna/knowledge-base/change-mail-options/index.html">change these settings</a>.
+</p>
+
+<p>
+If the total of pending outgoing individual messages are too big for a single standard group message, unsent messages are queued for later.
+If a message is bigger than the group message size it is returned to the sender with an explanation.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="116"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Security focus: How does mail metadata protection work?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        This is a quick overview for security people. You may prefer an
+<a href="/server/docs/metadata.html">IT administrator's viewpoint</a>.
+
+<p>
+GoodCrypto protects email metadata in transit by using encryption, mixing, and padding. It follows <a href="/news/snowdens-goals-software-developers">Ed Snowden's recommendations</a> to resist both network and traffic analysis.
+
+<p>
+First each message is encrypted to the recipient using GPG if we have their key.
+On a regular schedule, GoodCrypto mixes all the individual encrypted messages going from group to group into a single padded PGP MIME message, encrypted again with the group's GPG key.
+At the other end GoodCrypto reverses the process.
+
+<p>
+Mixing resists traditional network analysis.
+Bundling and encryption resist social network analysis.
+The periodic group message is padded to a fixed size.
+The regular schedule and fixed size resist traffic analysis.
+One bit is known to be leaked: The two groups might be exchanging private email.
+
+<p>
+Email is perfect for this form of protection because we already expect some
+delay. Few people notice a half hour average delay in email.
+Instant messaging doesn't work with this kind of packetization.
+It wouldn't be instant. Phone and video calls have the same limitation.
+Voice or video mail would work well, and could even be routed over email.
+
+<p>
+The default packet size is a MB, enough for an entire book of text.
+A MB per hour adds up to
+less than a GB per month for each group to group connection. At server prices one GB usually costs nothing today.
+Most groups don't write more than a book an hour, but if yours does
+you can change the defaults.
+
+<p>
+Metadata encryption is an extra GPG layer applied to the bundled messages.
+This is in addition to the user to user GPG encryption already provided by
+GoodCrypto. The inner layer protects content. The outer layer protects
+metadata and content.
+
+<p>
+When SMTP servers use TLS they provide yet another layer of encryption.
+Some people believe a single layer is enough. This is called an Eggshell Defense because it is so fragile. Encryption fails over time. We don't know when each layer will fail, but with a defense in depth we have a very good chance
+that at least one layer will survive long enough to fix or replace the others.
+When a single layer of defense fails you are completely unprotected.
+Multiple strong layers make a catastrophic failure very unlikely, so you are
+much safer.
+
+<p>
+Individual messages are encrypted and periodically mixed into a single message. The bundled message is padded
+and encrypted again. This provides very good metadata protection to resist both network and traffic analysis.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="64"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Which encryption software does GoodCrypto support?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            GoodCrypto supports the most popular open source standards:
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <ul>
+<li>OpenPGP and TLS</li>
+</ul>
+
+<p>The best part is that GoodCrypto lets you use multiple
+encryption apps in layers to give you even more privacy. When
+there is more than one encryption app installed on your system,
+GoodCrypto can encrypt your messages with each program in
+turn. That way a flaw in one encryption method doesn't expose your
+mail.</p>
+
+<p>Learn why we don't support <a href="/qna/technical/smime-support.html">s/mime</a>.</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="55"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Are all outgoing messages encrypted?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Yes, if you both use GoodCrypto or any open PGP.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        If both ends have GoodCrypto, it all happens automatically:
+<ul>
+  <li> GoodCrypto generates keys for you and your contact.
+  <li> GoodCrypto exchanges public keys P2P.
+</ul>
+
+<p>
+Generating and exchanging keys can take a little time. Remember your messages are not encrypted until that's done. After you both get mail reminding you to verify your contact's key, your messages are encrypted both ways.
+</p>
+
+<p>
+The mail administrator also has the <a href="/qna/knowledge-base/crypt-options/index.html">option</a> of only allowing outgoing mail if it is encrypted. Of course, that means that you are requiring all recipients of email from your server use encryption, too. This is probably too restrictive for most groups.
+</p>
+
+<p>
+If your contact doesn't use GoodCrypto:
+<ul>
+  <li> They have to generate a key.
+  <li> You have to <a href="/qna/knowledge-base/export-public-key.html">export</a> your public key and send it to them.
+  <li> You each have to <a href="/qna/knowledge-base/import-key.html">import your contact's public key</a>.
+</ul>
+Then GoodCrypto will automatically encrypt to that contact.
+
+<p>
+Make sure your mail server is configured to encrypt local traffic with TLS-SSL.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="63"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What is a fingerprint or key id?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        A fingerprint is a short summary of an encryption key.
+Because full encryption keys are so long, we use the key summary to verify a key.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="25"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How does PGP work?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Well. It works well.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        OK, you want <a href="http://marcomanzoni.me/blog/how-pgp-works-under-the-hood/" target =" _blank ">details.</a>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="69"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why shouldn't I verify someone's key by email?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        If someone slipped a fake  public key into your email, they can send a fake key verification the same way.
+
+<p>You could think that you're communicating privately with a friend or associate while all of your messages are being
+intercepted, read, and then forwarded to the destination.
+</p>
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="79"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Will my email ever be sent as plaintext if there's a key for the recipient?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            No, not if the GoodCrypto server has the recipient's key.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        If GoodCrypto detects any error encrypting a message, then the message is automatically returned to the sender with an explanation about the error.
+
+<p>
+Additionally, the mail administrator can set a flag so no one can ever send email to specific contacts unless the mail is encrypted. This allows the administrator to add contacts who need privacy ensured before a key is ready.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="66"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How does GoodCrypto work when the other person doesn't have it?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Email with people who still don't have
+privacy software works as it always has. Messages you send them will not be private and so they -- and anyone who intercepts your messages -- can read them just like they did before you
+installed GoodCrypto.
+
+<p>
+People with no protection at all will
+get a note at the bottom of your messages reminding them of
+the risks of unprotected email. You'll get a note at the bottom of their messages letting you know it wasn't private. That way you always know which messages arrived at your mail server privately, and which didn't. You can also verify which messages <a href="/qna/knowledge-base/verify-message-arrived-privately/index.html">arrived</a> and <a href="/qna/knowledge-base/confirm-message-was-sent-privately.html">were sent</a> privately.</p>
+
+<p>
+If a contact is using another PGP product, then you will have to <a href="/qna/knowledge-base/export-public-key/index.html">export your key</a> and send it to them so they can send your private messages. And, they will need to send you their key and you <a href="/qna/knowledge-base/import-from-file.html">import it</a> or <a href="/qna/knowledge-base/import-from-keyserver.html">import it from a keyserver</a> so you can send private email to them. Don't forget to <a href="/qna/knowledge-base/user-verify-key.html">verify their fingerprint</a> before you rely that you're exchanging private messages.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="57"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Can encrypted email be filtered for spam and viruses?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Yes.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        GoodCrypto integrates with your existing mail server. Configure your mail server to filter inbound email <em>after</em> it's been decrypted.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="27"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What encryption is used between the user and mail server?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            TLS-SSL works great.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        We strongly encourage you to require TLS 1.2 connections between users' computers and your mail server. Your mail server is behind a strong firewall for best security.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="78"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        How does GoodCrypto minimize MITM attacks on my messages?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Encryption and multifactor authentication
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Encryption is a great first step. But it's only reliable with good authentication.
+
+<p>All authentication methods have flaws. Any one by itself may be easy to crack, but cracking multiple authentication factors for the same key is much harder.  The standard form of this is called "Two factor authentication". GoodCrypto gives you more:
+<ul>
+    <li> Key pinning
+    <li> Out of band verification notice
+    <li> Public key in header
+    <li> Encrypts and signs
+    <li> Standard "the recipient got my encrypted message"
+</ul>
+
+<p>
+Remember that no authentication factor is perfect. But combined they can work well.
+
+<p>
+<strong>Key pinning.</strong>
+GoodCrypto pins PGP keys. Any time GoodCrypto generates or receives a new key, it records the fingerprint in GoodCrypto's database. It sends email to let you know about the new key. If that key ever changes, you get an alert.
+
+
+<p>
+When a signed message is received, GoodCrypto verifies the signature matches the message's 'From' and warns if it doesn't. Further, it verifies that the fingerprint of any keys in the message header match the fingerprint in GoodCrypto's database. Again, the user is warned if there are any inconsistencies and the key is blocked.
+</p>
+
+<p>
+<strong>Out of band verification notice.</strong> Whenever a new key comes in, the user gets a message strongly advising them to verify the new key's fingerprint using some method other than email. You get their fingerprint from your local GoodCrypto Server's web site. Then you need at least one more source to verify. Getting a fingerprint from somewhere else online is pretty good. A phone call is better.  Face to face is best.
+
+<p>
+<strong>Public key in header.</strong>
+Every message a GoodCrypto user sends has their public key in the header. Anyone can check it. GoodCrypto does.
+
+<p>
+<strong>Encrypts and signs.</strong>
+This is standard, but essential.
+GoodCrypto always both encrypts and signs messages. It checks signatures for you. If you exchange encrypted mail with PGP users who don't have GoodCrypto, ask them to also sign their messages.
+
+<p>
+<strong>"The recipient got my encrypted message."</strong>
+This is the most common method of verification. It's weak, but users seldom do more. That's why automated authentication is essential. If your contact has GoodCrypto, they get a tag line right in the message saying whether it was encrypted, so they can tell you. If the recipient replies saying something that clearly shows they really got your encrypted message, that helps.
+
+<p>
+<strong>Public key servers.</strong>
+In the future, we'll likely offer options such as verifying keys against public key servers. Key servers are convenient. They make PGP easier to use. That's crucial, because crypto that is hard to use is only used by experts. But relying on a few centralized crypto servers for the whole Internet is obviously very risky. </p>
+
+<strong>Use multiple factors.</strong>
+Most authentication methods aren't very strong by themselves. Always use multiple factors. GoodCrypto does it automatically, and helps you check things for yourself.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="26"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why not user-to-user PGP?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+
+
+
+Trying to get individuals to encrypt their email has had 20 years to work. There are excellent guides from <a href="https://freedom.press/encryption-works" target =" _blank ">Freedom of the Press</a>, <a href="https://ssd.eff.org/" target =" _blank ">EFF</a>, and <a href="https://emailselfdefense.fsf.org/en/" target =" _blank ">Free Software Foundation</a>. But it's a lot to learn and a lot of work.  Bruce Schneier says, "If PGP has taught us anything, it's that one click is one click too many." Only experts encrypt their email.
+
+<p>
+It's time to protect the rest of us.</p>
+
+<p>
+With GoodCrypto the users themselves don't have to do anything to encrypt. GoodCrypto does it for them, in a private server connected to their mail server. For almost everyone the alternative is unencrypted mail. Another huge advantage is that people can keep using the mail
+software they know on any platform they want.
+</p>
+
+<p>
+Without a solution like GoodCrypto almost all email is unencrypted. Anyone who taps the line can read it. We suggest you limit that risk to your own administrator. Everyone in the group gets PGP mail. The tradeoff is that your mail administrator who can already read your mail can still read your mail.</p>
+
+<p>
+Experts can still encrypt their mail themselves. But now everyone else in the group gets encrypted mail too. Everyone is protected.</p>
+
+<p>
+Individual users have a terrible record for using crypto, and a worse record for protecting their computers. Botnets show that mass cracking is already automated. How can you protect all those user computers?</p>
+
+<p>
+Most people already trust servers to protect private keys for HTTPS, SSH, and more. It is possible to protect servers. Otherwise banks and stock exchanges would suddenly find their money gone.</p>
+
+<p>
+Because blocking spam and malware requires the decrypted message, end user encryption also means users have to deal with spam and malware themselves. Some of that malware will crack their system for their keys. And businesses often need a record of all mail.</p>
+
+<p>
+Transparent encryption works for everyone. </p>
+
+<p>
+To stop mass surveillance we need mass encryption.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="28"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why do I need PGP? Isn't TLS/SSL enough?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            PGP is P2P and decentralized.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        TLS/SSL itself is generally secure. But on the Internet it is dependent on public DNS and Certificate Authorities. Both of these types of centralized servers are prime targets. Just one CA has to fail.
+
+<p>
+Worse, some ISPs and organizations <a href="https://www.eff.org/deeplinks/2014/11/starttls-downgrade-attacks" target =" _blank ">sabotage TLS/SSL</a> directly.
+
+<p>
+You can exchange TLS public keys in some other way, and pin the keys. These are promising approaches, and GoodCrypto may use them.
+
+<p>
+DNSSEC may help some, but it is still very dependent on DNS and not yet widely trusted.
+
+<p>
+Many mail servers don't encrypt at all. Especially in large organizations, mail may go through multiple servers. You can't force intermediate mail servers to encrypt. SMTP doesn't require it. So there's no guarantee that messages between mail servers are encrypted.
+
+<p>
+PGP is end to end, from domain to domain or user to user, and decentralized.
+
+<p>
+The GoodCrypto mail server handles everything for you transparently.
+You aren't as vulnerable to TLS attacks.You don't need cooperation from intermediate mail servers.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="23"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why can't I just use web mail with javascript crypto?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            There are more ways it can go wrong.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Javascript PGP in the browser has the very important advantage of making PGP more usable. But it introduces so many extra vulnerabilities that security people thought you didn't need to explain it. Then Google used javascript PGP in a browser. <a href="http://matasano.com/articles/javascript-cryptography/" target =" _blank ">This</a> is a detailed explanation of why you probably shouldn't.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="112"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why doesn't GoodCrypto support S/MIME?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            S/MIME is more about tracking. PGP is about privacy.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+PGP has a strong record of protecting users' privacy. So GoodCrypto uses PGP.
+</p>
+
+<p>
+Background: In the early 1990s, the PEM group tried to develop an open standard which would protect everyone's email privacy. NSA pushed the standard so hard they offered free @nsa.gov email addresses to members. Why? PEM was an email tracking system. The PEM charter said that tracking was required, but confidentiality was <em>optional</em>. When the group would not accept this low standard, that group was shut down and replaced by an invitation-only group that developed S/MIME.
+</p>
+
+<p>
+Additionally, S/MIME relies on centralized certificate authorities which are easy targets for mass surveillance. Certificate authorities can issue both the public and private components which also weakens security.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="87"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Where does a user get credentials to sign in to our GoodCrypto private server?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        As each user in your company sends a message out, a login and password is automatically created. The credentials are emailed to the user.
+
+The user cannot use these credentials to access the administrator areas (i.e., managing users, contacts, options) unless the administrator changes the user's permissions.
+
+If a user tries to access the administrator areas without the correct permissions, then the sign in form simply displays again. Regular users must only try to access non-administrator areas (e.g., viewing their personal private message history) when signing in.
+
+Of course, if a user loses their credentials, then the administrator can change their password via the Users button on your GoodCrypto private server's website under the Mail menu.
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-12">
+            <a name="Other"></a>
+            <p>&nbsp;</p>
+            <p><h3>Other</h3></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <a name="15"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why a virtual appliance?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Easier to install, use, and maintain. And safer.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+<strong>A virtual appliance is ready to use.</strong>
+Not a pile of parts. No assembly needed. Tested.
+
+<p>
+<strong>Easy to install.</strong>
+Just boot it.
+You get all the software you need, the right versions, pre-configured.
+
+<p>
+<strong>Easy to use.</strong>
+No training needed.
+
+<p>
+<strong>Easy to maintain.</strong>
+Automatic updates and professional support.
+
+<!-- You don't want a pile of parts where you have to do the wiring and plumbing. -->
+
+<p>
+<strong>More secure.</strong>
+(soon)
+Systems are isolated from each other so an attack on one isn't as likely to harm others.
+
+<p>
+Virtual machines are resistant to APTs, Advanced Persistent Threats. Some attacks compromise a machine at a very low level, in BIOS, driver PROMS, etc. Even reinstalling the OS doesn't help.
+
+<p>
+But a properly configured vm can be safely and automatically recreated with all data restored. This is much cheaper and easier than replacing physical machines.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="30"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        What's wrong with DSA?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            It is a state-sponsored standard
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        State sponsored standards are high risk. They are usually crippled so the state can crack them. We know that the US government has been spending more than $250 million per year to sabotage crypto (see <a href="http://www.nytimes.com/interactive/2013/09/05/us/documents-reveal-nsa-campaign-against-encryption.html?_r=0" target =" _blank ">New York Times</a>, <a href="http://www.propublica.org/article/the-nsas-secret-campaign-to-crack-undermine-internet-encryption" target =" _blank ">ProPublica</a>, and <a href="http://www.theguardian.com/world/2013/sep/05/nsa-gchq-encryption-codes-security" target =" _blank ">Guardian</a> articles). This results in <a href="http://www.gossamer-threads.com/lists/openssh/users/38055" target =" _blank ">nonsense</a>, such as "Simply put --- larger key sizes --- more risk of compromise."
+
+<p>One of the earliest specifications for DSA required that keys be "exactly 1024 bits". The ssh-keygen man page still says this is still a requirement, even though some later specs were supposed to supersede the limit.</p>
+
+<p>
+It is a very serious concern any time someone arbitrarily restricts key size. There are too many ways (think rainbow tables) that shortened keys can be compromised. It is reasonable to be deeply concerned about any standards from the same source.</p>
+
+<p>
+RSA is a tested and trusted alternative to DSA. Why trust an algorithm that was sabotaged, from an organization that is known to be working against secure encryption?</p>
+
+
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="31"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why doesn't GoodCrypto use ECC?
+                    </h4>
+
+                        <h4 class="dropcap">
+
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p class="dropcap">
+GoodCrypto's avoidance of elliptic curves is very controversial to some. Our biggest objection is that ECC is a state sponsored standard. You may disagree if you believe that state crypto standards are intended to protect you, and not <a href="http://www.it.slashdot.org/story/13/09/11/1224252/are-the-nist-standard-elliptic-curves-back-doored">crippled so the state can spy</a>.
+</p>
+
+<p>
+Multiple <a href="http://www.reuters.com/article/2014/03/31/us-usa-security-nsa-rsa-idUSBREA2U0TY20140331" target =" _blank ">compromises</a> of elliptic curves by NSA are now well known (<a href="http://www.theinquirer.net/inquirer/news/2296128/rsa-warns-against-nsa-code-in-its-encryption-software" target =" _blank ">RSA warning</a> and <a href="http://csrc.nist.gov/publications/nistbul/itlbul2013_09_supplemental.pdf" target =" _blank ">NIST alert</a>). In one case NSA paid <a href="http://www.reuters.com/article/2014/03/31/us-usa-security-nsa-rsa-idUSBREA2U0TY20140331" target =" _blank ">$10 million dollars for a backdoor</a> in ECC.
+</p>
+
+<p>We agree with Bruce Schneier when he <a href="https://www.schneier.com/blog/archives/2013/09/the_nsa_is_brea.html#c1675929">says</a>, "I no longer trust the constants. I believe the NSA has manipulated them through their relationships with industry". As Colin Percival suggests, "You should use elliptic curves <strong>only</strong> if your name is Daniel J. Bernstein." And <a href="https://projectbullrun.org/surveillance/2015/video-2015.html#bernstein">djb is very skeptical of ECC standards</a>.
+
+<p>
+It's also interesting that many mathematicians have found that they <a href="http://crypto.stackexchange.com/questions/10263/should-we-trust-the-nist-recommended-ecc-parameters">can't analyze the magic</a> ECC constants. That makes auditing a matter of "Trust me" with an implied "You're too stupid". That doesn't fly any more.
+
+<p>
+Mathematicians hate the implication that they are stupid. Many opt out of the discussion, leaving the field to elliptic curve promoters. This could be a good way to hide a backdoor.
+
+<p>
+There is no clear need for ECC. ECC is still a popular forward secrecy choice, and may be useful as an additional encryption layer for that purpose. The RSA algorithm is a tested and trusted alternative. RSA is auditable. The excuses for replacing RSA are not convincing to us.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="42"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why not a small hardware box?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Good security requires source, audits and updates.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        Open source hardware is almost non-existent. Auditing a computer's hardware requires countless person-years in a lab, so no one does it. The usual update procedure for a system with all the software in ROM is to buy a new one. Most people don't.
+
+<p>
+Security software without source isn't secure. Software is auditable. You can get automatic security updates.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="29"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why use the python sh module instead of standard libraries?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            Faster security updates.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+The sh module adds the entire command line suite to the python API. Command line programs are much more tested and trusted than language libraries.
+<p>
+If there is a security bug in a standard program, it is found faster and fixed urgently.
+<p>
+For example, <a href="https://wiki.python.org/moin/SSL" target =" _blank ">python did not verify ssl certs</a> properly for <a href="http://bugs.python.org/issue1589" target =" _blank ">years</a>. The ssh program worked.
+                    </p>
+
+                </div>
+
+
+
+
+                <div>
+                    <a name="104"></a>
+                    <p>&nbsp;</p>
+                    <h4 class="well">
+                        Why doesn't GoodCrypto share PCAPs?
+                    </h4>
+
+                        <h4 class="dropcap">
+                            People who want crypto don't want geolocation, etc. Anonymization is unreliable.
+                        </h4>
+                        <br/>
+
+
+
+                        <p>
+
+                        <p>
+PCAPs are packet logs. Some things even PCAPs of encrypted sessions reveal about you:
+<ul>
+  <li> Where you are</li>
+  <li> The sites you visit</li>
+  <li> Which sites are most interesting to you</li>
+</ul>
+</p>
+
+These details are from IP addresses and timestamps, especially timestamp differentials. It's available even in an encrypted session.
+
+<p>
+If your session is unencrypted, PCAPs reveal everything you do online:
+<ul>
+  <li> Logins</li>
+  <li> Passwords</li>
+  <li> Banking access</li>
+  <li> Medical details</li>
+  <li> What topics interest you most</li>
+  <li> Who you contact</li>
+  <li> Who contacts you</li>
+  <li> Every private word you speak</li>
+  <li> Everything others tell you</li>
+</ul>
+</p>
+
+<p>
+PCAPs of sessions that don't involve people are less sensitive. But even those can be traced to the people who set up the system.
+</p>
+
+<p>
+Anonymization is unreliable. If NSA is storing session metadata, then anonymization of PCAPs appears to be a hard problem.
+</p>
+
+                    </p>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+{% endblock contentpane %}
+

@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% comment %}
+
+    Copyright 2014-2017 GoodCrypto
+    Last modified: 2017-03-26
+
+{% endcomment %}
+{% load i18n custom %}
+
+{% block contentpane %}
+<div class="container">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+
+
+
+<div id="content">
+
+    <a name="Questions"></a>
+    <h2>Knowledge Base</h2>
+
+
+    <div class="row">
+        <div class="col-md-2">
+
+    <p>&nbsp;</p>
+
+
+
+
+
+
+
+    <h4> <a href="/qna/general/index.html" title="Answers to general topics about GoodCrypto">General FAQ</a> </h4>
+    <h4> <a href="/qna/technical/index.html" title="Answers to more technical topics and how GoodCrypto handles them">Technical FAQ</a> </h4>
+
+    <p> &nbsp; </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-md-10">
+
+    <div class="row">
+        <a name="Questions"></a>
+        <h2>How do I verify a message arrived privately?</h2>
+
+
+            <h4 class="dropcap">
+                GoodCrypto adds a tag with a unique validation code at the bottom of each message it decrypts.
+            </h4>
+
+                <p>
+                    It would be easy for someone else to fake a message so it appears that the message arrived privately when it didn't. Only the recipient of the message can verify that it was received privately.
+
+<p>
+If your administrator entered the URL for your GoodCrypto private server in the <a href="/qna/knowledge-base/change-mail-options.html">GoodCrypto private server options</a>, then a URL is included at the bottom of the message which lets you confirm the message was received privately by your GoodCrypto private server. You must <a href="/qna/technical/user-credentials-to-sign-in.html">sign in</a> with the email address of the recipient of the message to verify the status.
+
+<p>
+If you only see the unique validation code, then connect to your <a href="/qna/knowledge-base/access-goodcrypto-server.html">Goodcrypto Server website</a>, sign in with the credentials for the user that received the message, click the
+<strong>Mail</strong> menu and then the <strong>Verify</strong> button next to <strong>Private messages</strong>, and enter the validation code.
+<p>
+If you do not know the validation code, then click the <strong>Received</strong> button next to <strong>Private messages</strong>. You'll see a list of all messages that you received securely. The list shows the sender's email address, date, message id, and validation code.
+
+                </p>
+
+
+    </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+<div class="navbar navbar-bottom">
+    <div class="nav-collapse">
+
+
+
+
+
+
+    <div class="row">&nbsp;</div>
+    <div class="row"><hr></div>
+    <div class="row small center">
+        <div class="col-md-2">
+        &nbsp;
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1 center">
+
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-1 center">
+        </div>
+        <div class="col-md-2 right">
+            &copy; <a href="/legal/index.html" title="A few legal details">2014-2017 GoodCrypto</a>
+        </div>
+        <div class="col-md-1">
+        &nbsp;
+        </div>
+    </div>
+
+
+
+    </div>
+</div>
+
+
+
+</div>
+</body>
+</html>
+
+{% endblock contentpane %}
